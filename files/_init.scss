@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/*==============================
+Adobe XD Layout Grid Settings.
+===============================*/
+$maxcolumn: 12;
+$gutter: 28px;
+
+
+/*==============================
+Side Margin Settings.
+===============================*/
+/* ===== Desktop ===== */
+$desktop: 146px;
+
+/* ===== MacBook Air / MacBook Pro / Surface Pro ===== */
+$laptoplarge: 146px;
+
+/* ===== MacBook / MacBook Air ===== */
+$laptop: 139px;
+
+/* ===== iPad Pro 12.9inch ===== */
+$ipadpro129-port: 118px;
+$ipadpro129-land: 121px;
+
+/* ===== iPad Pro 10.5inch ===== */
+$ipadpro105-port: 84px;
+$ipadpro105-land: 83px;
+
+/* ===== iPad / iPad mini & Android Tablet===== */
+$ipad-port: 82px;
+$ipad-land: 80px;
