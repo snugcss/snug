@@ -1,19 +1,19 @@
 # SNUG
 
-A simple grid framework for AdobeXd.  
-AdobeXbのレイアウトグリッドをコードで再現できるシンプルなCSSフレームワークです。  
+### A simple grid framework for AdobeXd.  
+#### AdobeXbのレイアウトグリッドをコードで再現できるシンプルなCSSフレームワークです。  
 
-* レイアウトグリッドをコードで。  
+### レイアウトグリッドをコードで。  
     AdobeXdの機能のひとつ「レイアウトグリッド」をコードで再現できるCSSフレームワークです。  
-* 柔軟なデザインを可能に。  
+### 柔軟なデザインを可能に。  
     従来のWEBフレームワークでは、スピーディに開発できるよう独自のデザイン（スタイル）が適用されています。SNUGはグリッド以外のコンポーネントは持たず、フレームワークに依存しないオリジナリティのあるデザインを可能にします。  
-* チーム開発をスマートに。  
+### チーム開発をスマートに。  
     ディレクター、デザイナーはSNUGの知識は必要ありません。AdobeXdのレイアウトグリッドを使うことでワイヤーフレーム、デザイン、プロトタイプといった作業はフレームワークを意識せずに行うことができ、スマートに開発を進めることができます。  
 
 ## Features / 特徴
 
 * Build on SCSS  
-    SNUGはSCSSを使った軽量なグリッドシステムです。より柔軟な開発を可能にします。  
+    SNUGはSass / Scssを使った軽量なグリッドシステムです。  
 * Include Icon Font.  
     [Font Awesome 5](https://fontawesome.com/)をインストール済み。  
 * Customize.  
@@ -23,9 +23,9 @@ AdobeXbのレイアウトグリッドをコードで再現できるシンプル�
 
 ## Quick start / クイックスタート
 
-* Download / ダウンロード
+* [Download](https://github.com/snugcss/snug/archive/master.zip) / ダウンロード
 Githubよりダウンロードします。
-[Download](https://github.com/snugcss/snug/archive/master.zip)
+
 
 * Initialize / 初期設定
 解凍したら_init.scssを開きAdobeXdのレイアウトグリッドの値に合わせます。
@@ -39,6 +39,7 @@ $desktop: 146px; //両サイドのマージン
 列、段間隔は共通。両サイドのマージンはアートボード毎に個別に設定してください。
 
 * Markup / マークアップ
+
 
 ```
 <div class="l-container">
