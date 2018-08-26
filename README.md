@@ -25,11 +25,11 @@ SNUGのグリッドシステムはデスクトップ、モバイルだけでは�
 
 ## Quick start / クイックスタート
 
-###Download / ダウンロード
+### Download / ダウンロード
 Githubより[ダウンロード](https://github.com/snugcss/snug/archive/master.zip)します。
 
 
-###Initialize / 初期設定
+### Initialize / 初期設定
 解凍したら_init.scssを開きAdobeXdのレイアウトグリッドの値に合わせます。
 
 ```
@@ -41,7 +41,7 @@ $desktop: 146px; //両サイドのマージン
 ```
 列、段間隔は共通。両サイドのマージンはアートボード毎に個別に設定してください。
 
-###Markup / マークアップ
+### Markup / マークアップ
 
 ```
 <div class="l-container">
