@@ -1,27 +1,16 @@
 @charset "UTF-8";
-/*==============================
--Import Files
-*Don't touch this scss file.
-===============================*/
 
-/* ===== Copyright ===== */
-@import "./vendor/_copyright.scss";
+/* ======================================================
 
-/* ===== Reset select import file ===== */
-@import "./vendor/_reset.scss";
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-/* ===== Inithial file (LayoutGridSetting) ===== */
-@import "../../_init.scss";
+-> sass -> _style.scss
 
-/* ===== Root file (LayoutGridSetting) ===== */
-@import "./vendor/_root.scss";
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-/* ===== Universal stylesheets import file ===== */
-@import "./vendor/_variable.scss";
-@import "./vendor/_global.scss";
+====================================================== */
 
-/* ===== Grid system ===== */
-@import "./vendor/_grid.scss";
+@import "vendor/_vendor.scss";
 
-/* ===== Project ===== */
-@import "./_custom.scss";
+/* yout project css */
+@import "_custom.scss";

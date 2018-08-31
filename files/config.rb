@@ -6,10 +6,10 @@ javascripts_dir = "lib/js"
 
 
 # Development
-# output_style = :expanded
+output_style = :expanded
 
 # Production
-output_style = :compressed
+# output_style = :compressed
 
 # True or False
 line_comments = false
