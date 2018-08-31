@@ -19,19 +19,16 @@ SNUGはSass / Scssを使った軽量なグリッドシステムです。
 
 * Customize.  
 SNUGは、ほかのツールと組み合わせやすいピュアなCSSフレームワークです。プロジェクト毎のカスタマイズも簡単にでき、コンフリクトを回避できます。  
-
 * Responsive.  
 SNUGのグリッドシステムはデスクトップ、モバイルだけではなくAdobe XDで使えるアートボード全てに対応しています。  
 
 ## Quick start / クイックスタート
 
-### Download / ダウンロード
+1. Download / ダウンロード
 Githubより[ダウンロード](https://github.com/snugcss/snug/archive/master.zip)します。
 
-
-### Initialize / 初期設定
+2. Initialize / 初期設定
 解凍したら_init.scssを開きAdobeXdのレイアウトグリッドの値に合わせます。
-
 ```
 /* _init.scss */
 $maxcolumn: 12; // 列の値
@@ -41,8 +38,7 @@ $desktop: 146px; //両サイドのマージン
 ```
 列、段間隔は共通。両サイドのマージンはアートボード毎に個別に設定してください。
 
-### Markup / マークアップ
-
+3. Markup / マークアップ
 ```
 <div class="l-container">
     <div class="l-row">
@@ -52,6 +48,9 @@ $desktop: 146px; //両サイドのマージン
     </div>
 </div>
 ```
+
+## タスクランナーによるコンパイル
+\node.jsをインストール後、\npm installで必要なモジュールがインストールされます。コンパイルする時は\npm run allでstylelint、prefixの付与、styleのsort、Minifyまでを自動で行います。
 
 ## Changelog / ログ
 [CHANGELOG.md](https://github.com/snugcss/snug/blob/master/CHANGELOG.md)
