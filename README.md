@@ -50,7 +50,7 @@ $desktop: 146px; //両サイドのマージン
 ```
 
 ## タスクランナーによるコンパイル
-`node.js`をインストール後、`npm install`で必要なモジュールがインストールされます。コンパイルする時は`npm run all`でstylelint、prefixの付与、styleのsort、Minifyまでを自動で行います。
+`node.js`をインストール後、`npm install`で必要なモジュールがインストールされます。コンパイルする時は`npm run all`で`stylelint`、`prefix`の付与、styleの`sort`、`Minify`までを自動で行います。
 
 ## Changelog / ログ
 [CHANGELOG.md](https://github.com/snugcss/snug/blob/master/CHANGELOG.md)
