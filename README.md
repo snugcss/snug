@@ -34,7 +34,7 @@ Githubより[ダウンロード](https://github.com/snugcss/snug/archive/master.
 $maxcolumn: 12; // 列の値
 $gutter: 28px; // 段間隔の値
 
-$desktop: 146px; //両サイドのマージン
+$desktop: 146; //両サイドのマージンを単位なしで設定
 ```
 列、段間隔は共通。両サイドのマージンはアートボード毎に個別に設定してください。
 
