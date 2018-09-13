@@ -1,26 +1,27 @@
+
 @charset "UTF-8";
 
 /* Custom property */
 :root {
-    --container-desktop: calc(100% - (#{$desktop} * 2));
+    --container-desktop: calc(100% - ((#{$desktop} / 1920) * 100%) * 2);
 
     /* ===== MacBook Air / MacBook Pro ===== */
-    --container-laptop-large: calc(100% - (#{$laptoplarge} * 2));
+    --container-laptop-large: calc(100% - ((#{$laptoplarge} / 1440) * 100%) * 2);
 
     /* ===== MacBook / MacBook Air ===== */
-    --container-laptop: calc(100% - (#{$laptop} * 2));
+    --container-laptop: calc(100% - ((#{$laptop} / 1366) * 100%) * 2);
 
     /* ===== iPad Pro 12.9inch ===== */
-    --container-ipadpro129-port: calc(100% - (#{$ipadpro129-port} * 2));
-    --container-ipadpro129-land: calc(100% - (#{$ipadpro129-land} * 2));
+    --container-ipadpro129-port: calc(100% - ((#{$ipadpro129-port} / 1366) * 100%) * 2);
+    --container-ipadpro129-land: calc(100% - ((#{$ipadpro129-land} / 1024) * 100%) * 2);
 
     /* ===== iPad Pro 10.5inch ===== */
-    --container-ipadpro105-port: calc(100% - (#{$ipadpro105-port} * 2));
-    --container-ipadpro105-land: calc(100% - (#{$ipadpro105-land} * 2));
+    --container-ipadpro105-port: calc(100% - ((#{$ipadpro105-port} / 834) * 100%) * 2);
+    --container-ipadpro105-land: calc(100% - ((#{$ipadpro105-land} / 1112) * 100%) * 2);
 
     /* ===== iPad / iPad mini ===== */
-    --container-ipad-port: calc(100% - (#{$ipad-port} * 2));
-    --container-ipad-land: calc(100% - (#{$ipad-land} * 2));
+    --container-ipad-port: calc(100% - ((#{$ipad-port} / 768) * 100%) * 2);
+    --container-ipad-land: calc(100% - ((#{$ipad-land} / 1024) * 100%) * 2);
 
     /* ===== Grid Gutter ===== */
     --grid-gutter: #{$gutter};

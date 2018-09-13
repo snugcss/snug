@@ -12,26 +12,23 @@
 $maxcolumn: 12;
 $gutter: 28px;
 
-
-// アートボード別のセッティング
-
 /* 1920x1080 (デスクトップ) */
-$desktop: 146px;
+$desktop: 146;
 
 /* 1440x800 (MacBook Air / MacBook Pro / Surface Pro) */
-$laptoplarge: 146px;
+$laptoplarge: 146;
 
 /* 1366x768 (MacBook / MacBook Air) */
-$laptop: 139px;
+$laptop: 139;
 
 /* iPad Pro 12.9inch */
-$ipadpro129-port: 118px;
-$ipadpro129-land: 121px;
+$ipadpro129-port: 118;
+$ipadpro129-land: 121;
 
 /* iPad Pro 10.5inch */
-$ipadpro105-port: 84px;
-$ipadpro105-land: 83px;
+$ipadpro105-port: 84;
+$ipadpro105-land: 83;
 
 /* iPad / iPad mini & Android Tablet */
-$ipad-port: 82px;
-$ipad-land: 80px;
+$ipad-port: 82;
+$ipad-land: 80;
