@@ -7,8 +7,12 @@
 
 .l-container {
     margin: 0 auto;
-    max-width: calc(var(--container-desktop) + var(--grid-gutter));
+    max-width: calc(var(--container-desktop-large) + var(--grid-gutter));
     padding: 0 calc(var(--grid-gutter) / 2);
+
+    @include max(1920) {
+        max-width: calc(var(--container-desktop) + var(--grid-gutter));
+    }
 
     // Macbook Air 13' / MacBook Pro / Surface Pro
     @include max(1440) {

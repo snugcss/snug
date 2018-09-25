@@ -12,23 +12,26 @@
 $maxcolumn: 12;
 $gutter: 28px;
 
+/* 1920以上 */
+$retina: 468px;
+
 /* 1920x1080 (デスクトップ) */
-$desktop: 146;
+$desktop: 146px;
 
 /* 1440x800 (MacBook Air / MacBook Pro / Surface Pro) */
-$laptoplarge: 146;
+$laptoplarge: 146px;
 
 /* 1366x768 (MacBook / MacBook Air) */
-$laptop: 139;
+$laptop: 139px;
 
 /* iPad Pro 12.9inch */
-$ipadpro129-port: 118;
-$ipadpro129-land: 121;
+$ipadpro129-port: 118px;
+$ipadpro129-land: 121px;
 
 /* iPad Pro 10.5inch */
-$ipadpro105-port: 84;
-$ipadpro105-land: 83;
+$ipadpro105-port: 84px;
+$ipadpro105-land: 83px;
 
 /* iPad / iPad mini & Android Tablet */
-$ipad-port: 82;
-$ipad-land: 80;
+$ipad-port: 82px;
+$ipad-land: 80px;
