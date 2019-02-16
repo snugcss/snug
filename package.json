@@ -15,11 +15,13 @@
     "stylelint": "stylelint --config stylelintrc.js --syntax scss files/lib/sass/** --fix",
     "compile": "node-sass --include-path scss files/lib/sass/style.scss files/lib/css/style.css --output-style compressed",
     "build": "postcss --config postcss.config.js files/lib/css/style.css -o files/lib/css/style.min.css",
-    "all": "npm-run-all stylelint compile build"
+    "sync": "browser-sync start --server --files='./files/*.html, ./*.css'",
+    "all": "npm-run-all stylelint compile build sync"
   },
   "author": "Masato Nakamura",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
