@@ -8,8 +8,7 @@
     "framework",
     "flexbox",
     "responsive",
-    "web",
-    "front-end"
+    "web"
   ],
   "scripts": {
     "stylelint": "stylelint --config stylelintrc.js --syntax scss files/lib/sass/** --fix",
@@ -21,28 +20,28 @@
   "author": "Masato Nakamura",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^9.4.7",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
-    "postcss-cli": "^6.0.0",
+    "postcss-cli": "^6.1.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.0",
-    "postcss-scss": "^2.0.0",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^1.0.0"
+    "stylelint-order": "^2.0.0"
   },
   "dependencies": {
+    "autoprefixer": "^9.4.7",
+    "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
-    "postcss-cli": "^6.0.0",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.0",
-    "postcss-scss": "^2.0.0",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^1.0.0"
+    "stylelint-order": "^2.0.0"
   }
 }
