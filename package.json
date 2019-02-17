@@ -12,15 +12,14 @@
   ],
   "scripts": {
     "stylelint": "stylelint --config stylelintrc.js --syntax scss files/lib/sass/** --fix",
-    "compile": "node-sass --include-path scss files/lib/sass/style.scss files/lib/css/style.css --output-style compressed",
+    "compile": "node-sass --include-path scss files/lib/sass/*.scss files/lib/css/style.css --output-style compressed -w",
     "build": "postcss --config postcss.config.js files/lib/css/style.css -o files/lib/css/style.min.css",
-    "sync": "browser-sync start --server --files='./files/*.html, ./*.css'",
+    "sync": "browser-sync start --server --files='./files/*.html, ./files/lib/css/*.css', ",
     "all": "npm-run-all stylelint compile build sync"
   },
   "author": "Masato Nakamura",
   "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.4.7",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",
     "node-sass": "^4.9.3",
@@ -33,7 +32,6 @@
     "stylelint-order": "^2.0.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.4.7",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",
     "node-sass": "^4.9.3",
