@@ -11,11 +11,11 @@
     "web"
   ],
   "scripts": {
-    "stylelint": "stylelint --config stylelintrc.js --syntax scss files/lib/sass/** --fix",
-    "compile": "node-sass --include-path scss files/lib/sass/*.scss files/lib/css/style.css --output-style compressed -w",
-    "build": "postcss --config postcss.config.js files/lib/css/style.css -o files/lib/css/style.min.css",
-    "sync": "browser-sync start --server --files='./files/*.html, ./files/lib/css/*.css', ",
-    "all": "npm-run-all stylelint compile build sync"
+    "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
+    "compile": "node-sass -w --include-path scss src/_scss/main.scss src/css/main.css --output-style expanded",
+    "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o src/css/main.min.css",
+    "sync": "browser-sync start --server ./src --no-notify --no-open --files='./src/*.html, ./src/css/*.css, ./src/js/*.js'",
+    "all": "npm-run-all -p stylelint compile build sync"
   },
   "author": "Masato Nakamura",
   "license": "MIT",
