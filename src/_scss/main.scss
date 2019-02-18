@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* ======================================================
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+-> src/_scss/ -> _main.scss
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+====================================================== */
+
+/* Import CSS Framework */
+@import "./_snug/snug";
+
+/* Write your project's style */
+.text {
+  background: #eee;
+  color: #444;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 2rem;
+  padding: .8rem;
+  transition: all .2s linear;
+
+  &:hover {
+    background: #ccc;
+  }
+}
+
+.notes {
+  display: block;
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  margin:1rem 0 3rem;
+}

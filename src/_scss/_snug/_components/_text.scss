@@ -4,12 +4,11 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
--> sass -> _custom.scss
+-> src/_scss/_components/ -> _text.scss
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ====================================================== */
-.text {
-  color: #cc0;
-  font-size: 15px;
+p {
+  display: block;
 }

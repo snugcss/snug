@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* ======================================================
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+-> src/_scss/_components/ -> _button.scss
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+====================================================== */
+$theme-color: #2dc0a6;
+$button-color: #fff;
+$button-color-hover: orange;
+$button-fillcolor: orange;
+$button-bordercolor: orange;
+$button-round: 6px;
+
+.button {
+  background: $theme-color;
+  border: solid 1px $theme-color;
+  color: $button-color;
+  display: inline-block;
+  font-size: 1.1rem;
+  -webkit-font-smoothing: antialiased;
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  transition: all .2s linear;
+  &:hover {
+    background: transparent;
+    color: $theme-color;
+  }
+}
+
+.button-large {
+  @extend .button;
+  font-size: 1.3rem;
+  padding: 1.6rem 3rem;
+}
+
+.button-primary {
+  @extend .button;
+  border-radius: $button-round;
+}
+
+.button-primary-large {
+  @extend .button-large;
+  border-radius: $button-round;
+}

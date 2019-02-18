@@ -4,12 +4,17 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
--> sass -> _custom.scss
+-> src/_scss/_snug/ -> _snug.scss
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ====================================================== */
-.text {
-  color: #cc0;
-  font-size: 15px;
-}
+
+/* Framework corefile */
+@import "./_config/config";
+
+/* Grid system */
+@import "./_layout/grid";
+
+/* Some components */
+@import "./_components/components";

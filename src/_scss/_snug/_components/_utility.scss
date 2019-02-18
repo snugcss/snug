@@ -4,12 +4,14 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
--> sass -> _custom.scss
+-> src/_scss/_components/ -> _utility.scss
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ====================================================== */
-.text {
-  color: #cc0;
-  font-size: 15px;
+.u-fullwidth {
+  @include max(767) {
+    display: block;
+    width: 100%;
+  }
 }
