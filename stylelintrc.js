@@ -17,7 +17,7 @@ module.exports = {
             "ignoreAtRules": ["value", "for", "media", "if", "each", "mixin", "content", "include", "function", "import", "else"] // - 配列内のプロパティは除外
         }],
         "order/properties-alphabetical-order": true, // アルファベット順に並べ替える
-        "indentation": 4, // - インデントを指定
+        "indentation": 2, // - インデントを指定
         "string-quotes": "double", // - 文字列の引用符をシングルで括るかかダブルで括るか
         "no-duplicate-selectors": true, // - セレクタの重複を禁止
         "color-hex-case": "lower", // - 16進数のカラーコードを大文字か小文字か
