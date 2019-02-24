@@ -14,30 +14,37 @@
     "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
     "compile": "node-sass -w --include-path scss src/_scss/main.scss src/css/main.css --output-style expanded",
     "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o src/css/main.min.css",
-    "sync": "browser-sync start --server ./src --no-notify --no-open --files='./src/*.html, ./src/css/*.css, ./src/js/*.js'",
-    "all": "npm-run-all -p stylelint compile build sync"
+    "pug": "pug -w src/_pug/*.pug -P -O ./pug.json -o ./dist/",
+    "imagemin": "node imagemin.js",
+    "sync": "browser-sync start --server ./dist --no-notify --no-open --files='./src/*.html, ./dist/css/*.css, ./src/js/*.js, ./src/images/*'",
+    "all": "npm-run-all -p stylelint imagemin compile build pug sync"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "author": "Masato Nakamura",
   "license": "MIT",
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",
+    "imagemin": "^6.1.0",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
     "postcss-cli": "^6.1.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^12.0.0",
-    "stylelint": "^9.5.0",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-order": "^2.0.0"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.3",
-    "cssnano": "^4.1.0",
-    "node-sass": "^4.9.3",
-    "npm-run-all": "^4.1.3",
-    "postcss-cssnext": "^3.1.0",
-    "postcss-import": "^12.0.0",
+    "pug-cli": "^1.0.0-alpha6",
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^2.0.0"

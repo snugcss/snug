@@ -14,7 +14,7 @@ module.exports = {
             "declarations"
         ],
         "at-rule-no-unknown":[true, {
-            "ignoreAtRules": ["value", "for", "media", "if", "each", "mixin", "content", "include", "function", "import", "else"] // - 配列内のプロパティは除外
+            "ignoreAtRules": ["value", "for", "media", "if", "each", "mixin", "content", "include", "function", "import", "else", "extend"] // - 配列内のプロパティは除外
         }],
         "order/properties-alphabetical-order": true, // アルファベット順に並べ替える
         "indentation": 2, // - インデントを指定
