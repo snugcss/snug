@@ -10,15 +10,6 @@
     "responsive",
     "web"
   ],
-  "scripts": {
-    "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
-    "compile": "node-sass -w --include-path scss src/_scss/main.scss src/css/main.css --output-style expanded",
-    "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o src/css/main.min.css",
-    "pug": "pug -w src/_pug/*.pug -P -O ./pug.json -o ./dist/",
-    "imagemin": "node imagemin.js",
-    "sync": "browser-sync start --server ./dist --no-notify --no-open --files='./src/*.html, ./dist/css/*.css, ./src/js/*.js, ./src/images/*'",
-    "all": "npm-run-all -p stylelint imagemin compile build pug sync"
-  },
   "browserify": {
     "transform": [
       "babelify"
@@ -26,10 +17,19 @@
   },
   "author": "Masato Nakamura",
   "license": "MIT",
+  "scripts": {
+    "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
+    "compile": "node-sass -w --include-path scss src/_scss/main.scss dist/css/main.css --output-style expanded",
+    "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o dist/css/main.min.css",
+    "pug": "pug -w src/_pug/*.pug -P -O ./pug.json -o ./dist/",
+    "imagemin": "node imagemin.js -w",
+    "sync": "browser-sync start --server ./dist --no-notify --no-open --files='./src/*.html, ./dist/css/*.css, ./src/js/*.js, ./src/images/*', ./src/_pug/*",
+    "all": "npm-run-all -p stylelint imagemin compile build pug sync"
+  },
   "devDependencies": {
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-polyfill": "^6.20.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.0",

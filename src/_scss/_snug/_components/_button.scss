@@ -51,3 +51,29 @@ $button-round: 6px;
 
   border-radius: $button-round;
 }
+
+.button-ghost {
+  @extend .button;
+
+  background: transparent;
+  color: $theme-color;
+
+  &:hover {
+    background: $theme-color;
+    color: $button-color;
+  }
+}
+
+.button-round {
+  @extend .button;
+
+  border-radius: 35px;
+  padding: 1.2rem 2rem;
+}
+
+.button-round-large {
+  @extend .button-round;
+
+  font-size: 1.3rem;
+  padding: 1.6rem 3rem;
+}

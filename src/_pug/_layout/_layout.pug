@@ -1,0 +1,22 @@
+doctype
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+
+    //- OGP
+    block var_meta
+    include ../_components/_meta.pug
+
+    //- Import CSS Assets
+    include ../_components/_assets.pug
+
+    block title
+      title TEST
+  body(ontouchstart="")
+    include ../_components/_header.pug
+
+    main
+      block content
+
+    include ../_components/_footer.pug

@@ -693,22 +693,8 @@ p {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ====================================================== */
-.text-header {
-  color: #444;
-  font-size: 32px;
-  line-height: 1.5;
-}
-
-.text-lead {
-  color: #444;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.text-notes {
-  color: #444;
-  font-size: 11px;
-  line-height: 1.5;
+p {
+  display: block;
 }
 
 /* ======================================================
@@ -720,7 +706,7 @@ p {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ====================================================== */
-.button, .button-large, .button-primary-large, .button-primary, .button-ghost, .button-round, .button-round-large {
+.button, .button-large, .button-primary-large, .button-primary, .button-ghost {
   background: #2dc0a6;
   border: solid 1px #2dc0a6;
   color: #fff;
@@ -732,7 +718,7 @@ p {
   transition: all .2s linear;
 }
 
-.button:hover, .button-large:hover, .button-primary-large:hover, .button-primary:hover, .button-ghost:hover, .button-round:hover, .button-round-large:hover {
+.button:hover, .button-large:hover, .button-primary-large:hover, .button-primary:hover, .button-ghost:hover {
   background: transparent;
   color: #2dc0a6;
 }
@@ -752,82 +738,11 @@ p {
 
 .button-ghost {
   background: transparent;
-  color: #2dc0a6;
 }
 
 .button-ghost:hover {
   background: #2dc0a6;
   color: #fff;
-}
-
-.button-round, .button-round-large {
-  border-radius: 35px;
-  padding: 1.2rem 2rem;
-}
-
-.button-round-large {
-  font-size: 1.3rem;
-  padding: 1.6rem 3rem;
-}
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/ -> _vard.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.card {
-  box-shadow: 3px 2px 2.5rem -3px #dcdcdc;
-  border-radius: 12px;
-  overflow: hidden;
-  display: block;
-}
-
-.card-detail {
-  padding: 3rem 2rem;
-}
-
-.card-title {
-  color: #444;
-  font-size: 2.2rem;
-  font-weight: 900;
-}
-
-.card-description {
-  color: #444;
-  letter-spacing: 0.1rem;
-  font-size: 1.4rem;
-  margin-top: 1rem;
-}
-
-.card-date {
-  color: #848484;
-  display: block;
-  font-size: 1.1rem;
-  margin-top: 0.5rem;
-}
-
-.card-category {
-  font-size: 1.1rem;
-  background: #2dc0a6;
-  color: #fff;
-  display: inline-block;
-  padding: 0.8rem 1rem;
-  letter-spacing: 0.1rem;
-  margin-top: 3rem;
-}
-
-.card-category + .card-category {
-  margin-left: 5px;
-}
-
-.card-button {
-  display: block;
-  position: absolute;
-  bottom: 3rem;
 }
 
 /* ======================================================
@@ -846,7 +761,7 @@ p {
   }
 }
 
-/* Example Style */
+/* Write your project's style */
 .text {
   background: #eee;
   color: #444;
@@ -865,8 +780,5 @@ p {
 .notes {
   display: block;
   font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 1.1rem;
   margin: 1rem 0 3rem;
 }
-
-/* Write your project's style */

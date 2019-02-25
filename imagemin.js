@@ -12,7 +12,7 @@ imagemin(['src/images/**/*.{jpg,png,gif,svg}'], {
         imageminSvgo()
     ],
     replaceOutputDir: output => {
-        return output.replace(/images\//, 'dist/images/')
+        return output.replace(/images\//, '../dist/images/')
     }
 }).then(() => {
     console.log('Images optimized');

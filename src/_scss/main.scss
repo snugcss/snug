@@ -13,7 +13,7 @@
 /* Import CSS Framework */
 @import "./_snug/snug";
 
-/* Write your project's style */
+/* Example Style */
 .text {
   background: #eee;
   color: #444;
@@ -32,5 +32,8 @@
 .notes {
   display: block;
   font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+  font-size: 1.1rem;
   margin: 1rem 0 3rem;
 }
+
+/* Write your project's style */
