@@ -48,13 +48,6 @@
   display: block;
 }
 
-// prefix
-@mixin prefix($property, $value) {
-  @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
-    #{$prefix}#{$property}: $value;
-  }
-}
-
 // position-center
 @mixin position-center($top: 50%, $left: 50%, $translateX: -50%, $translateY: -50%) {
   left: $left;
