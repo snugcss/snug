@@ -1,0 +1,19 @@
+.header {
+  height: 60px;
+  left: 0;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-logo {
+  color: #848484;
+  font-weight: 900;
+  position: relative;
+  z-index: 4;
+}
