@@ -331,10 +331,9 @@ p {
 
 ====================================================== */
 .header {
-  background: rgba(255, 255, 255, 0.8);
   left: 0;
   margin: 0 auto;
-  padding: 50px 10px;
+  padding: 10px;
   position: fixed;
   right: 0;
   top: 0;
@@ -347,6 +346,43 @@ p {
   font-weight: 900;
   position: relative;
   z-index: 4;
+}
+
+/* ======================================================
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+-> sass -> __components -> _hero.scss
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+====================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image {
+  background-image: url(../images/sample.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  padding-top: 38%;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.hero-title {
+  color: #fff;
+  letter-spacing: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-align: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 /* ===== @class ===== */
@@ -934,12 +970,12 @@ p {
 
 ====================================================== */
 .trigger {
+  bottom: 0;
   display: block;
+  margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 0;
-  margin: auto;
   width: 20px;
   z-index: 4;
 }
@@ -1008,6 +1044,10 @@ p {
 }
 
 /* Example Style */
+.content {
+  padding: 100px 0;
+}
+
 .text {
   background: #eee;
   color: #444;

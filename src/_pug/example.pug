@@ -25,102 +25,107 @@ block title
   title= og_title
 
 block content
-  article.l-container
-    h3 Grid Components
-    .l-row
-      .l-grid-1
-        p.text One
-      .l-grid-11
-        p.text Eleven
-      .l-grid-2
-        p.text Two
-      .l-grid-10
-        p.text Nine
-      .l-grid-3
-        p.text Three
-      .l-grid-9
-        p.text Nine
-      .l-grid-4
-        p.text Four
-      .l-grid-8
-        p.text Eight
-      .l-grid-5
-        p.text Five
-      .l-grid-7
-        p.text Seven
-      .l-grid-6
-        p.text Six
-      .l-grid-6
-        p.text Six
-      .l-grid-7
-        p.text Seven
-      .l-grid-5
-        p.text Five
-      .l-grid-8
-        p.text Eight
-      .l-grid-4
-        p.text Four
-      .l-grid-9
-        p.text Nine
-      .l-grid-3
-        p.text Three
-      .l-grid-10
-        p.text Nine
-      .l-grid-2
-        p.text Two
-      .l-grid-11
-        p.text Eleven
-      .l-grid-1
-        p.text One
-
-  article.l-container
-    h3 Button
-    p
-      a.button(href="#") READ MORE
-      span.notes .button
-    p
-      a.button-large(href="#") READ MORE
-      span.notes .button-large
-    p
-      a.button-primary(href="#") READ MORE
-      span.notes .button-primary
-    p
-      a.button-primary-large(href="#") READ MORE
-      span.notes .button-primary-laege
-    p
-      a.button-ghost(href="#") READ MORE
-      span.notes .button-ghost
-    p
-      a.button-round(href="#") READ MORE
-      span.notes .button-round
-    p
-      a.button-round-large(href="#") READ MORE
-      span.notes .button-round-large
-    p
-      a.button.u-fullwidth(href="#") READ MORE
-      span.notes .button.u-fullwidth
-
-  article.l-container
-    h3 Typography
-    p.text-header Heading
-      span.notes .text-header
-    p.text-lead Lead Sentense
-      span.notes .text-lead
-    p.text-notes Notes
-      span.notes .text-notes
-
-  article.l-container
-    h3 Card
-    .l-row
-      - for (var i = 0; i < 3; i++)
+  include _components/_hero.pug
+  article.content
+    section.l-container
+      h3 Grid Components
+      .l-row
+        .l-grid-1
+          p.text One
+        .l-grid-11
+          p.text Eleven
+        .l-grid-2
+          p.text Two
+        .l-grid-10
+          p.text Ten
+        .l-grid-3
+          p.text Three
+        .l-grid-9
+          p.text Nine
         .l-grid-4
-          a.card
-            img(src="images/sample.jpg")
-            section.card-detail
-              h2.card-title Sample Post
-              p.card-description Post description
-              p.card-date Feb 25th, 2019
-              p.card-category Development
-              p.card-category Life
-              p.card-category Travel
-    span.notes .card
+          p.text Four
+        .l-grid-8
+          p.text Eight
+        .l-grid-5
+          p.text Five
+        .l-grid-7
+          p.text Seven
+        .l-grid-6
+          p.text Six
+        .l-grid-6
+          p.text Six
+        .l-grid-7
+          p.text Seven
+        .l-grid-5
+          p.text Five
+        .l-grid-8
+          p.text Eight
+        .l-grid-4
+          p.text Four
+        .l-grid-9
+          p.text Nine
+        .l-grid-3
+          p.text Three
+        .l-grid-10
+          p.text Ten
+        .l-grid-2
+          p.text Two
+        .l-grid-11
+          p.text Eleven
+        .l-grid-1
+          p.text One
+
+  article.content
+    section.l-container
+      h3 Button
+      p
+        a.button(href="#") READ MORE
+        span.notes .button
+      p
+        a.button-large(href="#") READ MORE
+        span.notes .button-large
+      p
+        a.button-primary(href="#") READ MORE
+        span.notes .button-primary
+      p
+        a.button-primary-large(href="#") READ MORE
+        span.notes .button-primary-laege
+      p
+        a.button-ghost(href="#") READ MORE
+        span.notes .button-ghost
+      p
+        a.button-round(href="#") READ MORE
+        span.notes .button-round
+      p
+        a.button-round-large(href="#") READ MORE
+        span.notes .button-round-large
+      p
+        a.button.u-fullwidth(href="#") READ MORE
+        span.notes .button.u-fullwidth
+
+  article.content
+    section.l-container
+      h3 Typography
+      p.text-header Heading
+        span.notes .text-header
+      p.text-lead Lead Sentense
+        span.notes .text-lead
+      p.text-notes Notes
+        span.notes .text-notes
+
+  article.conent
+    section.l-container
+      h3 Card
+      .l-row
+        - for (var i = 0; i < 3; i++)
+          .l-grid-4
+            a.card
+              img(src="images/sample.jpg")
+              section.card-detail
+                h2.card-title Sample Post
+                p.card-description Post description
+                p.card-date Feb 25th, 2019
+                p.card-category Development
+                p.card-category Life
+                p.card-category Travel
+      span.notes .card

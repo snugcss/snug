@@ -11,12 +11,12 @@
 ====================================================== */
 
 .trigger {
+  bottom: 0;
   display: block;
+  margin: auto;
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 0;
-  margin: auto;
   width: 20px;
   z-index: 4;
 
