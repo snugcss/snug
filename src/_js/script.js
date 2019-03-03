@@ -1,1 +1,1 @@
-console.log('Hello, World')
+import _trigger from "./_trigger";
