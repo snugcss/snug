@@ -330,6 +330,26 @@ p {
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ====================================================== */
+.header {
+  height: 60px;
+  left: 0;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-logo {
+  color: #848484;
+  font-weight: 900;
+  position: relative;
+  z-index: 4;
+}
+
 /* ===== @class ===== */
 .l-full {
   width: 100%;
@@ -836,6 +856,139 @@ p {
   bottom: 3rem;
   display: block;
   position: absolute;
+}
+
+/* ======================================================
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+-> sass -> __components -> _gnav.scss
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+====================================================== */
+.gnav {
+  background: rgba(0, 0, 0, 0.9);
+  display: table;
+  height: 100vh;
+  left: auto;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate(3%, 0);
+  transition: all 0.4s cubic-bezier(0.55, 0, 0.13, 1);
+  visibility: hidden;
+  width: 100%;
+  z-index: 2;
+}
+
+.gnav.is-open {
+  opacity: 1;
+  transform: translate(0, 0);
+  visibility: visible;
+}
+
+.gnav-list {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.gnav-list-item {
+  opacity: 0;
+  transform: translate(2rem, 0);
+  transition: all 0.6s cubic-bezier(0.55, 0, 0.13, 1);
+}
+
+.gnav-list-item.is-active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.gnav-list-link {
+  color: #aaa;
+  display: block;
+  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
+  font-size: 1.3rem;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .2rem;
+  margin-right: -.2s;
+  padding: 1rem;
+  text-align: center;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.gnav-list-link:hover {
+  color: #f7f8f9;
+  letter-spacing: .5rem;
+  margin-right: -.5rem;
+}
+
+/* ======================================================
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+-> src/_scss/_components/ -> _trigger.scss
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+====================================================== */
+.trigger {
+  display: block;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60px;
+  z-index: 4;
+}
+
+.trigger:hover {
+  cursor: pointer;
+}
+
+.trigger-line {
+  background: #111;
+  border-radius: 8px;
+  bottom: 0;
+  display: block;
+  height: 3px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all .2s ease-out;
+  width: 50%;
+}
+
+.trigger-line:nth-of-type(1) {
+  top: -2rem;
+}
+
+.trigger-line:nth-of-type(3) {
+  bottom: -2rem;
+}
+
+.trigger.is-open .trigger-line {
+  background: #fff;
+  height: 1px;
+}
+
+.trigger.is-open .trigger-line:nth-of-type(1) {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.trigger.is-open .trigger-line:nth-of-type(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.trigger.is-open .trigger-line:nth-of-type(3) {
+  bottom: 0;
+  transform: rotate(-45deg);
 }
 
 /* ======================================================
