@@ -331,11 +331,10 @@ p {
 
 ====================================================== */
 .header {
-  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
   left: 0;
   margin: 0 auto;
-  max-width: 960px;
-  padding: 10px;
+  padding: 50px 10px;
   position: fixed;
   right: 0;
   top: 0;
@@ -936,11 +935,12 @@ p {
 ====================================================== */
 .trigger {
   display: block;
-  height: 60px;
   position: absolute;
   right: 0;
   top: 0;
-  width: 60px;
+  bottom: 0;
+  margin: auto;
+  width: 20px;
   z-index: 4;
 }
 
@@ -960,7 +960,7 @@ p {
   right: 0;
   top: 0;
   transition: all .2s ease-out;
-  width: 50%;
+  width: 100%;
 }
 
 .trigger-line:nth-of-type(1) {
