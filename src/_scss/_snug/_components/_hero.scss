@@ -18,17 +18,17 @@
   background-image: url(../images/sample.jpg);
   background-position: 50% 50%;
   background-size: cover;
-  padding-top: 38%;
   display: block;
+  padding-top: 38%;
   position: relative;
   width: 100%;
 }
 
 .hero-title {
   color: #fff;
-  letter-spacing: 0.5rem;
   font-size: 1.3rem;
   font-weight: 900;
+  letter-spacing: .5rem;
   text-align: center;
 
   @include position-center;

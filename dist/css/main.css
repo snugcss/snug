@@ -366,17 +366,17 @@ p {
   background-image: url(../images/sample.jpg);
   background-position: 50% 50%;
   background-size: cover;
-  padding-top: 38%;
   display: block;
+  padding-top: 38%;
   position: relative;
   width: 100%;
 }
 
 .hero-title {
   color: #fff;
-  letter-spacing: 0.5rem;
   font-size: 1.3rem;
   font-weight: 900;
+  letter-spacing: .5rem;
   text-align: center;
   left: 50%;
   position: absolute;
@@ -1025,6 +1025,33 @@ p {
 .trigger.is-open .trigger-line:nth-of-type(3) {
   bottom: 0;
   transform: rotate(-45deg);
+}
+
+.footer {
+  background: #444;
+  padding: 70px 0;
+}
+
+.footer-menu + .footer-menu {
+  margin-top: 3rem;
+}
+
+.footer-menu-link {
+  display: block;
+  padding: 1rem 0;
+  color: #f7f8f9;
+}
+
+.copyright-wrapper {
+  padding: 30px 0;
+}
+
+.copyright-txt {
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+  padding: 0 30px;
+  letter-spacing: 0.1rem;
 }
 
 /* ======================================================
