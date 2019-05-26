@@ -1,43 +1,13 @@
-@charset "UTF-8";
+/*
+  * main.scss
+  *
+  */
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/ -> _main.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-
-/* Import CSS Framework */
+/* ------------------------
+  SNUG CSS
+------------------------ */
 @import "./_snug/snug";
 
-/* Example Style */
-.content {
-  padding: 100px 0;
-}
-
-.text {
-  background: #eee;
-  color: #444;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 12px;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 2rem;
-  padding: .8rem;
-  transition: all .2s linear;
-
-  &:hover {
-    background: #ccc;
-  }
-}
-
-.notes {
-  display: block;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 1.1rem;
-  margin: 1rem 0 3rem;
-}
-
-/* Write your project's style */
+/* ------------------------
+  Custom Style
+------------------------ */

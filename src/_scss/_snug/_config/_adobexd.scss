@@ -1,37 +1,35 @@
-@charset "UTF-8";
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _adobexd.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
+/* ------------------------
+  Grid Setting
+------------------------ */
+/* Max Column ------- */
 $maxcolumn: 12;
+
+/* Grid Gutter Size ------- */
 $gutter: 28px;
 
-/* 1920以上 */
+/* ------------------------
+  Margin of container outside
+------------------------ */
+/* Extra Large Display ------- */
 $retina: 468px;
 
-/* 1920x1080 (デスクトップ) */
+/* Full HD Display ------- */
 $desktop: 146px;
 
-/* 1440x800 (MacBook Air / MacBook Pro / Surface Pro) */
+/* 1440x800 ------- */
 $laptoplarge: 146px;
 
-/* 1366x768 (MacBook / MacBook Air) */
+/* 1366x768 ------- */
 $laptop: 139px;
 
-/* iPad Pro 12.9inch */
+/* iPad Pro 12.9inch ------- */
 $ipadpro129-port: 118px;
 $ipadpro129-land: 121px;
 
-/* iPad Pro 10.5inch */
+/* iPad Pro 10.5inch ------- */
 $ipadpro105-port: 84px;
 $ipadpro105-land: 83px;
 
-/* iPad / iPad mini & Android Tablet */
+/* iPad / iPad mini & Android Tablet ------- */
 $ipad-port: 82px;
 $ipad-land: 80px;

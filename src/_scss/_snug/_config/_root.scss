@@ -1,33 +1,21 @@
+/*
+  * _root.scss
+  *
+  */
 
-@charset "UTF-8";
-
-/* Custom property */
-
+/* ------------------------
+  Custom Properties
+------------------------ */
 :root {
-  /* ===== Desktop Large / Retina ===== */
   --container-desktop-large: calc(2560px - (#{$retina} * 2));
-
-  /* ===== Desktop ===== */
   --container-desktop: calc(1920px - (#{$desktop} * 2));
-
-  /* ===== MacBook Air / MacBook Pro ===== */
   --container-laptop-large: calc(1440px - (#{$laptoplarge} * 2));
-
-  /* ===== MacBook / MacBook Air ===== */
   --container-laptop: calc(1366px - (#{$laptop} * 2));
-
-  /* ===== iPad Pro 12.9inch ===== */
   --container-ipadpro129-port: calc(1366px - (#{$ipadpro129-port} * 2));
   --container-ipadpro129-land: calc(1024px - (#{$ipadpro129-land} * 2));
-
-  /* ===== iPad Pro 10.5inch ===== */
   --container-ipadpro105-port: calc(834px - (#{$ipadpro105-port} * 2));
   --container-ipadpro105-land: calc(1112px - (#{$ipadpro105-land} * 2));
-
-  /* ===== iPad / iPad mini ===== */
   --container-ipad-port: calc(768px - (#{$ipad-port} * 2));
   --container-ipad-land: calc(1024px - (#{$ipad-land} * 2));
-
-  /* ===== Grid Gutter ===== */
   --grid-gutter: #{$gutter};
 }

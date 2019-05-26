@@ -1,16 +1,11 @@
-@charset "UTF-8";
+/*
+  * _mixin.scss
+  *
+  */
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _mixin.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-
-// mediaquery
+/* ------------------------
+  Media Query
+------------------------ */
 @mixin max($width) {
   @media only screen and (max-width: $width + px) {
     @content;
@@ -29,26 +24,32 @@
   }
 }
 
+/* For Tablet ------- */
 @mixin tablet($width,$height) {
   @media only screen and (device-width: $width + px) and (device-height: $height + px) {
     @content;
   }
 }
 
+/* For Smartphone ------- */
 @mixin device($width,$height) {
   @media only screen and (device-width: $width + px) and (device-height: $height + px) {
     @content;
   }
 }
 
-// clearfix
+/* ------------------------
+  Clear Fix
+------------------------ */
 @mixin clearfix {
   clear: both;
   content: "";
   display: block;
 }
 
-// position-center
+/* ------------------------
+  Position Center
+------------------------ */
 @mixin position-center($top: 50%, $left: 50%, $translateX: -50%, $translateY: -50%) {
   left: $left;
   position: absolute;
@@ -57,7 +58,9 @@
   width: 100%;
 }
 
-// flexbox
+/* ------------------------
+  Flex Box
+------------------------ */
 @mixin flex($justify: flex-start, $align: flex-start, $direction: column ) {
   align-items: $align;
   display: flex;

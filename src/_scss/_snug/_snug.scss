@@ -1,17 +1,336 @@
-@charset "UTF-8";
+/*
+  * _snug.scss
+  *
+  */
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_snug/ -> _snug.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-
-/* Framework corefile */
+/* ------------------------
+  Import Config
+------------------------ */
 @import "./_config/config";
 
-/* SNUG components */
-@import "./_components/components";
+/* ------------------------
+  SNUG Grid System
+------------------------ */
+%row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+%column {
+  flex: 1;
+  margin: 0 calc(#{$gutter} / 2);
+  position: relative;
+}
+
+.sng-container {
+  margin: 0 auto;
+  max-width: calc(#{$container-desktop-large} + #{$gutter});
+  padding: 0 calc(#{$gutter} / 2);
+
+  @include max(1920) {
+    max-width: calc(#{$container-desktop} + #{$gutter});
+  }
+
+  // Macbook Air 13' / MacBook Pro / Surface Pro
+  @include max(1440) {
+    max-width: calc(#{$container-laptop-large} + #{$gutter});
+  }
+
+  // Macbook Air 11'
+  @include max(1366) {
+    max-width: calc(#{$container-laptop} + #{$gutter});
+  }
+
+  // iPad Pro 12.9' Landscape
+  @include tablet(1366,1024) {
+    max-width: calc(#{$container-ipadpro129-land} + #{$gutter});
+  }
+
+  // iPad Pro 10.5' Landscape
+  @include tablet(1112,834) {
+    max-width: calc(#{$container-ipadpro105-land} + #{$gutter});
+  }
+
+  // iPad Pro 12.9' Portlait
+  @include tablet(1024,1366) {
+    max-width: calc(#{$container-ipadpro129-port} + #{$gutter});
+  }
+
+  // iPad and Android Tablet Landscape
+  @include tablet(1024,768) {
+    max-width: calc(#{$container-ipad-land} + #{$gutter});
+  }
+
+  // iPad Pro 10.5' Portlait
+  @include tablet(834,1112) {
+    max-width: calc(#{$container-ipadpro105-port} + #{$gutter});
+  }
+
+  // iPad and Android Tablet Portlait
+  @include tablet(768,1024) {
+    max-width: calc(#{$container-ipad-port} + #{$gutter});
+  }
+
+  // Smartphone
+  @include max(767) {
+    max-width: calc(100%);
+  }
+}
+
+.grid-row {
+  @extend %row;
+
+  margin-left: calc(#{$gutter} / -2);
+  margin-right: calc(#{$gutter} / -2);
+
+  > [class*="column"] {
+    @extend %column;
+  }
+
+  > [class*="offset"] {
+    @include max(767) {
+      margin: 0 calc(#{$gutter} / 2);
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .column-#{$i} {
+      flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
+      margin: 0 calc(#{$gutter} / 2);
+      max-width: calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .md-#{$i} {
+      @include max(1280) {
+        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
+        margin: 0 calc(#{$gutter} / 2);
+        max-width: calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
+      }
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .sm-#{$i} {
+      @include max(767) {
+        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
+        margin: 0 calc(#{$gutter} / 2);
+        max-width: calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
+      }
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .offset-left-#{$i} {
+      margin-left: calc((100% / ( #{$maxcolumn} / #{$i})) + (#{$gutter} / 2));
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .offset-right-#{$i} {
+      margin-right: calc((100% / ( #{$maxcolumn} / #{$i})) + (#{$gutter} / 2));
+    }
+  }
+}
+
+.tile-row {
+  @extend %row;
+
+  &.md-full {
+    @include max(1280) {
+      margin-left: calc(#{$gutter} / -2);
+      margin-right: calc(#{$gutter} / -2);
+    }
+  }
+
+  &.sm-full {
+    @include max(767) {
+      margin-left: calc(#{$gutter} / -2);
+      margin-right: calc(#{$gutter} / -2);
+    }
+  }
+
+  > [class*="column"] {
+    flex: 1;
+    margin: 0;
+    position: relative;
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .column-#{$i} {
+      flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})));
+      max-width: calc((100% / ( #{$maxcolumn} / #{$i})));
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .md-#{$i} {
+      @include max(1280) {
+        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})));
+        max-width: calc((100% / ( #{$maxcolumn} / #{$i})));
+      }
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .sm-#{$i} {
+      @include max(767) {
+        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})));
+        max-width: calc((100% / ( #{$maxcolumn} / #{$i})));
+      }
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .offset-left-#{$i} {
+      margin-left: calc((100% / ( #{$maxcolumn} / #{$i})));
+    }
+  }
+
+  @for $i from 1 through $maxcolumn {
+    > .offset-right-#{$i} {
+      margin-right: calc((100% / ( #{$maxcolumn} / #{$i})));
+    }
+  }
+}
+
+@mixin sng-container {
+  margin: 0 auto;
+  max-width: calc(#{$container-desktop} + #{$gutter});
+  padding: 0 calc(#{$gutter} / 2);
+
+  @include max(1440) {
+    max-width: calc(#{$container-laptop-large} + #{$gutter});
+  }
+
+  @include max(1366) {
+    max-width: calc(#{$container-laptop} + #{$gutter});
+  }
+
+  @include tablet(1366,1024) {
+    max-width: calc(#{$container-ipadpro129-land} + #{$gutter});
+  }
+
+  @include tablet(1024,1366) {
+    max-width: calc(#{$container-ipadpro129-port} + #{$gutter});
+  }
+
+  @include tablet(1112,834) {
+    max-width: calc(#{$container-ipadpro105-land} + #{$gutter});
+  }
+
+  @include tablet(834,1112) {
+    max-width: calc(#{$container-ipadpro105-port} + #{$gutter});
+  }
+
+  @include tablet(1024,768) {
+    max-width: calc(#{$container-ipad-land} + #{$gutter});
+  }
+
+  @include tablet(768,1024) {
+    max-width: calc(#{$container-ipad-port} + #{$gutter});
+  }
+
+  @include max(767) {
+    max-width: calc(100% - #{$gutter} / 2);
+  }
+}
+
+@mixin grid-row {
+  @extend .grid-row ;
+}
+
+@mixin tile-row {
+  @extend .tile-row ;
+}
+
+@mixin grid-style {
+  margin: 0 calc(#{$gutter} / 2);
+  position: relative;
+}
+
+@mixin offset($offset-left:0,$offset-right:0) {
+  margin-left: calc(( 100% / ( #{$maxcolumn} / #{$offset-left})) + (#{$gutter} / 2));
+  margin-right: calc(( 100% / ( #{$maxcolumn} / #{$offset-right})) + (#{$gutter} / 2));
+
+  @if $offset-left == 0 {
+    margin-left: calc(#{$gutter} / 2);
+  }
+
+  @if $offset-left !=0 {
+    margin-left: calc(( 100% / ( #{$maxcolumn} / #{$offset-left})) + (#{$gutter} / 2));
+
+    @include max(767) {
+      margin-left: calc(#{$gutter} / 2);
+    }
+  }
+
+  @if $offset-right == 0 {
+    margin-right: calc(#{$gutter} / 2);
+  }
+
+  @if $offset-right !=0 {
+    margin-right: calc(( 100% / ( #{$maxcolumn} / #{$offset-right})) + (#{$gutter} / 2));
+
+    @include max(767) {
+      margin-right: calc(#{$gutter} / 2);
+    }
+  }
+}
+
+@mixin offset-left($offset-left:0) {
+  @if $offset-left == 0 {
+    margin-right: calc(#{$gutter} / 2);
+  }
+
+  @if $offset-left !=0 {
+    margin-left: calc(( 100% / ( #{$maxcolumn} / #{$offset-left})) + (#{$gutter} / 2));
+
+    @include max(767) {
+      margin-left: calc(#{$gutter} / 2);
+    }
+  }
+}
+
+@mixin offset-right($offset-right:0) {
+  @if $offset-right == 0 {
+    margin-right: calc(#{$gutter} / 2);
+  }
+
+  @if $offset-right !=0 {
+    margin-right: calc(( 100% / ( #{$maxcolumn} / #{$offset-right})) + (#{$gutter} / 2));
+
+    @include max(767) {
+      margin-right: calc(#{$gutter} / 2);
+    }
+  }
+}
+
+@mixin column($column:0) {
+  @if $column == 0 {
+    flex: 1;
+  }
+
+  @if $column !=0 {
+    flex: 0 0 calc((100% / (#{$maxcolumn} / #{$column})) - #{$gutter});
+    max-width: calc((100% / (#{$maxcolumn} / #{$column})) - #{$gutter});
+  }
+
+  margin: 0 calc(#{$gutter} / 2);
+  position: relative;
+}
+
+@mixin tile($tile:0) {
+  @if $tile == 0 {
+    flex: 1;
+  }
+
+  @if $tile !=0 {
+    flex: 0 0 calc(100% / #{$tile});
+    max-width: calc(100% / #{$tile});
+  }
+
+  position: relative;
+}

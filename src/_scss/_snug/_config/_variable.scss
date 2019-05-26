@@ -1,14 +1,12 @@
-@charset "UTF-8";
+/*
+  * _variable.scss
+  *
+  */
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _variable.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
+/* ------------------------
+  Grid Setting
+------------------------ */
+/* Grid Setting ------- */
 $container-desktop-large: calc(2560px - (#{$retina} * 2));
 $container-desktop: calc(1920px - (#{$desktop} * 2));
 $container-laptop-large: calc(1440px - (#{$laptoplarge} * 2));
