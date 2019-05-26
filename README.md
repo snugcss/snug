@@ -19,14 +19,14 @@ Markup is easy.
 
 1. Import with your html file.  
 ```
-<link rel="dist/css/main.min.css">
+<link rel="stylesheet" href="dist/css/main.min.css">
 ```
 
 or
 
 ```
 $ npm install snug-css
-<link rel=".node_modules/snugcss/dist/css/main.min.css">
+<link rel="stylesheet" href="./node_modules/snug-css/dist/css/main.min.css">
 ```
 
 
