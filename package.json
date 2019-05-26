@@ -29,5 +29,15 @@
     "stylelint": "^9.5.0",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-order": "^2.0.0"
-  }
+  },
+  "main": "postcss.config.js",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snugcss/snug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/snugcss/snug/issues"
+  },
+  "homepage": "https://github.com/snugcss/snug#readme"
 }
