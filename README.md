@@ -5,13 +5,13 @@ Build the 'layout grid' on HTML.
 
 ## Features
 
-* Light weight.
+* Light weight.  
 SNUG is vary light weight.  
   
 * Responsive.  
 Grid component made by flexbox.  
   
-* Easy.
+* Easy.  
 Markup is easy.  
   
 
@@ -52,13 +52,13 @@ $ npm install snug-css
 
 ## How to fix your Adobe XD's comp.
 
-1. Open your Adobe XD file.
+1. Open your Adobe XD file.  
 
-2. Visible grid.
+2. Visible grid.  
 
-3. Select layout grid mode.
+3. Select layout grid mode.  
 
-4. Customize.
+4. Customize.  
 Fix to variables.
 
 ```_adobexd.scss
