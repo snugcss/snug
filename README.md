@@ -26,7 +26,7 @@ or
 
 ```
 $ npm install snug-css
-<link rel=".nodemodules/snugcss/dist/css/main.min.css">
+<link rel=".node_modules/snugcss/dist/css/main.min.css">
 ```
 
 
