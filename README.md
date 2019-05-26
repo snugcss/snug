@@ -1,59 +1,103 @@
 # SNUG  
-#### A simple grid framework for Adobe XD.  
-Adobe XDのレイアウトグリッドをコードで再現できるシンプルなCSSフレームワークです。  
+#### A simple grid system for Adobe XD.  
+SNUG is CSS framework.  
+Build the 'layout grid' on HTML.  
 
-### レイアウトグリッドをコードで。  
-Adobe XDの機能「レイアウトグリッド」をコードで簡単に再現できるCSSフレームワークです。  
-### 柔軟なデザインを可能に。  
-従来のWEBフレームワークでは、スピーディに開発できるよう独自のデザイン（スタイル）が適用されています。SNUGはグリッド以外のコンポーネントは持たず、フレームワークに依存しないオリジナリティのあるデザインを可能にします。  
-### チーム開発をスマートに。  
-ディレクター、デザイナーはSNUGの知識は必要ありません。Adobe XDのレイアウトグリッドを使うことでワイヤーフレーム、デザイン、プロトタイプといった作業はフレームワークを意識せずに行うことができ、スマートに開発を進めることができます。  
+## Features
 
-## Features / 特徴
-
-* Build on SCSS  
-SNUGはSass / Scssを使った軽量なグリッドシステムです。  
-
-* Include Icon Font.  
-[Font Awesome 5](https://fontawesome.com/)をインストール済み。  
-
-* Customize.  
-SNUGは、ほかのツールと組み合わせやすいピュアなCSSフレームワークです。プロジェクト毎のカスタマイズも簡単にでき、コンフリクトを回避できます。  
+* Light weight.
+SNUG is vary light weight.  
+  
 * Responsive.  
-SNUGのグリッドシステムはデスクトップ、モバイルだけではなくAdobe XDで使えるアートボード全てに対応しています。  
+Grid component made by flexbox.  
+  
+* Easy.
+Markup is easy.  
+  
 
-## Quick start / クイックスタート
+## Quick start
 
-1. Download / ダウンロード
-Githubより[ダウンロード](https://github.com/snugcss/snug/archive/master.zip)します。
-
-2. Initialize / 初期設定
-解凍したら_init.scssを開きAdobeXdのレイアウトグリッドの値に合わせます。
+1. Import with your html file.  
 ```
-/* _init.scss */
-$maxcolumn: 12; // 列の値
-$gutter: 28px; // 段間隔の値
-
-$desktop: 146; //両サイドのマージンを単位なしで設定
+<link rel="dist/css/main.min.css">
 ```
-列、段間隔は共通。両サイドのマージンはアートボード毎に個別に設定してください。
 
-3. Markup / マークアップ
+or
+
 ```
-<div class="l-container">
-    <div class="l-row">
-        <div class="l-grid-12>
-            //コンテンツ
+$ npm install snug-css
+<link rel=".nodemodules/snugcss/dist/css/main.min.css">
+```
+
+
+2. Markups  
+```
+<div class="sng-container">
+    <div class="grid-row">
+        <div class="column-3 md-4 sm-6>
+            // Contents
+        </div>
+        <div class="column-3 md-4 sm-6>
+            // Contents
+        </div>
+        <div class="column-3 md-4 sm-6>
+            // Contents
+        </div>
+        <div class="column-3 md-4 sm-6>
+            // Contents
         </div>
     </div>
 </div>
 ```
 
-## タスクランナーによるコンパイル
-`node.js`をインストール後、`npm install`で必要なモジュールがインストールされます。コンパイルする時は`npm run all`で`stylelint`、`prefix`の付与、styleの`sort`、`Minify`までを自動で行います。
+## How to fix your Adobe XD's comp.
 
-## Changelog / ログ
-[CHANGELOG.md](https://github.com/snugcss/snug/blob/master/CHANGELOG.md)
+1. Open your Adobe XD file.
+
+2. Visible grid.
+
+3. Select layout grid mode.
+
+4. Customize.
+Fix to variables.
+
+```_adobexd.scss
+/* ------------------------
+  Grid Setting
+------------------------ */
+/* Max Column ------- */
+$maxcolumn: 12;
+
+/* Grid Gutter Size ------- */
+$gutter: 28px;
+
+/* ------------------------
+  Margin of container outside
+------------------------ */
+/* Extra Large Display ------- */
+$retina: 468px;
+
+/* Full HD Display ------- */
+$desktop: 146px;
+
+/* 1440x800 ------- */
+$laptoplarge: 146px;
+
+/* 1366x768 ------- */
+$laptop: 139px;
+
+/* iPad Pro 12.9inch ------- */
+$ipadpro129-port: 118px;
+$ipadpro129-land: 121px;
+
+/* iPad Pro 10.5inch ------- */
+$ipadpro105-port: 84px;
+$ipadpro105-land: 83px;
+
+/* iPad / iPad mini & Android Tablet ------- */
+$ipad-port: 82px;
+$ipad-land: 80px;
+```
 
 ## License
 [LICENSE.md](https://github.com/snugcss/snug/blob/master/LICENSE.md)
