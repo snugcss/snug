@@ -1,24 +1,18 @@
 @charset "UTF-8";
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/ -> _main.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-/* Import CSS Framework */
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_snug/ -> _snug.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-/* Framework corefile */
+/*
+  * main.scss
+  *
+  */
+/* ------------------------
+  SNUG CSS
+------------------------ */
+/*
+  * _snug.scss
+  *
+  */
+/* ------------------------
+  Import Config
+------------------------ */
 /*!
  * SNUG (https://snugcss.com/)
  * Copyright 2018 Masato Nakamura | M.A.DESIGN ART WORKS
@@ -175,15 +169,13 @@ select {
   padding: 0;
 }
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _global.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
+/*
+  * _base.scss
+  *
+  */
+/* ------------------------
+  Box sizing
+------------------------ */
 *,
 *::before,
 *::after {
@@ -193,6 +185,9 @@ select {
   padding: 0;
 }
 
+/* ------------------------
+  Default Font Setting
+------------------------ */
 html {
   font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Yu Gothic", "メイリオ", Meiryo, "MS P ゴシック", "Helveica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
@@ -204,6 +199,9 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* ------------------------
+  Clearfix
+------------------------ */
 .clearfix::after {
   clear: both;
   content: "";
@@ -228,6 +226,9 @@ video {
   max-width: 100%;
 }
 
+/* ------------------------
+  Heading Styles
+------------------------ */
 h1 {
   font-size: 36px;
   font-size: 3.6rem;
@@ -244,857 +245,883 @@ h3 {
 }
 
 h4 {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+h5 {
   font-size: 18px;
   font-size: 1.8rem;
 }
 
-h5 {
-  font-size: 14px;
-  font-size: 1.4rem;
-}
-
 h6 {
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 p {
-  font-size: 12px;
+  font-size: 13px;
   font-size: 1.2rem;
 }
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _mixin.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _adobexd.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-/* 1920以上 */
-/* 1920x1080 (デスクトップ) */
-/* 1440x800 (MacBook Air / MacBook Pro / Surface Pro) */
-/* 1366x768 (MacBook / MacBook Air) */
-/* iPad Pro 12.9inch */
-/* iPad Pro 10.5inch */
-/* iPad / iPad mini & Android Tablet */
-/* Custom property */
+/*
+  * _mixin.scss
+  *
+  */
+/* ------------------------
+  Media Query
+------------------------ */
+/* For Tablet ------- */
+/* For Smartphone ------- */
+/* ------------------------
+  Clear Fix
+------------------------ */
+/* ------------------------
+  Position Center
+------------------------ */
+/* ------------------------
+  Flex Box
+------------------------ */
+/* ------------------------
+  Grid Setting
+------------------------ */
+/* Max Column ------- */
+/* Grid Gutter Size ------- */
+/* ------------------------
+  Margin of container outside
+------------------------ */
+/* Extra Large Display ------- */
+/* Full HD Display ------- */
+/* 1440x800 ------- */
+/* 1366x768 ------- */
+/* iPad Pro 12.9inch ------- */
+/* iPad Pro 10.5inch ------- */
+/* iPad / iPad mini & Android Tablet ------- */
+/*
+  * _root.scss
+  *
+  */
+/* ------------------------
+  Custom Properties
+------------------------ */
 :root {
-  /* ===== Desktop Large / Retina ===== */
   --container-desktop-large: calc(2560px - (468px * 2));
-  /* ===== Desktop ===== */
   --container-desktop: calc(1920px - (146px * 2));
-  /* ===== MacBook Air / MacBook Pro ===== */
   --container-laptop-large: calc(1440px - (146px * 2));
-  /* ===== MacBook / MacBook Air ===== */
   --container-laptop: calc(1366px - (139px * 2));
-  /* ===== iPad Pro 12.9inch ===== */
   --container-ipadpro129-port: calc(1366px - (118px * 2));
   --container-ipadpro129-land: calc(1024px - (121px * 2));
-  /* ===== iPad Pro 10.5inch ===== */
   --container-ipadpro105-port: calc(834px - (84px * 2));
   --container-ipadpro105-land: calc(1112px - (83px * 2));
-  /* ===== iPad / iPad mini ===== */
   --container-ipad-port: calc(768px - (82px * 2));
   --container-ipad-land: calc(1024px - (80px * 2));
-  /* ===== Grid Gutter ===== */
   --grid-gutter: 28px;
 }
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> _config/ -> _variable.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-/* SNUG components */
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_components/ -> _componts.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.header {
-  left: 0;
-  margin: 0 auto;
-  padding: 10px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10;
+/*
+  * _variable.scss
+  *
+  */
+/* ------------------------
+  Grid Setting
+------------------------ */
+/* Grid Setting ------- */
+/* ------------------------
+  SNUG Grid System
+------------------------ */
+.grid-row, .tile-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
-.header-logo {
-  color: #848484;
-  font-weight: 900;
+.grid-row > [class*="column"] {
+  flex: 1;
+  margin: 0 calc(28px / 2);
   position: relative;
-  z-index: 4;
 }
 
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> __components -> _hero.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.hero {
-  position: relative;
-  width: 100%;
-}
-
-.hero-image {
-  background-image: url(../images/sample.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  display: block;
-  padding-top: 38%;
-  position: relative;
-  width: 100%;
-}
-
-.hero-title {
-  color: #fff;
-  font-size: 1.3rem;
-  font-weight: 900;
-  letter-spacing: .5rem;
-  text-align: center;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-}
-
-/* ===== @class ===== */
-.l-full {
-  width: 100%;
-}
-
-.l-container {
+.sng-container {
   margin: 0 auto;
   max-width: calc(calc(2560px - (468px * 2)) + 28px);
   padding: 0 calc(28px / 2);
 }
 
 @media only screen and (max-width: 1920px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1920px - (146px * 2)) + 28px);
   }
 }
 
 @media only screen and (max-width: 1440px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1440px - (146px * 2)) + 28px);
   }
 }
 
 @media only screen and (max-width: 1366px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1366px - (139px * 2)) + 28px);
   }
 }
 
 @media only screen and (device-width: 1366px) and (device-height: 1024px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1024px - (121px * 2)) + 28px);
   }
 }
 
 @media only screen and (device-width: 1112px) and (device-height: 834px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1112px - (83px * 2)) + 28px);
   }
 }
 
 @media only screen and (device-width: 1024px) and (device-height: 1366px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1366px - (118px * 2)) + 28px);
   }
 }
 
 @media only screen and (device-width: 1024px) and (device-height: 768px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(1024px - (80px * 2)) + 28px);
   }
 }
 
 @media only screen and (device-width: 834px) and (device-height: 1112px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(834px - (84px * 2)) + 28px);
   }
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) {
-  .l-container {
+  .sng-container {
     max-width: calc(calc(768px - (82px * 2)) + 28px);
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .l-container {
+  .sng-container {
     max-width: calc(100%);
   }
 }
 
-.l-row {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+.grid-row {
   margin-left: calc(28px / -2);
   margin-right: calc(28px / -2);
 }
 
-.l-laid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-}
-
 @media only screen and (max-width: 767px) {
-  .l-container .l-laid {
-    margin-left: calc(28px / -2);
-    margin-right: calc(28px / -2);
+  .grid-row > [class*="offset"] {
+    margin: 0 calc(28px / 2);
   }
 }
 
-[class*="grid-"] {
-  position: relative;
-}
-
-.l-grid-1 {
+.grid-row > .column-1 {
   flex: 0 0 calc((100% / ( 12 / 1)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 1)) - 28px);
 }
 
-.l-grid-2 {
+.grid-row > .column-2 {
   flex: 0 0 calc((100% / ( 12 / 2)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 2)) - 28px);
 }
 
-.l-grid-3 {
+.grid-row > .column-3 {
   flex: 0 0 calc((100% / ( 12 / 3)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 3)) - 28px);
 }
 
-.l-grid-4 {
+.grid-row > .column-4 {
   flex: 0 0 calc((100% / ( 12 / 4)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 4)) - 28px);
 }
 
-.l-grid-5 {
+.grid-row > .column-5 {
   flex: 0 0 calc((100% / ( 12 / 5)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 5)) - 28px);
 }
 
-.l-grid-6 {
+.grid-row > .column-6 {
   flex: 0 0 calc((100% / ( 12 / 6)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 6)) - 28px);
 }
 
-.l-grid-7 {
+.grid-row > .column-7 {
   flex: 0 0 calc((100% / ( 12 / 7)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 7)) - 28px);
 }
 
-.l-grid-8 {
+.grid-row > .column-8 {
   flex: 0 0 calc((100% / ( 12 / 8)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 8)) - 28px);
 }
 
-.l-grid-9 {
+.grid-row > .column-9 {
   flex: 0 0 calc((100% / ( 12 / 9)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 9)) - 28px);
 }
 
-.l-grid-10 {
+.grid-row > .column-10 {
   flex: 0 0 calc((100% / ( 12 / 10)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 10)) - 28px);
 }
 
-.l-grid-11 {
+.grid-row > .column-11 {
   flex: 0 0 calc((100% / ( 12 / 11)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 11)) - 28px);
 }
 
-.l-grid-12 {
+.grid-row > .column-12 {
   flex: 0 0 calc((100% / ( 12 / 12)) - 28px);
   margin: 0 calc(28px / 2);
   max-width: calc((100% / ( 12 / 12)) - 28px);
 }
 
-.l-grid-auto {
-  flex: 1;
-  margin: 0 calc(28px / 2);
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-1 {
+    flex: 0 0 calc((100% / ( 12 / 1)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 1)) - 28px);
+  }
 }
 
-.l-tilegrid-1 {
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-2 {
+    flex: 0 0 calc((100% / ( 12 / 2)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 2)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-3 {
+    flex: 0 0 calc((100% / ( 12 / 3)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 3)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-4 {
+    flex: 0 0 calc((100% / ( 12 / 4)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 4)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-5 {
+    flex: 0 0 calc((100% / ( 12 / 5)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 5)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-6 {
+    flex: 0 0 calc((100% / ( 12 / 6)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 6)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-7 {
+    flex: 0 0 calc((100% / ( 12 / 7)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 7)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-8 {
+    flex: 0 0 calc((100% / ( 12 / 8)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 8)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-9 {
+    flex: 0 0 calc((100% / ( 12 / 9)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 9)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-10 {
+    flex: 0 0 calc((100% / ( 12 / 10)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 10)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-11 {
+    flex: 0 0 calc((100% / ( 12 / 11)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 11)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .grid-row > .md-12 {
+    flex: 0 0 calc((100% / ( 12 / 12)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 12)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-1 {
+    flex: 0 0 calc((100% / ( 12 / 1)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 1)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-2 {
+    flex: 0 0 calc((100% / ( 12 / 2)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 2)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-3 {
+    flex: 0 0 calc((100% / ( 12 / 3)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 3)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-4 {
+    flex: 0 0 calc((100% / ( 12 / 4)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 4)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-5 {
+    flex: 0 0 calc((100% / ( 12 / 5)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 5)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-6 {
+    flex: 0 0 calc((100% / ( 12 / 6)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 6)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-7 {
+    flex: 0 0 calc((100% / ( 12 / 7)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 7)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-8 {
+    flex: 0 0 calc((100% / ( 12 / 8)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 8)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-9 {
+    flex: 0 0 calc((100% / ( 12 / 9)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 9)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-10 {
+    flex: 0 0 calc((100% / ( 12 / 10)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 10)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-11 {
+    flex: 0 0 calc((100% / ( 12 / 11)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 11)) - 28px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .grid-row > .sm-12 {
+    flex: 0 0 calc((100% / ( 12 / 12)) - 28px);
+    margin: 0 calc(28px / 2);
+    max-width: calc((100% / ( 12 / 12)) - 28px);
+  }
+}
+
+.grid-row > .offset-left-1 {
+  margin-left: calc((100% / ( 12 / 1)) + (28px / 2));
+}
+
+.grid-row > .offset-left-2 {
+  margin-left: calc((100% / ( 12 / 2)) + (28px / 2));
+}
+
+.grid-row > .offset-left-3 {
+  margin-left: calc((100% / ( 12 / 3)) + (28px / 2));
+}
+
+.grid-row > .offset-left-4 {
+  margin-left: calc((100% / ( 12 / 4)) + (28px / 2));
+}
+
+.grid-row > .offset-left-5 {
+  margin-left: calc((100% / ( 12 / 5)) + (28px / 2));
+}
+
+.grid-row > .offset-left-6 {
+  margin-left: calc((100% / ( 12 / 6)) + (28px / 2));
+}
+
+.grid-row > .offset-left-7 {
+  margin-left: calc((100% / ( 12 / 7)) + (28px / 2));
+}
+
+.grid-row > .offset-left-8 {
+  margin-left: calc((100% / ( 12 / 8)) + (28px / 2));
+}
+
+.grid-row > .offset-left-9 {
+  margin-left: calc((100% / ( 12 / 9)) + (28px / 2));
+}
+
+.grid-row > .offset-left-10 {
+  margin-left: calc((100% / ( 12 / 10)) + (28px / 2));
+}
+
+.grid-row > .offset-left-11 {
+  margin-left: calc((100% / ( 12 / 11)) + (28px / 2));
+}
+
+.grid-row > .offset-left-12 {
+  margin-left: calc((100% / ( 12 / 12)) + (28px / 2));
+}
+
+.grid-row > .offset-right-1 {
+  margin-right: calc((100% / ( 12 / 1)) + (28px / 2));
+}
+
+.grid-row > .offset-right-2 {
+  margin-right: calc((100% / ( 12 / 2)) + (28px / 2));
+}
+
+.grid-row > .offset-right-3 {
+  margin-right: calc((100% / ( 12 / 3)) + (28px / 2));
+}
+
+.grid-row > .offset-right-4 {
+  margin-right: calc((100% / ( 12 / 4)) + (28px / 2));
+}
+
+.grid-row > .offset-right-5 {
+  margin-right: calc((100% / ( 12 / 5)) + (28px / 2));
+}
+
+.grid-row > .offset-right-6 {
+  margin-right: calc((100% / ( 12 / 6)) + (28px / 2));
+}
+
+.grid-row > .offset-right-7 {
+  margin-right: calc((100% / ( 12 / 7)) + (28px / 2));
+}
+
+.grid-row > .offset-right-8 {
+  margin-right: calc((100% / ( 12 / 8)) + (28px / 2));
+}
+
+.grid-row > .offset-right-9 {
+  margin-right: calc((100% / ( 12 / 9)) + (28px / 2));
+}
+
+.grid-row > .offset-right-10 {
+  margin-right: calc((100% / ( 12 / 10)) + (28px / 2));
+}
+
+.grid-row > .offset-right-11 {
+  margin-right: calc((100% / ( 12 / 11)) + (28px / 2));
+}
+
+.grid-row > .offset-right-12 {
+  margin-right: calc((100% / ( 12 / 12)) + (28px / 2));
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row.md-full {
+    margin-left: calc(28px / -2);
+    margin-right: calc(28px / -2);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row.sm-full {
+    margin-left: calc(28px / -2);
+    margin-right: calc(28px / -2);
+  }
+}
+
+.tile-row > [class*="column"] {
+  flex: 1;
+  margin: 0;
+  position: relative;
+}
+
+.tile-row > .column-1 {
   flex: 0 0 calc((100% / ( 12 / 1)));
   max-width: calc((100% / ( 12 / 1)));
 }
 
-.l-tilegrid-2 {
+.tile-row > .column-2 {
   flex: 0 0 calc((100% / ( 12 / 2)));
   max-width: calc((100% / ( 12 / 2)));
 }
 
-.l-tilegrid-3 {
+.tile-row > .column-3 {
   flex: 0 0 calc((100% / ( 12 / 3)));
   max-width: calc((100% / ( 12 / 3)));
 }
 
-.l-tilegrid-4 {
+.tile-row > .column-4 {
   flex: 0 0 calc((100% / ( 12 / 4)));
   max-width: calc((100% / ( 12 / 4)));
 }
 
-.l-tilegrid-5 {
+.tile-row > .column-5 {
   flex: 0 0 calc((100% / ( 12 / 5)));
   max-width: calc((100% / ( 12 / 5)));
 }
 
-.l-tilegrid-6 {
+.tile-row > .column-6 {
   flex: 0 0 calc((100% / ( 12 / 6)));
   max-width: calc((100% / ( 12 / 6)));
 }
 
-.l-tilegrid-7 {
+.tile-row > .column-7 {
   flex: 0 0 calc((100% / ( 12 / 7)));
   max-width: calc((100% / ( 12 / 7)));
 }
 
-.l-tilegrid-8 {
+.tile-row > .column-8 {
   flex: 0 0 calc((100% / ( 12 / 8)));
   max-width: calc((100% / ( 12 / 8)));
 }
 
-.l-tilegrid-9 {
+.tile-row > .column-9 {
   flex: 0 0 calc((100% / ( 12 / 9)));
   max-width: calc((100% / ( 12 / 9)));
 }
 
-.l-tilegrid-10 {
+.tile-row > .column-10 {
   flex: 0 0 calc((100% / ( 12 / 10)));
   max-width: calc((100% / ( 12 / 10)));
 }
 
-.l-tilegrid-11 {
+.tile-row > .column-11 {
   flex: 0 0 calc((100% / ( 12 / 11)));
   max-width: calc((100% / ( 12 / 11)));
 }
 
-.l-tilegrid-12 {
+.tile-row > .column-12 {
   flex: 0 0 calc((100% / ( 12 / 12)));
   max-width: calc((100% / ( 12 / 12)));
 }
 
-.l-tilegrid-auto {
-  flex: 1;
-}
-
-.l-offset-left-1 {
-  margin-left: calc((100% / ( 12 / 1)) + (28px / 2));
-}
-
-.l-offset-left-2 {
-  margin-left: calc((100% / ( 12 / 2)) + (28px / 2));
-}
-
-.l-offset-left-3 {
-  margin-left: calc((100% / ( 12 / 3)) + (28px / 2));
-}
-
-.l-offset-left-4 {
-  margin-left: calc((100% / ( 12 / 4)) + (28px / 2));
-}
-
-.l-offset-left-5 {
-  margin-left: calc((100% / ( 12 / 5)) + (28px / 2));
-}
-
-.l-offset-left-6 {
-  margin-left: calc((100% / ( 12 / 6)) + (28px / 2));
-}
-
-.l-offset-left-7 {
-  margin-left: calc((100% / ( 12 / 7)) + (28px / 2));
-}
-
-.l-offset-left-8 {
-  margin-left: calc((100% / ( 12 / 8)) + (28px / 2));
-}
-
-.l-offset-left-9 {
-  margin-left: calc((100% / ( 12 / 9)) + (28px / 2));
-}
-
-.l-offset-left-10 {
-  margin-left: calc((100% / ( 12 / 10)) + (28px / 2));
-}
-
-.l-offset-left-11 {
-  margin-left: calc((100% / ( 12 / 11)) + (28px / 2));
-}
-
-.l-offset-left-12 {
-  margin-left: calc((100% / ( 12 / 12)) + (28px / 2));
-}
-
-.l-offset-right-1 {
-  margin-right: calc((100% / ( 12 / 1)) + (28px / 2));
-}
-
-.l-offset-right-2 {
-  margin-right: calc((100% / ( 12 / 2)) + (28px / 2));
-}
-
-.l-offset-right-3 {
-  margin-right: calc((100% / ( 12 / 3)) + (28px / 2));
-}
-
-.l-offset-right-4 {
-  margin-right: calc((100% / ( 12 / 4)) + (28px / 2));
-}
-
-.l-offset-right-5 {
-  margin-right: calc((100% / ( 12 / 5)) + (28px / 2));
-}
-
-.l-offset-right-6 {
-  margin-right: calc((100% / ( 12 / 6)) + (28px / 2));
-}
-
-.l-offset-right-7 {
-  margin-right: calc((100% / ( 12 / 7)) + (28px / 2));
-}
-
-.l-offset-right-8 {
-  margin-right: calc((100% / ( 12 / 8)) + (28px / 2));
-}
-
-.l-offset-right-9 {
-  margin-right: calc((100% / ( 12 / 9)) + (28px / 2));
-}
-
-.l-offset-right-10 {
-  margin-right: calc((100% / ( 12 / 10)) + (28px / 2));
-}
-
-.l-offset-right-11 {
-  margin-right: calc((100% / ( 12 / 11)) + (28px / 2));
-}
-
-.l-offset-right-12 {
-  margin-right: calc((100% / ( 12 / 12)) + (28px / 2));
-}
-
-@media only screen and (max-width: 767px) {
-  [class*="l-offset-left-"] {
-    margin-left: calc(28px / 2);
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-1 {
+    flex: 0 0 calc((100% / ( 12 / 1)));
+    max-width: calc((100% / ( 12 / 1)));
   }
 }
 
-@media only screen and (max-width: 767px) {
-  [class*="l-offset-right-"] {
-    margin-right: calc(28px / 2);
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-2 {
+    flex: 0 0 calc((100% / ( 12 / 2)));
+    max-width: calc((100% / ( 12 / 2)));
   }
 }
 
-@media only screen and (max-width: 767px) {
-  [class*="l-grid-"] {
-    flex: 1 0 calc(100% / ( 12 / 12 ) - 28px);
-    margin-left: calc(28px / 2);
-    margin-right: calc(28px / 2);
-    max-width: calc(100% / ( 12 / 12 ) - 28px);
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-3 {
+    flex: 0 0 calc((100% / ( 12 / 3)));
+    max-width: calc((100% / ( 12 / 3)));
   }
 }
 
-@media only screen and (max-width: 767px) {
-  [class*="l-tilegrid-"] {
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-4 {
+    flex: 0 0 calc((100% / ( 12 / 4)));
+    max-width: calc((100% / ( 12 / 4)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-5 {
+    flex: 0 0 calc((100% / ( 12 / 5)));
+    max-width: calc((100% / ( 12 / 5)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-6 {
+    flex: 0 0 calc((100% / ( 12 / 6)));
+    max-width: calc((100% / ( 12 / 6)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-7 {
+    flex: 0 0 calc((100% / ( 12 / 7)));
+    max-width: calc((100% / ( 12 / 7)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-8 {
+    flex: 0 0 calc((100% / ( 12 / 8)));
+    max-width: calc((100% / ( 12 / 8)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-9 {
+    flex: 0 0 calc((100% / ( 12 / 9)));
+    max-width: calc((100% / ( 12 / 9)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-10 {
+    flex: 0 0 calc((100% / ( 12 / 10)));
+    max-width: calc((100% / ( 12 / 10)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-11 {
+    flex: 0 0 calc((100% / ( 12 / 11)));
+    max-width: calc((100% / ( 12 / 11)));
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .tile-row > .md-12 {
     flex: 0 0 calc((100% / ( 12 / 12)));
-    max-width: 0 0 calc((100% / ( 12 / 12)));
+    max-width: calc((100% / ( 12 / 12)));
   }
 }
 
-/* ===== @mixin ===== */
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_components/ -> _text.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.text-header {
-  color: #444;
-  font-size: 32px;
-  line-height: 1.5;
-}
-
-.text-lead {
-  color: #444;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.text-notes {
-  color: #444;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_components/ -> _button.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.button, .button-large, .button-primary-large, .button-primary, .button-ghost, .button-round, .button-round-large {
-  background: #2dc0a6;
-  border: solid 1px #2dc0a6;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.1rem;
-  -webkit-font-smoothing: antialiased;
-  padding: 1.2rem 1.5rem;
-  text-align: center;
-  transition: all .2s linear;
-}
-
-.button:hover, .button-large:hover, .button-primary-large:hover, .button-primary:hover, .button-ghost:hover, .button-round:hover, .button-round-large:hover {
-  background: transparent;
-  color: #2dc0a6;
-}
-
-.button-large, .button-primary-large {
-  font-size: 1.3rem;
-  padding: 1.6rem 3rem;
-}
-
-.button-primary {
-  border-radius: 6px;
-}
-
-.button-primary-large {
-  border-radius: 6px;
-}
-
-.button-ghost {
-  background: transparent;
-  color: #2dc0a6;
-}
-
-.button-ghost:hover {
-  background: #2dc0a6;
-  color: #fff;
-}
-
-.button-round, .button-round-large {
-  border-radius: 35px;
-  padding: 1.2rem 2rem;
-}
-
-.button-round-large {
-  font-size: 1.3rem;
-  padding: 1.6rem 3rem;
-}
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/ -> _vard.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.card {
-  border-radius: 12px;
-  box-shadow: 3px 2px 2.5rem -3px #dcdcdc;
-  display: block;
-  overflow: hidden;
-}
-
-.card-detail {
-  padding: 3rem 2rem;
-}
-
-.card-title {
-  color: #444;
-  font-size: 2.2rem;
-  font-weight: 900;
-}
-
-.card-description {
-  color: #444;
-  font-size: 1.4rem;
-  letter-spacing: .1rem;
-  margin-top: 1rem;
-}
-
-.card-date {
-  color: #848484;
-  display: block;
-  font-size: 1.1rem;
-  margin-top: .5rem;
-}
-
-.card-category {
-  background: #2dc0a6;
-  color: #fff;
-  display: inline-block;
-  font-size: 1.1rem;
-  letter-spacing: .1rem;
-  margin-top: 3rem;
-  padding: .8rem 1rem;
-}
-
-.card-category + .card-category {
-  margin-left: 5px;
-}
-
-.card-button {
-  bottom: 3rem;
-  display: block;
-  position: absolute;
-}
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> sass -> __components -> _gnav.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.gnav {
-  background: rgba(0, 0, 0, 0.9);
-  display: table;
-  height: 100vh;
-  left: auto;
-  opacity: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transform: translate(3%, 0);
-  transition: all 0.4s cubic-bezier(0.55, 0, 0.13, 1);
-  visibility: hidden;
-  width: 100%;
-  z-index: 2;
-}
-
-.gnav.is-open {
-  opacity: 1;
-  transform: translate(0, 0);
-  visibility: visible;
-}
-
-.gnav-list {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.gnav-list-item {
-  opacity: 0;
-  transform: translate(2rem, 0);
-  transition: all 0.6s cubic-bezier(0.55, 0, 0.13, 1);
-}
-
-.gnav-list-item.is-active {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.gnav-list-link {
-  color: #aaa;
-  display: block;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 1.3rem;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .2rem;
-  margin-right: -.2s;
-  padding: 1rem;
-  text-align: center;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.gnav-list-link:hover {
-  color: #f7f8f9;
-  letter-spacing: .5rem;
-  margin-right: -.5rem;
-}
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_components/ -> _trigger.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
-.trigger {
-  bottom: 0;
-  display: block;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 20px;
-  z-index: 4;
-}
-
-.trigger:hover {
-  cursor: pointer;
-}
-
-.trigger-line {
-  background: #111;
-  border-radius: 8px;
-  bottom: 0;
-  display: block;
-  height: 3px;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.trigger-line:nth-of-type(1) {
-  top: -2rem;
-}
-
-.trigger-line:nth-of-type(3) {
-  bottom: -2rem;
-}
-
-.trigger.is-open .trigger-line {
-  background: #fff;
-  height: 1px;
-}
-
-.trigger.is-open .trigger-line:nth-of-type(1) {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.trigger.is-open .trigger-line:nth-of-type(2) {
-  opacity: 0;
-  width: 0;
-}
-
-.trigger.is-open .trigger-line:nth-of-type(3) {
-  bottom: 0;
-  transform: rotate(-45deg);
-}
-
-.footer {
-  background: #444;
-  padding: 70px 0;
-}
-
-.footer-menu + .footer-menu {
-  margin-top: 3rem;
-}
-
-.footer-menu-link {
-  display: block;
-  padding: 1rem 0;
-  color: #f7f8f9;
-}
-
-.copyright-wrapper {
-  padding: 30px 0;
-}
-
-.copyright-txt {
-  font-size: 1.1rem;
-  color: #444;
-  text-align: center;
-  padding: 0 30px;
-  letter-spacing: 0.1rem;
-}
-
-/* ======================================================
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
--> src/_scss/_components/ -> _utility.scss
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-====================================================== */
 @media only screen and (max-width: 767px) {
-  .u-fullwidth {
-    display: block;
-    width: 100%;
+  .tile-row > .sm-1 {
+    flex: 0 0 calc((100% / ( 12 / 1)));
+    max-width: calc((100% / ( 12 / 1)));
   }
 }
 
-/* Example Style */
-.content {
-  padding: 100px 0;
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-2 {
+    flex: 0 0 calc((100% / ( 12 / 2)));
+    max-width: calc((100% / ( 12 / 2)));
+  }
 }
 
-.text {
-  background: #eee;
-  color: #444;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 12px;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 2rem;
-  padding: .8rem;
-  transition: all .2s linear;
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-3 {
+    flex: 0 0 calc((100% / ( 12 / 3)));
+    max-width: calc((100% / ( 12 / 3)));
+  }
 }
 
-.text:hover {
-  background: #ccc;
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-4 {
+    flex: 0 0 calc((100% / ( 12 / 4)));
+    max-width: calc((100% / ( 12 / 4)));
+  }
 }
 
-.notes {
-  display: block;
-  font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-  font-size: 1.1rem;
-  margin: 1rem 0 3rem;
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-5 {
+    flex: 0 0 calc((100% / ( 12 / 5)));
+    max-width: calc((100% / ( 12 / 5)));
+  }
 }
 
-/* Write your project's style */
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-6 {
+    flex: 0 0 calc((100% / ( 12 / 6)));
+    max-width: calc((100% / ( 12 / 6)));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-7 {
+    flex: 0 0 calc((100% / ( 12 / 7)));
+    max-width: calc((100% / ( 12 / 7)));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-8 {
+    flex: 0 0 calc((100% / ( 12 / 8)));
+    max-width: calc((100% / ( 12 / 8)));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-9 {
+    flex: 0 0 calc((100% / ( 12 / 9)));
+    max-width: calc((100% / ( 12 / 9)));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-10 {
+    flex: 0 0 calc((100% / ( 12 / 10)));
+    max-width: calc((100% / ( 12 / 10)));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-11 {
+    flex: 0 0 calc((100% / ( 12 / 11)));
+    max-width: calc((100% / ( 12 / 11)));
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tile-row > .sm-12 {
+    flex: 0 0 calc((100% / ( 12 / 12)));
+    max-width: calc((100% / ( 12 / 12)));
+  }
+}
+
+.tile-row > .offset-left-1 {
+  margin-left: calc((100% / ( 12 / 1)));
+}
+
+.tile-row > .offset-left-2 {
+  margin-left: calc((100% / ( 12 / 2)));
+}
+
+.tile-row > .offset-left-3 {
+  margin-left: calc((100% / ( 12 / 3)));
+}
+
+.tile-row > .offset-left-4 {
+  margin-left: calc((100% / ( 12 / 4)));
+}
+
+.tile-row > .offset-left-5 {
+  margin-left: calc((100% / ( 12 / 5)));
+}
+
+.tile-row > .offset-left-6 {
+  margin-left: calc((100% / ( 12 / 6)));
+}
+
+.tile-row > .offset-left-7 {
+  margin-left: calc((100% / ( 12 / 7)));
+}
+
+.tile-row > .offset-left-8 {
+  margin-left: calc((100% / ( 12 / 8)));
+}
+
+.tile-row > .offset-left-9 {
+  margin-left: calc((100% / ( 12 / 9)));
+}
+
+.tile-row > .offset-left-10 {
+  margin-left: calc((100% / ( 12 / 10)));
+}
+
+.tile-row > .offset-left-11 {
+  margin-left: calc((100% / ( 12 / 11)));
+}
+
+.tile-row > .offset-left-12 {
+  margin-left: calc((100% / ( 12 / 12)));
+}
+
+.tile-row > .offset-right-1 {
+  margin-right: calc((100% / ( 12 / 1)));
+}
+
+.tile-row > .offset-right-2 {
+  margin-right: calc((100% / ( 12 / 2)));
+}
+
+.tile-row > .offset-right-3 {
+  margin-right: calc((100% / ( 12 / 3)));
+}
+
+.tile-row > .offset-right-4 {
+  margin-right: calc((100% / ( 12 / 4)));
+}
+
+.tile-row > .offset-right-5 {
+  margin-right: calc((100% / ( 12 / 5)));
+}
+
+.tile-row > .offset-right-6 {
+  margin-right: calc((100% / ( 12 / 6)));
+}
+
+.tile-row > .offset-right-7 {
+  margin-right: calc((100% / ( 12 / 7)));
+}
+
+.tile-row > .offset-right-8 {
+  margin-right: calc((100% / ( 12 / 8)));
+}
+
+.tile-row > .offset-right-9 {
+  margin-right: calc((100% / ( 12 / 9)));
+}
+
+.tile-row > .offset-right-10 {
+  margin-right: calc((100% / ( 12 / 10)));
+}
+
+.tile-row > .offset-right-11 {
+  margin-right: calc((100% / ( 12 / 11)));
+}
+
+.tile-row > .offset-right-12 {
+  margin-right: calc((100% / ( 12 / 12)));
+}
+
+/* ------------------------
+  Custom Style
+------------------------ */
