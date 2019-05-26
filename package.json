@@ -4,7 +4,7 @@
   "description": "A simple grid framework for Adobe XD.",
   "keywords": [
     "css",
-    "sass",
+    "scss",
     "framework",
     "flexbox",
     "responsive",
