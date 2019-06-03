@@ -14,9 +14,9 @@
   "license": "MIT",
   "scripts": {
     "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
-    "compile": "node-sass -w --include-path scss src/_scss/main.scss dist/css/main.css --output-style expanded",
-    "minify": "node-sass -w --include-path scss src/_scss/main.scss dist/css/main.min.css --output-style compressed",
-    "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o dist/css/main.min.css",
+    "compile": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.css --output-style expanded",
+    "minify": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.min.css --output-style compressed",
+    "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o dist/css/snug.min.css",
     "all": "npm-run-all -p stylelint compile minify build"
   },
   "devDependencies": {
