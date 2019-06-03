@@ -11,22 +11,22 @@ SNUG is vary light weight.
 * Responsive.  
 Grid component made by flexbox.  
   
-* Easy.
-Markup is easy.  
+* Simple and easy.
   
 
 ## Quick start
 
 1. Import with your html file.  
 ```
-<link rel="dist/css/main.min.css">
+<link rel="stylesheet" href="dist/css/snug.min.css">
+<link rel="stylesheet" href="//unpkg.com/snug-css@latest/dist/css/snug.min.css">
 ```
 
 or
 
 ```
 $ npm install snug-css
-<link rel=".node_modules/snugcss/dist/css/main.min.css">
+<link rel="stylesheet" href=".node_modules/snugcss/dist/css/snug.min.css">
 ```
 
 
@@ -54,12 +54,11 @@ $ npm install snug-css
 
 1. Open your Adobe XD file.
 
-2. Visible grid.
+2. Use artboard grid.
 
 3. Select layout grid mode.
 
-4. Customize.
-Fix to variables.
+4. Setting and customize.
 
 ```_adobexd.scss
 /* ------------------------
