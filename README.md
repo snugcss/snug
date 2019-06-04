@@ -63,11 +63,19 @@ $ npm install snug-css
 
 3. Select layout grid mode.  
 
-4. Setting and customize.
+4. Open the setting file.  
+```
+src > _scss > _config > _adobexd.scss
 
-```_adobexd.scss
+or
+
+node_modules > snug-css > src > _scss > _config > _adobexd.scss
+```
+
+5. Customize CSS variables.
+```
 /* ------------------------
-  Grid Settings
+  Grid Settings.
 ------------------------ */
 /* Max Column ------- */
 $maxcolumn: 12;
@@ -76,29 +84,29 @@ $maxcolumn: 12;
 $gutter: 28px;
 
 /* ------------------------
-  Margin of container outside
+  Margin of container outside.
 ------------------------ */
-/* Extra Large Display ------- */
+/* For Extra Large Display ------- */
 $retina: 468px;
 
-/* Full HD Display ------- */
+/* For Full HD Display ------- */
 $desktop: 146px;
 
-/* 1440x800 ------- */
+/* For 1440 px x 800px ------- */
 $laptoplarge: 146px;
 
-/* 1366x768 ------- */
+/* For 1366px x 768px ------- */
 $laptop: 139px;
 
-/* iPad Pro 12.9inch ------- */
+/* For iPad Pro 12.9inch ------- */
 $ipadpro129-port: 118px;
 $ipadpro129-land: 121px;
 
-/* iPad Pro 10.5inch ------- */
+/* For iPad Pro 10.5inch ------- */
 $ipadpro105-port: 84px;
 $ipadpro105-land: 83px;
 
-/* iPad / iPad mini & Android Tablet ------- */
+/* For iPad / iPad mini & Android Tablet ------- */
 $ipad-port: 82px;
 $ipad-land: 80px;
 ```
