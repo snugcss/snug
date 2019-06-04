@@ -5,7 +5,7 @@ Build the 'layout grid' on HTML.
 
 ## Features
 
-* Light weight.
+* Light weight.  
 SNUG is vary light weight.  
   
 * Responsive.  
@@ -19,11 +19,16 @@ Grid component made by flexbox.
 1. Import with your html file.  
 ```
 <link rel="stylesheet" href="dist/css/snug.min.css">
+```
+  
+or  
+  
+```
 <link rel="stylesheet" href="//unpkg.com/snug-css@latest/dist/css/snug.min.css">
 ```
-
-or
-
+  
+or  
+  
 ```
 $ npm install snug-css
 <link rel="stylesheet" href=".node_modules/snugcss/dist/css/snug.min.css">
@@ -52,17 +57,17 @@ $ npm install snug-css
 
 ## How to fix your Adobe XD's comp.
 
-1. Open your Adobe XD file.
+1. Open your Adobe XD file.  
 
-2. Use artboard grid.
+2. Use artboard grid.  
 
-3. Select layout grid mode.
+3. Select layout grid mode.  
 
 4. Setting and customize.
 
 ```_adobexd.scss
 /* ------------------------
-  Grid Setting
+  Grid Settings
 ------------------------ */
 /* Max Column ------- */
 $maxcolumn: 12;
