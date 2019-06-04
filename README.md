@@ -19,11 +19,16 @@ Grid component made by flexbox.
 1. Import with your html file.  
 ```
 <link rel="stylesheet" href="dist/css/snug.min.css">
+```
+  
+or  
+  
+```
 <link rel="stylesheet" href="//unpkg.com/snug-css@latest/dist/css/snug.min.css">
 ```
-
-or
-
+  
+or  
+  
 ```
 $ npm install snug-css
 <link rel="stylesheet" href=".node_modules/snugcss/dist/css/snug.min.css">
