@@ -16,8 +16,9 @@
     "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
     "compile": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.css --output-style expanded",
     "minify": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.min.css --output-style compressed",
-    "build": "postcss -w --config postcss.config.js src/_scss/*.scss -o dist/css/snug.min.css",
-    "all": "npm-run-all -p stylelint compile minify build"
+    "build": "postcss -w --config postcss.config.js dist/css/snug.min.css -o dist/css/snug.min.css",
+    "buildminify": "postcss -w --config postcss.config.js dist/css/snug.css -o dist/css/snug.css",
+    "all": "npm-run-all -p stylelint compile minify build buildminify"
   },
   "devDependencies": {
     "cssnano": "^4.1.0",
