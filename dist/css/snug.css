@@ -383,6 +383,14 @@ p {
   margin: 0;
 }
 
+.sng-rows.-centered {
+  justify-content: center;
+}
+
+.sng-rows.-right {
+  justify-content: flex-end;
+}
+
 .column-1 {
   flex-basis: calc((100% / 1) - 32px);
   flex-grow: 0;
@@ -726,14 +734,14 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   [class*="grid-md-"] {
     flex-basis: calc(100% - 32px);
     max-width: calc(100% - 32px);
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-1 {
     flex-basis: calc((100% / 1) - 32px);
     margin: 0 calc(32px / 2);
@@ -746,7 +754,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-2 {
     flex-basis: calc((100% / 2) - 32px);
     margin: 0 calc(32px / 2);
@@ -759,7 +767,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-3 {
     flex-basis: calc((100% / 3) - 32px);
     margin: 0 calc(32px / 2);
@@ -772,7 +780,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-4 {
     flex-basis: calc((100% / 4) - 32px);
     margin: 0 calc(32px / 2);
@@ -785,7 +793,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-5 {
     flex-basis: calc((100% / 5) - 32px);
     margin: 0 calc(32px / 2);
@@ -798,7 +806,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-6 {
     flex-basis: calc((100% / 6) - 32px);
     margin: 0 calc(32px / 2);
@@ -811,7 +819,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-7 {
     flex-basis: calc((100% / 7) - 32px);
     margin: 0 calc(32px / 2);
@@ -824,7 +832,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 839px) {
   .col-md-8 {
     flex-basis: calc((100% / 8) - 32px);
     margin: 0 calc(32px / 2);
