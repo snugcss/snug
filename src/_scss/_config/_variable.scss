@@ -1,13 +1,7 @@
-/*
-  * _variable.scss
-  *
-  */
-
 /* ------------------------
-  Grid Setting
+  _scss > _config > _variable.scss
 ------------------------ */
-
-/* Container ------- */
+// Container
 $container-desktop-xl: calc(5120px - (#{$desktop-xl} * 2));
 $container-desktop-lg: calc(2560px - (#{$desktop-lg} * 2));
 $container-desktop: calc(1920px - (#{$desktop} * 2));

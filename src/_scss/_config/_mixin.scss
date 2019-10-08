@@ -1,11 +1,7 @@
-/*
-  * _mixin.scss
-  *
-  */
-
 /* ------------------------
-  Media Query
+  _scss > _config > _mixin.scss
 ------------------------ */
+// media query
 @mixin max($width) {
   @media only screen and (max-width: $width + px) {
     @content;
@@ -24,32 +20,26 @@
   }
 }
 
-/* For Tablet ------- */
 @mixin tablet($width,$height) {
   @media only screen and (device-width: $width + px) and (device-height: $height + px) {
     @content;
   }
 }
 
-/* For Smartphone ------- */
 @mixin device($width,$height) {
   @media only screen and (device-width: $width + px) and (device-height: $height + px) {
     @content;
   }
 }
 
-/* ------------------------
-  Clear Fix
------------------------- */
+// clearfix
 @mixin clearfix {
   clear: both;
   content: "";
   display: block;
 }
 
-/* ------------------------
-  Position Center
------------------------- */
+// position-center
 @mixin position-center($top: 50%, $left: 50%, $translateX: -50%, $translateY: -50%) {
   left: $left;
   position: absolute;
@@ -58,9 +48,7 @@
   width: 100%;
 }
 
-/* ------------------------
-  Flex Box
------------------------- */
+// flexbox
 @mixin flex($justify: flex-start, $align: flex-start, $direction: column ) {
   align-items: $align;
   display: flex;

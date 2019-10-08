@@ -1,10 +1,5 @@
-/*
-  * _base.scss
-  *
-  */
-
 /* ------------------------
-  Box sizing
+  _scss > _config > _base.scss
 ------------------------ */
 *,
 *::before,
@@ -15,9 +10,6 @@
   padding: 0;
 }
 
-/* ------------------------
-  Default Font Setting
------------------------- */
 html {
   font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ ProN W3", "Yu Gothic", "メイリオ", Meiryo, "MS P ゴシック", "Helveica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
@@ -29,9 +21,6 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* ------------------------
-  Clearfix
------------------------- */
 .clearfix::after {
   clear: both;
   content: "";
@@ -56,9 +45,6 @@ video {
   max-width: 100%;
 }
 
-/* ------------------------
-  Heading Styles
------------------------- */
 h1 {
   font-size: 36px;
   font-size: 3.6rem;

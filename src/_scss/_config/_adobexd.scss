@@ -1,53 +1,49 @@
 /* ------------------------
-  Grid Setting
+  _scss > _config > _adobexd.scss
 ------------------------ */
 
-/* Max Column ------- */
+// Max Column
 $maxcolumn: 12 !default;
 $maxcolumn-tablet: 8 !default;
 $maxcolumn-mobile: 4 !default; 
 
-/* Grid Gutter Size ------- */
+// Grid Gutter Size
 $gutter: 32px !default;
 
-/* ------------------------
-  ContainerSize
------------------------- */
-
-/*  Extra Large Display(w5120) ------- */
+//  Extra Large Display(w5120) 
 $desktop-xl: 936px !default;
 
-/*  Large Display(w2560) ------- */
+//  Large Display(w2560)
 $desktop-lg: 468px !default;
 
-/* Full HD Display(w1920) ------- */
+// Full HD Display(w1920)
 $desktop: 146px !default;
 
-/* w1440 ------- */
+// w1440
 $laptop-lg: 146px !default;
 
-/* w1366 ------- */
+// w1366
 $laptop-md: 139px !default;
 
-/* w1280 ------- */
+// w1280
 $laptop-sm: 139px !default;
 
-/* iPad Pro 12.9inch ------- */
+// iPad Pro 12.9inch
 $ipadpro129-port: 118px !default;
 $ipadpro129-land: 139px !default;
 
-/* iPad Pro 11inch ------- */
+// iPad Pro 11inch
 $ipadpro11-port: 81px !default;
 $ipadpro11-land: 80px !default;
 
-/* iPad Pro 10.5inch ------- */
+// iPad Pro 10.5inch
 $ipadpro105-port: 84px !default;
 $ipadpro105-land: 83px !default;
 
-/* iPad / iPad mini & Android Tablet ------- */
+// iPad / iPad mini & Android Tablet
 $ipad-port: 82px !default;
 $ipad-land: 80px !default;
 
-/* Surface Pro 4/5/6 ------- */
+// Surface Pro 4/5/6
 $surfacepro-port: 122px !default;
 $surfacepro-land: 140px !default;
