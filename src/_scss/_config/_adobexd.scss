@@ -3,35 +3,51 @@
 ------------------------ */
 
 /* Max Column ------- */
-$maxcolumn: 12;
+$maxcolumn: 12 !default;
+$maxcolumn-tablet: 8 !default;
+$maxcolumn-mobile: 4 !default; 
 
 /* Grid Gutter Size ------- */
-$gutter: 28px;
+$gutter: 32px !default;
 
 /* ------------------------
-  Margin of container outside
+  ContainerSize
 ------------------------ */
 
-/* Extra Large Display ------- */
-$retina: 468px;
+/*  Extra Large Display(w5120) ------- */
+$desktop-xl: 936px !default;
 
-/* Full HD Display ------- */
-$desktop: 146px;
+/*  Large Display(w2560) ------- */
+$desktop-lg: 468px !default;
 
-/* 1440x800 ------- */
-$laptoplarge: 146px;
+/* Full HD Display(w1920) ------- */
+$desktop: 146px !default;
 
-/* 1366x768 ------- */
-$laptop: 139px;
+/* w1440 ------- */
+$laptop-lg: 146px !default;
+
+/* w1366 ------- */
+$laptop-md: 139px !default;
+
+/* w1280 ------- */
+$laptop-sm: 139px !default;
 
 /* iPad Pro 12.9inch ------- */
-$ipadpro129-port: 118px;
-$ipadpro129-land: 121px;
+$ipadpro129-port: 118px !default;
+$ipadpro129-land: 139px !default;
+
+/* iPad Pro 11inch ------- */
+$ipadpro11-port: 81px !default;
+$ipadpro11-land: 80px !default;
 
 /* iPad Pro 10.5inch ------- */
-$ipadpro105-port: 84px;
-$ipadpro105-land: 83px;
+$ipadpro105-port: 84px !default;
+$ipadpro105-land: 83px !default;
 
 /* iPad / iPad mini & Android Tablet ------- */
-$ipad-port: 82px;
-$ipad-land: 80px;
+$ipad-port: 82px !default;
+$ipad-land: 80px !default;
+
+/* Surface Pro 4/5/6 ------- */
+$surfacepro-port: 122px !default;
+$surfacepro-land: 140px !default;
