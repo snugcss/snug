@@ -19,7 +19,6 @@ module.exports = {
         "order/properties-alphabetical-order": true, // アルファベット順に並べ替える
         "indentation": 2, // - インデントを指定
         "string-quotes": "double", // - 文字列の引用符をシングルで括るかかダブルで括るか
-        // "no-duplicate-selectors": false, // - セレクタの重複を禁止
         "color-hex-case": "lower", // - 16進数のカラーコードを大文字か小文字か
         "color-hex-length": "short", // - 16進数のカラーコードを省略するか否か
         "color-named": "never", // - 名前付きカラーを強制するかどうか
