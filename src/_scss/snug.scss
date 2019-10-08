@@ -25,26 +25,43 @@
 
 .sng-container {
   margin: 0 auto;
-  max-width: calc(#{$container-desktop-large} + #{$gutter});
+  max-width: calc(#{$container-desktop-lg} + #{$gutter});
   padding: 0 calc(#{$gutter} / 2);
 
   @include max(1920) {
     max-width: calc(#{$container-desktop} + #{$gutter});
   }
 
-  // Macbook Air 13' / MacBook Pro / Surface Pro
+  // Macbook Air 13' / MacBook Pro
   @include max(1440) {
-    max-width: calc(#{$container-laptop-large} + #{$gutter});
+    max-width: calc(#{$container-laptop-lg} + #{$gutter});
+  }
+
+  @include tablet(1440, 960) {
+    max-width: calc(#{$container-surfacepro3-land} + #{$gutter});
+  }
+
+  @include tablet(1368,912) {
+    max-width: calc(#{$container-surfacepro6-land} + #{$gutter});
   }
 
   // Macbook Air 11'
   @include max(1366) {
-    max-width: calc(#{$container-laptop} + #{$gutter});
+    max-width: calc(#{$container-laptop-md} + #{$gutter});
+  }
+
+  @include max(1280) {
+    max-width: calc(#{$container-laptop-sm} + #{$gutter});
   }
 
   // iPad Pro 12.9' Landscape
   @include tablet(1366,1024) {
     max-width: calc(#{$container-ipadpro129-land} + #{$gutter});
+  }
+
+  // iPad Pro 11' Landscape
+  @include tablet(1194,834) {
+    max-width: calc(#{$container-ipadpro11-land} + #{$gutter});
   }
 
   // iPad Pro 10.5' Landscape
@@ -62,9 +79,22 @@
     max-width: calc(#{$container-ipad-land} + #{$gutter});
   }
 
+  @include tablet(960, 1440) {
+    max-width: calc(#{$container-surfacepro3-port} + #{$gutter});
+  }
+
+  @include tablet(912, 1368) {
+    max-width: calc(#{$container-surfacepro6-port} + #{$gutter});
+  }
+
   // iPad Pro 10.5' Portlait
   @include tablet(834,1112) {
     max-width: calc(#{$container-ipadpro105-port} + #{$gutter});
+  }
+
+  // iPad Pro 11' Portlait
+  @include tablet(834,1194) {
+    max-width: calc(#{$container-ipadpro11-port} + #{$gutter});
   }
 
   // iPad and Android Tablet Portlait
@@ -74,125 +104,171 @@
 
   // Smartphone
   @include max(767) {
-    max-width: calc(100%);
+    max-width: 100%;
+  }
+
+  &.-fullWidth {
+    max-width: 100%;
+    padding: 0;
   }
 }
 
-.grid-row {
+.sng-rows {
   @extend %row;
 
   margin-left: calc(#{$gutter} / -2);
   margin-right: calc(#{$gutter} / -2);
 
-  > [class*="column"] {
-    @extend %column;
+  &.-tiles {
+    margin: 0;
   }
+}
 
-  > [class*="offset"] {
-    @include max(767) {
-      margin: 0 calc(#{$gutter} / 2);
-    }
-  }
+[class*="column"] {
+  @extend %column;
+}
 
-  @for $i from 1 through $maxcolumn {
-    > .column-#{$i} {
-      flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
-      margin: 0 calc(#{$gutter} / 2);
-      max-width: calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
-    }
-  }
+[class*="grid"] {
+  @extend %column;
+}
 
-  @for $i from 1 through $maxcolumn {
-    > .md-#{$i} {
-      @include max(1280) {
-        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
-        margin: 0 calc(#{$gutter} / 2);
-        max-width: calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
-      }
-    }
-  }
+[class*="offset"] {
+  @extend %column;
+}
 
-  @for $i from 1 through $maxcolumn {
-    > .sm-#{$i} {
-      @include max(767) {
-        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
-        margin: 0 calc(#{$gutter} / 2);
-        max-width: calc((100% / ( #{$maxcolumn} / #{$i})) - #{$gutter});
-      }
-    }
-  }
+@for $i from 1 through $maxcolumn {
+  .column-#{$i} {
+    flex-basis: calc((100% / #{$i}) - #{$gutter});
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 calc(#{$gutter} / 2);
+    max-width: calc((100% / #{$i}) - #{$gutter});
 
-  @for $i from 1 through $maxcolumn {
-    > .offset-left-#{$i} {
-      margin-left: calc((100% / ( #{$maxcolumn} / #{$i})) + (#{$gutter} / 2));
-    }
-  }
-
-  @for $i from 1 through $maxcolumn {
-    > .offset-right-#{$i} {
-      margin-right: calc((100% / ( #{$maxcolumn} / #{$i})) + (#{$gutter} / 2));
+    .-tiles & {
+      flex-basis: calc(100% / #{$i});
+      margin: 0;
+      max-width: calc(100% / #{$i});
     }
   }
 }
 
-.tile-row {
-  @extend %row;
+@for $i from 1 through $maxcolumn {
+  .grid-#{$i} {
+    flex-basis: calc((100% / (#{$maxcolumn} / #{$i})) - #{$gutter});
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 calc(#{$gutter} / 2);
+    max-width: calc((100% / (#{$maxcolumn} / #{$i})) - #{$gutter});
 
-  &.md-full {
-    @include max(1280) {
-      margin-left: calc(#{$gutter} / -2);
-      margin-right: calc(#{$gutter} / -2);
+    .-tiles & {
+      flex-basis: calc(100% / (#{$maxcolumn} / #{$i}));
+      margin: 0;
+      max-width: calc(100% / (#{$maxcolumn} / #{$i}));
     }
   }
+}
 
-  &.sm-full {
+[class*="col-md-"] {
+  @include max(1024) {
+    flex-basis: calc(100% - #{$gutter});
+    max-width: calc(100% - #{$gutter});
+  }
+}
+
+[class*="grid-md-"] {
+  @include max(1024) {
+    flex-basis: calc(100% - #{$gutter});
+    max-width: calc(100% - #{$gutter});
+  }
+}
+
+@for $i from 1 through $maxcolumn-tablet {
+  .col-md-#{$i} {
+    @include max(1024) {
+      flex-basis: calc((100% / #{$i}) - #{$gutter});
+      margin: 0 calc(#{$gutter} / 2);
+      max-width: calc((100% / #{$i}) - #{$gutter});
+
+      .-tiles & {
+        flex-basis: calc(100% / #{$i});
+        margin: 0;
+        max-width: calc(100% / #{$i});
+      }
+    }
+  }
+}
+
+@for $i from 1 through $maxcolumn-tablet {
+  .grid-md-#{$i} {
+    @include max(839) {
+      flex-basis: calc((100% / (#{$maxcolumn-tablet} / #{$i})) - #{$gutter});
+      margin: 0 calc(#{$gutter} / 2);
+      max-width: calc((100% / (#{$maxcolumn-tablet} / #{$i})) - #{$gutter});
+
+      .-tiles & {
+        flex-basis: calc(100% / (#{$maxcolumn-tablet} / #{$i}));
+        margin: 0;
+        max-width: calc(100% / (#{$maxcolumn-tablet} / #{$i}));
+      }
+    }
+  }
+}
+
+[class*="col-sm-"] {
+  @include max(767) {
+    flex-basis: calc(100% - #{$gutter});
+    max-width: calc(100% - #{$gutter});
+  }
+}
+
+[class*="grid-sm-"] {
+  @include max(767) {
+    flex-basis: calc(100% - #{$gutter});
+    max-width: calc(100% - #{$gutter});
+  }
+}
+
+@for $i from 1 through $maxcolumn-mobile {
+  .col-sm-#{$i} {
     @include max(767) {
-      margin-left: calc(#{$gutter} / -2);
-      margin-right: calc(#{$gutter} / -2);
-    }
-  }
+      flex-basis: calc((100% / #{$i}) - #{$gutter});
+      margin: 0 calc(#{$gutter} / 2);
+      max-width: calc((100% / #{$i}) - #{$gutter});
 
-  > [class*="column"] {
-    flex: 1;
-    margin: 0;
-    position: relative;
-  }
-
-  @for $i from 1 through $maxcolumn {
-    > .column-#{$i} {
-      flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})));
-      max-width: calc((100% / ( #{$maxcolumn} / #{$i})));
-    }
-  }
-
-  @for $i from 1 through $maxcolumn {
-    > .md-#{$i} {
-      @include max(1280) {
-        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})));
-        max-width: calc((100% / ( #{$maxcolumn} / #{$i})));
+      .-tiles & {
+        flex-basis: calc(100% / #{$i});
+        margin: 0;
+        max-width: calc(100% / #{$i});
       }
     }
   }
+}
 
-  @for $i from 1 through $maxcolumn {
-    > .sm-#{$i} {
-      @include max(767) {
-        flex: 0 0 calc((100% / ( #{$maxcolumn} / #{$i})));
-        max-width: calc((100% / ( #{$maxcolumn} / #{$i})));
+@for $i from 1 through $maxcolumn-mobile {
+  .grid-sm-#{$i} {
+    @include max(767) {
+      flex-basis: calc((100% / (#{$maxcolumn-mobile} / #{$i})) - #{$gutter});
+      margin: 0 calc(#{$gutter} / 2);
+      max-width: calc((100% / (#{$maxcolumn-mobile} / #{$i})) - #{$gutter});
+
+      .-tiles & {
+        flex-basis: calc(100% / (#{$maxcolumn-mobile} / #{$i}));
+        margin: 0;
+        max-width: calc(100% / (#{$maxcolumn-mobile} / #{$i}));
       }
     }
   }
+}
 
-  @for $i from 1 through $maxcolumn {
-    > .offset-left-#{$i} {
-      margin-left: calc((100% / ( #{$maxcolumn} / #{$i})));
-    }
+@for $i from 1 through $maxcolumn {
+  .offset-right-#{$i} {
+    margin-right: calc(100% / (#{$maxcolumn} / #{$i}) + (#{$gutter} / 2)) !important;
   }
+}
 
-  @for $i from 1 through $maxcolumn {
-    > .offset-right-#{$i} {
-      margin-right: calc((100% / ( #{$maxcolumn} / #{$i})));
-    }
+@for $i from 1 through $maxcolumn {
+  .offset-left-#{$i} {
+    margin-left: calc(100% / (#{$maxcolumn} / #{$i}) + (#{$gutter} / 2)) !important;
   }
 }
 
