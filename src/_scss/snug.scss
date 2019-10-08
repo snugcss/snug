@@ -114,6 +114,14 @@
   &.-tiles {
     margin: 0;
   }
+
+  &.-centered {
+    justify-content: center;
+  }
+
+  &.-right {
+    justify-content: flex-end;
+  }
 }
 
 [class*="column"] {
@@ -168,7 +176,7 @@
 }
 
 [class*="grid-md-"] {
-  @include max(1024) {
+  @include max(839) {
     flex-basis: calc(100% - #{$gutter});
     max-width: calc(100% - #{$gutter});
   }
@@ -176,7 +184,7 @@
 
 @for $i from 1 through $maxcolumn-tablet {
   .col-md-#{$i} {
-    @include max(1024) {
+    @include max(839) {
       flex-basis: calc((100% / #{$i}) - #{$gutter});
       margin: 0 calc(#{$gutter} / 2);
       max-width: calc((100% / #{$i}) - #{$gutter});
@@ -265,53 +273,15 @@
 }
 
 @mixin sng-container {
-  margin: 0 auto;
-  max-width: calc(#{$container-desktop} + #{$gutter});
-  padding: 0 calc(#{$gutter} / 2);
-
-  @include max(1440) {
-    max-width: calc(#{$container-laptop-large} + #{$gutter});
-  }
-
-  @include max(1366) {
-    max-width: calc(#{$container-laptop} + #{$gutter});
-  }
-
-  @include tablet(1366,1024) {
-    max-width: calc(#{$container-ipadpro129-land} + #{$gutter});
-  }
-
-  @include tablet(1024,1366) {
-    max-width: calc(#{$container-ipadpro129-port} + #{$gutter});
-  }
-
-  @include tablet(1112,834) {
-    max-width: calc(#{$container-ipadpro105-land} + #{$gutter});
-  }
-
-  @include tablet(834,1112) {
-    max-width: calc(#{$container-ipadpro105-port} + #{$gutter});
-  }
-
-  @include tablet(1024,768) {
-    max-width: calc(#{$container-ipad-land} + #{$gutter});
-  }
-
-  @include tablet(768,1024) {
-    max-width: calc(#{$container-ipad-port} + #{$gutter});
-  }
-
-  @include max(767) {
-    max-width: calc(100% - #{$gutter} / 2);
-  }
+  @extend .sng-container ;
 }
 
 @mixin grid-row {
-  @extend .grid-row ;
+  @extend .sng-rows ;
 }
 
 @mixin tile-row {
-  @extend .tile-row ;
+  @extend .sng-rows.-tiles ;
 }
 
 @mixin grid-style {
@@ -376,14 +346,16 @@
   }
 }
 
-@mixin column($column:0) {
-  @if $column == 0 {
+@mixin column($grid:0) {
+  @if $grid == 0 {
     flex: 1;
   }
 
-  @if $column !=0 {
-    flex: 0 0 calc((100% / (#{$maxcolumn} / #{$column})) - #{$gutter});
-    max-width: calc((100% / (#{$maxcolumn} / #{$column})) - #{$gutter});
+  @if $grid !=0 {
+    flex-basis: calc((100% / (#{$maxcolumn} / #{$grid})) - #{$gutter});
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: calc((100% / (#{$maxcolumn} / #{$grid})) - #{$gutter});
   }
 
   margin: 0 calc(#{$gutter} / 2);
@@ -396,7 +368,9 @@
   }
 
   @if $tile !=0 {
-    flex: 0 0 calc(100% / #{$tile});
+    flex-basis: calc(100% / (#{$maxcolumn} / #{$tile}));
+    flex-grow: 0;
+    flex-shrink: 0;
     max-width: calc(100% / #{$tile});
   }
 
