@@ -14,7 +14,7 @@
   "license": "MIT",
   "scripts": {
     "stylelint": "stylelint --config stylelintrc.js --syntax scss src/_scss/** --fix",
-    "compile": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.css",
+    "compile": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.css --output-style expanded",
     "minify": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.min.css --output-style compressed",
     "build": "postcss -w --config postcss.config.js dist/css/snug.min.css -o dist/css/snug.css",
     "buildminify": "postcss -w --config postcss.config.js dist/css/snug.css -o dist/css/snug.min.css",
