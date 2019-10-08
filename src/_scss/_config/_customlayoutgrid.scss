@@ -1,0 +1,60 @@
+$custom-maxcolumn: 0;
+$custom-maxcolumn-tablet: 0;
+$custom-maxcolumn-mobile: 0;
+$custom-grid-gutter: 0;
+
+/* Setup Container Size */
+$w2560: 0;
+$w1920: 0;
+$w1440: 0;
+$w1366: 0;
+$w1280: 0;
+$iPad: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$iPadPro105: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$iPadPro110: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$iPadPro129: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$surfacepro3: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$surfacePro: (
+  portrait: 0,
+  landscape: 0,
+);
+
+@if $custom-maxcolumn != 0 {
+  $maxcolumn: $custom-maxcolumn ;
+}
+
+@if map-get(($custom), 'column') != 0 {
+  $maxcolumn: map-get(($custom), 'column' );
+}
+
+@if $custom-maxcolumn-tablet != 0 {
+  $column-tablet: $custom-maxcolumn-tablet;
+}
+
+@if $custom-maxcolumn-mobile != 0 {
+  $column-mobile: $custom-maxcolumn-mobile;
+}
+
+@if $custom-grid-gutter != 0 {
+  $gutter: $custom-grid-gutter;
+}
