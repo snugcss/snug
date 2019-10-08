@@ -1,0 +1,76 @@
+$custom-maxcolumn: 12;
+$custom-maxcolumn-tablet: 12;
+$custom-maxcolumn-mobile: 12;
+$custom-grid-gutter: 30px;
+
+/* Setup Container Size */
+$w2560: 710px;
+$w1920: 390px;
+$w1440: 150px;
+$w1366: 113px;
+$w1280: 70px;
+$iPad: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$iPadPro105: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$iPadPro110: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$iPadPro129: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$surfacepro3: (
+  portrait: 0,
+  landscape: 0,
+);
+
+$surfacePro: (
+  portrait: 0,
+  landscape: 0,
+);
+
+@if $custom-maxcolumn != 0 {
+  $maxcolumn: $custom-maxcolumn !global;
+}
+
+@if $custom-maxcolumn-tablet != 0 {
+  $maxcolumn-tablet: $custom-maxcolumn-tablet !global;
+}
+
+@if $custom-maxcolumn-mobile != 0 {
+  $maxcolumn-mobile: $custom-maxcolumn-mobile !global;
+}
+
+@if $custom-grid-gutter != 0 {
+  $gutter: $custom-grid-gutter !global;
+}
+
+@if $w2560 != 0 {
+  $desktop-lg: $w2560 !global;
+}
+
+@if $w1920 != 0 {
+  $desktop: $w1920 !global;
+}
+
+@if $w1440 != 0 {
+  $laptop-lg: $w1440 !global;
+}
+
+@if $w1366 != 0 {
+  $laptop-md: $w1366 !global;
+}
+
+@if $w1280 != 0 {
+  $laptop-sm: $w1280 !global;
+}
