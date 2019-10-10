@@ -12,7 +12,7 @@ SNUG is vary light weight.
 Grid component made by flexbox.  
   
 * Simple and easy.
-  
+
 
 ## Quick start
 
@@ -35,20 +35,20 @@ $ npm install snug-css
 ```
 
 
-2. Markups  
+2. Markups
 ```
 <div class="sng-container">
-    <div class="grid-row">
-        <div class="column-3 md-4 sm-6>
+    <div class="sng-rows">
+        <div class="column-2 col-md-2 col-sm-2>
             // Contents
         </div>
-        <div class="column-3 md-4 sm-6>
+        <div class="column-2 col-md-2 col-sm-2>
             // Contents
         </div>
-        <div class="column-3 md-4 sm-6>
+        <div class="column-2 c0l-md-2 col-sm-2>
             // Contents
         </div>
-        <div class="column-3 md-4 sm-6>
+        <div class="column-2 col-md-2 col-sm-2>
             // Contents
         </div>
     </div>
@@ -65,50 +65,161 @@ $ npm install snug-css
 
 4. Open the setting file.  
 ```
-src > _scss > _config > _adobexd.scss
+src > _scss > _config > _customlayoutgrid.scss
 
 or
 
-node_modules > snug-css > src > _scss > _config > _adobexd.scss
+node_modules > snug-css > src > _scss > _config > _customlayoutgrid.scss
 ```
 
 5. Customize CSS variables.
 ```
-/* ------------------------
-  Grid Settings.
------------------------- */
-/* Max Column ------- */
-$maxcolumn: 12;
+/* Grid setting(column + gutter) */
+$custom-maxcolumn: 0;
+$custom-maxcolumn-tablet: 0;
+$custom-maxcolumn-mobile: 0;
+$custom-gutter: 0;
 
-/* Grid Gutter Size ------- */
-$gutter: 28px;
+/* Side margin of grid container. */
+$w5120: 0;
+$w2560: 0;
+$w1920: 0;
+$w1440: 0;
+$w1366: 0;
+$w1280: 0;
+$iPad: (
+  portrait: 0,
+  landscape: 0,
+);
 
-/* ------------------------
-  Margin of container outside.
------------------------- */
-/* For Extra Large Display ------- */
-$retina: 468px;
+$iPadPro105: (
+  portrait: 0,
+  landscape: 0,
+);
 
-/* For Full HD Display ------- */
-$desktop: 146px;
+$iPadPro11: (
+  portrait: 0,
+  landscape: 0,
+);
 
-/* For 1440 px x 800px ------- */
-$laptoplarge: 146px;
+$iPadPro129: (
+  portrait: 0,
+  landscape: 0,
+);
 
-/* For 1366px x 768px ------- */
-$laptop: 139px;
+$surfacepro: (
+  portrait: 0,
+  landscape: 0,
+);
+```
 
-/* For iPad Pro 12.9inch ------- */
-$ipadpro129-port: 118px;
-$ipadpro129-land: 121px;
+## Default breakpoint of SNUG Grid
+* iMac 5K / 4K / FullHD desktop
+* MacBook Pro / MacBook / MacBook Air
+* iPad Pro(10.5' / 11' / 12.9')
+* iPad 
+* Surface Pro
 
-/* For iPad Pro 10.5inch ------- */
-$ipadpro105-port: 84px;
-$ipadpro105-land: 83px;
+## Example Markup.
+* Like a Bootstrap Grid.
+```
+<div class="sng-container">
+    <div class="sng-rows">
+        <div class="grid-3 grid-md-4 grid-sm-6>
+            // Contents
+        </div>
+        <div class="grid-3 grid-md-4 grid-sm-6>
+            // Contents
+        </div>
+        <div class="grid-3 grid-md-4 grid-sm-6>
+            // Contents
+        </div>
+        <div class="grid-3 grid-md-4 grid-sm-6>
+            // Contents
+        </div>
+    </div>
+</div>
+```
 
-/* For iPad / iPad mini & Android Tablet ------- */
-$ipad-port: 82px;
-$ipad-land: 80px;
+* Grid position.
+```
+// center
+<div class="sng-container">
+    <div class="sng-rows -centered">
+        <div class="grid-6">
+            // Contents
+        </div>
+    </div>
+</div>
+
+// right
+<div class="sng-container">
+    <div class="sng-rows -right">
+        <div class="grid-6">
+            // Contents
+        </div>
+    </div>
+</div>
+```
+
+* Tile.
+```
+<div class="sng-container">
+    <div class="sng-rows -tiles">
+        <div class="grid-6">
+            // Contents
+        </div>
+    </div>
+</div>
+```
+
+* Full width.
+```
+<div class="sng-container -fullWidth">
+    <div class="sng-rows">
+        <div class="grid-6">
+            // Contents
+        </div>
+    </div>
+</div>
+```
+
+* Nested.
+```
+<div class="sng-container">
+    <div class="sng-rows">
+        <div class="grid-6">
+            <div class="sng-rows">
+                <div class="grid-6">
+                    // content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+* Split.
+```
+<div class="sng-container">
+    <div class="sng-rows">
+        <div class="grid-6">
+            <div class="grid-6">
+                <div class="sng-rows">
+                    <div class="grid-4">
+                        // content
+                    </div>
+                    <div class="grid-4">
+                        // content
+                    </div>
+                    <div class="grid-4">
+                        // content
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 ```
 
 ## License
