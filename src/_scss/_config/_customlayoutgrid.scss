@@ -2,10 +2,9 @@ $custom-maxcolumn: 0;
 $custom-maxcolumn-tablet: 0;
 $custom-maxcolumn-mobile: 0;
 $custom-gutter: 0;
-$custom-gutter-tablet: 0;
-$custom-gutter-mobile: 0;
 
 // Setup Container Size
+$w5120: 0;
 $w2560: 0;
 $w1920: 0;
 $w1440: 0;
@@ -21,7 +20,7 @@ $iPadPro105: (
   landscape: 0,
 );
 
-$iPadPro110: (
+$iPadPro11: (
   portrait: 0,
   landscape: 0,
 );
@@ -31,32 +30,87 @@ $iPadPro129: (
   landscape: 0,
 );
 
-$surfacepro3: (
-  portrait: 0,
-  landscape: 0,
-);
-
-$surfacePro: (
+$surfacepro: (
   portrait: 0,
   landscape: 0,
 );
 
 @if $custom-maxcolumn != 0 {
-  $maxcolumn: $custom-maxcolumn ;
-}
-
-@if map-get(($custom), 'column') != 0 {
-  $maxcolumn: map-get(($custom), 'column' );
+  $maxcolumn: $custom-maxcolumn !global;
 }
 
 @if $custom-maxcolumn-tablet != 0 {
-  $column-tablet: $custom-maxcolumn-tablet;
+  $maxcolumn-tablet: $custom-maxcolumn-tablet !global;
 }
 
 @if $custom-maxcolumn-mobile != 0 {
-  $column-mobile: $custom-maxcolumn-mobile;
+  $maxcolumn-mobile: $custom-maxcolumn-mobile !global;
 }
 
 @if $custom-gutter != 0 {
-  $gutter: $custom-gutter;
+  $gutter: $custom-gutter !global;
+}
+
+@if $w5120 != 0 {
+  $desktop-xl: $w5120 !global;
+}
+
+@if $w2560 != 0 {
+  $desktop-lg: $w2560 !global;
+}
+
+@if $w1920 != 0 {
+  $desktop: $w1920 !global;
+}
+
+@if $w1440 != 0 {
+  $laptop-lg: $w1440 !global;
+}
+
+@if $w1366 != 0 {
+  $laptop-md: $w1366 !global;
+}
+
+@if $w1280 != 0 {
+  $laptop-sm: $w1280 !global;
+}
+
+@if map-get(($iPad), 'portrait') != 0 {
+  $ipad-port: map-get(($iPad), 'portrait') !global; 
+}
+
+@if map-get(($iPad), 'landscape') != 0 {
+  $ipad-land: map-get(($iPad), 'landscape') !global; 
+}
+
+@if map-get(($iPadPro105), 'portrait') != 0 {
+  $ipadpro105-portrait: map-get(($iPadPro105), 'portrait') !global; 
+}
+
+@if map-get(($iPadPro105), 'landscape') != 0 {
+  $ipadpro105-landscape: map-get(($iPadPro105), 'landscape') !global; 
+}
+
+@if map-get(($iPadPro11), 'portrait') != 0 {
+  $ipadpro11-portrait: map-get(($iPadPro11), 'portrait') !global; 
+}
+
+@if map-get(($iPadPro11), 'landscape') != 0 {
+  $ipadpro11-landscape: map-get(($iPadPro11), 'landscape') !global; 
+}
+
+@if map-get(($iPadPro129), 'portrait') != 0 {
+  $ipadpro129-portrait: map-get(($iPadPro129), 'portrait') !global; 
+}
+
+@if map-get(($iPadPro129), 'landscape') != 0 {
+  $ipadpro129-landscape: map-get(($iPadPro129), 'landscape') !global; 
+}
+
+@if map-get(($surfacepro), 'portrait') != 0 {
+  $surfacepro-portrait: map-get(($surfacepro), 'portrait') !global; 
+}
+
+@if map-get(($surfacepro), 'landscape') != 0 {
+  $surfacepro-landscape: map-get(($surfacepro), 'landscape') !global; 
 }
