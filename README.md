@@ -39,16 +39,16 @@ $ npm install snug-css
 ```
 <div class="sng-container">
     <div class="sng-rows">
-        <div class="column-2 col-md-2 col-sm-2>
+        <div class="column-2 col-md-2 col-sm-2">
             // Contents
         </div>
-        <div class="column-2 col-md-2 col-sm-2>
+        <div class="column-2 col-md-2 col-sm-2">
             // Contents
         </div>
-        <div class="column-2 c0l-md-2 col-sm-2>
+        <div class="column-2 c0l-md-2 col-sm-2">
             // Contents
         </div>
-        <div class="column-2 col-md-2 col-sm-2>
+        <div class="column-2 col-md-2 col-sm-2">
             // Contents
         </div>
     </div>
@@ -125,16 +125,16 @@ $surfacepro: (
 ```
 <div class="sng-container">
     <div class="sng-rows">
-        <div class="grid-3 grid-md-4 grid-sm-6>
+        <div class="grid-3 grid-md-4 grid-sm-6">
             // Contents
         </div>
-        <div class="grid-3 grid-md-4 grid-sm-6>
+        <div class="grid-3 grid-md-4 grid-sm-6">
             // Contents
         </div>
-        <div class="grid-3 grid-md-4 grid-sm-6>
+        <div class="grid-3 grid-md-4 grid-sm-6">
             // Contents
         </div>
-        <div class="grid-3 grid-md-4 grid-sm-6>
+        <div class="grid-3 grid-md-4 grid-sm-6">
             // Contents
         </div>
     </div>
