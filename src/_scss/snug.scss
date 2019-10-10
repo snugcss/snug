@@ -17,8 +17,12 @@
 
 .sng-container {
   margin: 0 auto;
-  max-width: calc(#{$container-desktop-lg} + #{$gutter});
+  max-width: calc(#{$container-desktop-xl} + #{$gutter});
   padding: 0 calc(#{$gutter} / 2);
+
+  @include max(2560) {
+    max-width: calc(#{$container-desktop-lg} + #{$gutter});
+  }
 
   @include max(1920) {
     max-width: calc(#{$container-desktop} + #{$gutter});
@@ -30,11 +34,11 @@
   }
 
   @include tablet(1440, 960) {
-    max-width: calc(#{$container-surfacepro3-land} + #{$gutter});
+    max-width: calc(#{$container-surfacepro3-landscape} + #{$gutter});
   }
 
   @include tablet(1368,912) {
-    max-width: calc(#{$container-surfacepro6-land} + #{$gutter});
+    max-width: calc(#{$container-surfacepro6-landscape} + #{$gutter});
   }
 
   // Macbook Air 11'
@@ -48,50 +52,50 @@
 
   // iPad Pro 12.9' Landscape
   @include tablet(1366,1024) {
-    max-width: calc(#{$container-ipadpro129-land} + #{$gutter});
+    max-width: calc(#{$container-ipadpro129-landscape} + #{$gutter});
   }
 
   // iPad Pro 11' Landscape
   @include tablet(1194,834) {
-    max-width: calc(#{$container-ipadpro11-land} + #{$gutter});
+    max-width: calc(#{$container-ipadpro11-landscape} + #{$gutter});
   }
 
   // iPad Pro 10.5' Landscape
   @include tablet(1112,834) {
-    max-width: calc(#{$container-ipadpro105-land} + #{$gutter});
+    max-width: calc(#{$container-ipadpro105-landscape} + #{$gutter});
   }
 
   // iPad Pro 12.9' Portlait
   @include tablet(1024,1366) {
-    max-width: calc(#{$container-ipadpro129-port} + #{$gutter});
+    max-width: calc(#{$container-ipadpro129-portrait} + #{$gutter});
   }
 
   // iPad and Android Tablet Landscape
   @include tablet(1024,768) {
-    max-width: calc(#{$container-ipad-land} + #{$gutter});
+    max-width: calc(#{$container-ipad-landscape} + #{$gutter});
   }
 
   @include tablet(960, 1440) {
-    max-width: calc(#{$container-surfacepro3-port} + #{$gutter});
+    max-width: calc(#{$container-surfacepro3-portrait} + #{$gutter});
   }
 
   @include tablet(912, 1368) {
-    max-width: calc(#{$container-surfacepro6-port} + #{$gutter});
+    max-width: calc(#{$container-surfacepro6-portrait} + #{$gutter});
   }
 
   // iPad Pro 10.5' Portlait
   @include tablet(834,1112) {
-    max-width: calc(#{$container-ipadpro105-port} + #{$gutter});
+    max-width: calc(#{$container-ipadpro105-portrait} + #{$gutter});
   }
 
   // iPad Pro 11' Portlait
   @include tablet(834,1194) {
-    max-width: calc(#{$container-ipadpro11-port} + #{$gutter});
+    max-width: calc(#{$container-ipadpro11-portrait} + #{$gutter});
   }
 
   // iPad and Android Tablet Portlait
   @include tablet(768,1024) {
-    max-width: calc(#{$container-ipad-port} + #{$gutter});
+    max-width: calc(#{$container-ipad-portrait} + #{$gutter});
   }
 
   // Smartphone
@@ -152,6 +156,13 @@
   }
 }
 
+[class*="column-"] {
+  @include max(767) {
+    flex-basis: calc(100% - #{$gutter});
+    max-width: calc(100% - #{$gutter});
+  }
+}
+
 @for $i from 1 through $maxcolumn {
   .grid-#{$i} {
     flex-basis: calc((100% / (#{$maxcolumn} / #{$i})) - #{$gutter});
@@ -165,11 +176,21 @@
       margin: 0;
       max-width: calc(100% / (#{$maxcolumn} / #{$i}));
     }
+
+    @include max(839) {
+      flex-basis: calc(100% - #{$gutter});
+      max-width: calc(100% - #{$gutter});
+    }
+
+    @include max(767) {
+      flex-basis: calc(100% - #{$gutter});
+      max-width: calc(100% - #{$gutter});
+    }
   }
 }
 
 [class*="col-md-"] {
-  @include max(1024) {
+  @include max(839) {
     flex-basis: calc(100% - #{$gutter});
     max-width: calc(100% - #{$gutter});
   }
@@ -194,6 +215,11 @@
         margin: 0;
         max-width: calc(100% / #{$i});
       }
+    }
+
+    @include max(767) {
+      flex-basis: calc(100% - #{$gutter});
+      max-width: calc(100% - #{$gutter});
     }
   }
 }
@@ -270,109 +296,4 @@
   .offset-left-#{$i} {
     margin-left: calc(100% / (#{$maxcolumn} / #{$i}) + (#{$gutter} / 2)) !important;
   }
-}
-
-@mixin sng-container {
-  @extend .sng-container ;
-}
-
-@mixin grid-row {
-  @extend .sng-rows ;
-}
-
-@mixin tile-row {
-  @extend .sng-rows.-tiles ;
-}
-
-@mixin grid-style {
-  margin: 0 calc(#{$gutter} / 2);
-  position: relative;
-}
-
-@mixin offset($offset-left:0,$offset-right:0) {
-  margin-left: calc(( 100% / ( #{$maxcolumn} / #{$offset-left})) + (#{$gutter} / 2));
-  margin-right: calc(( 100% / ( #{$maxcolumn} / #{$offset-right})) + (#{$gutter} / 2));
-
-  @if $offset-left == 0 {
-    margin-left: calc(#{$gutter} / 2);
-  }
-
-  @if $offset-left !=0 {
-    margin-left: calc(( 100% / ( #{$maxcolumn} / #{$offset-left})) + (#{$gutter} / 2));
-
-    @include max(767) {
-      margin-left: calc(#{$gutter} / 2);
-    }
-  }
-
-  @if $offset-right == 0 {
-    margin-right: calc(#{$gutter} / 2);
-  }
-
-  @if $offset-right !=0 {
-    margin-right: calc(( 100% / ( #{$maxcolumn} / #{$offset-right})) + (#{$gutter} / 2));
-
-    @include max(767) {
-      margin-right: calc(#{$gutter} / 2);
-    }
-  }
-}
-
-@mixin offset-left($offset-left:0) {
-  @if $offset-left == 0 {
-    margin-right: calc(#{$gutter} / 2);
-  }
-
-  @if $offset-left !=0 {
-    margin-left: calc(( 100% / ( #{$maxcolumn} / #{$offset-left})) + (#{$gutter} / 2));
-
-    @include max(767) {
-      margin-left: calc(#{$gutter} / 2);
-    }
-  }
-}
-
-@mixin offset-right($offset-right:0) {
-  @if $offset-right == 0 {
-    margin-right: calc(#{$gutter} / 2);
-  }
-
-  @if $offset-right !=0 {
-    margin-right: calc(( 100% / ( #{$maxcolumn} / #{$offset-right})) + (#{$gutter} / 2));
-
-    @include max(767) {
-      margin-right: calc(#{$gutter} / 2);
-    }
-  }
-}
-
-@mixin column($grid:0) {
-  @if $grid == 0 {
-    flex: 1;
-  }
-
-  @if $grid !=0 {
-    flex-basis: calc((100% / (#{$maxcolumn} / #{$grid})) - #{$gutter});
-    flex-grow: 0;
-    flex-shrink: 0;
-    max-width: calc((100% / (#{$maxcolumn} / #{$grid})) - #{$gutter});
-  }
-
-  margin: 0 calc(#{$gutter} / 2);
-  position: relative;
-}
-
-@mixin tile($tile:0) {
-  @if $tile == 0 {
-    flex: 1;
-  }
-
-  @if $tile !=0 {
-    flex-basis: calc(100% / (#{$maxcolumn} / #{$tile}));
-    flex-grow: 0;
-    flex-shrink: 0;
-    max-width: calc(100% / #{$tile});
-  }
-
-  position: relative;
 }
