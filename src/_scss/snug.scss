@@ -128,15 +128,15 @@
   }
 }
 
-[class*="column"] {
+[class*="column-"] {
   @extend %column;
 }
 
-[class*="grid"] {
+[class*="grid-"] {
   @extend %column;
 }
 
-[class*="offset"] {
+[class*="offset-"] {
   @extend %column;
 }
 
