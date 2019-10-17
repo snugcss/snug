@@ -2,6 +2,8 @@ $custom-maxcolumn: 0;
 $custom-maxcolumn-tablet: 0;
 $custom-maxcolumn-mobile: 0;
 $custom-gutter: 0;
+$custom-gutter-tablet: 0;
+$custom-gutter-mobile: 0;
 
 // Setup Container Size
 $w5120: 0;
@@ -49,6 +51,14 @@ $surfacepro: (
 
 @if $custom-gutter != 0 {
   $gutter: $custom-gutter !global;
+}
+
+@if $custom-gutter-tablet != 0 {
+  $gutter-tablet: $custom-gutter-tablet !global;
+}
+
+@if $custom-gutter-mobile != 0 {
+  $gutter-mobile: $custom-gutter-mobile !global;
 }
 
 @if $w5120 != 0 {
