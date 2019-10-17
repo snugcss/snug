@@ -1,7 +1,7 @@
 {
   "name": "snug-css",
   "version": "3.1.0",
-  "description": "A simple grid framework for Adobe XD.",
+  "description": "A simple CSS framework of responsive grid ",
   "keywords": [
     "css",
     "scss",
