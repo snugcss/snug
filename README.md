@@ -1,14 +1,13 @@
 # SNUG  
-#### A simple grid system for Adobe XD.  
-SNUG is CSS framework.  
-Build the 'layout grid' on HTML.  
+#### A simple CSS framework of responsive grid.
+With SNUG, You can make good things every single day.
 
 ## Features
 
 * Light weight.  
 SNUG is vary light weight.  
   
-* Responsive.  
+* Responsive Grid.  
 Grid component made by flexbox.  
   
 * Simple and easy.
@@ -79,6 +78,8 @@ $custom-maxcolumn: 0;
 $custom-maxcolumn-tablet: 0;
 $custom-maxcolumn-mobile: 0;
 $custom-gutter: 0;
+$custom-gutter-tablet: 0;
+$custom-gutter-mobile: 0;
 
 /* Side margin of grid container. */
 $w5120: 0;
@@ -166,7 +167,13 @@ $surfacepro: (
 ```
 <div class="sng-container">
     <div class="sng-rows -tiles">
-        <div class="grid-6">
+        <div class="grid-3">
+            // Contents
+        </div>
+        <div class="grid-3">
+            // Contents
+        </div>
+        <div class="grid-3">
             // Contents
         </div>
     </div>
@@ -177,7 +184,7 @@ $surfacepro: (
 ```
 <div class="sng-container -fullWidth">
     <div class="sng-rows">
-        <div class="grid-6">
+        <div class="grid-12">
             // Contents
         </div>
     </div>
@@ -190,7 +197,13 @@ $surfacepro: (
     <div class="sng-rows">
         <div class="grid-6">
             <div class="sng-rows">
-                <div class="grid-6">
+                <div class="grid-3">
+                    // content
+                </div>
+                <div class="grid-3">
+                    // content
+                </div>
+                <div class="grid-3">
                     // content
                 </div>
             </div>
