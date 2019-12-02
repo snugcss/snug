@@ -27,6 +27,7 @@
   margin: 0 auto;
   max-width: calc(#{$container-desktop-xl} + #{$gutter});
   padding: 0 calc(#{$gutter} / 2);
+  width: 100%;
 
   @include max(2560) {
     max-width: calc(#{$container-desktop-lg} + #{$gutter});
@@ -108,7 +109,7 @@
 
   // Smartphone
   @include max(767) {
-    max-width: 100%;
+    max-width: calc(#{$container-mobile} + #{$gutter-mobile});
   }
 
   &.-fullWidth {
