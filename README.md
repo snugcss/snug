@@ -15,7 +15,7 @@ Grid component made by flexbox.
 
 ## Quick start
 
-1. Import with your html file.  
+1. Import your html file.  
 ```
 <link rel="stylesheet" href="dist/css/snug.min.css">
 ```
@@ -34,7 +34,7 @@ $ npm install snug-css
 ```
 
 
-2. Markups
+2. Markup.
 ```
 <div class="sng-container">
     <div class="sng-rows">
@@ -58,11 +58,11 @@ $ npm install snug-css
 
 1. Open your Adobe XD file.  
 
-2. Use artboard grid.  
+1. Use artboard grid.  
 
-3. Select layout grid mode.  
+1. Select layout grid mode.  
 
-4. Open the setting file.  
+1. Open the setting file.  
 ```
 src > _scss > _config > _customlayoutgrid.scss
 
@@ -71,7 +71,7 @@ or
 node_modules > snug-css > src > _scss > _config > _customlayoutgrid.scss
 ```
 
-5. Customize CSS variables.
+1. Customize CSS variables.
 ```
 /* Grid setting(column + gutter) */
 $custom-maxcolumn: 0;
@@ -114,14 +114,17 @@ $surfacepro: (
 );
 ```
 
-## Default breakpoint of SNUG Grid
-* iMac 5K / 4K / FullHD desktop
-* MacBook Pro / MacBook / MacBook Air
-* iPad Pro(10.5' / 11' / 12.9')
-* iPad 
-* Surface Pro
+## Default breakpoints
+### PC
+* iMac 5K / 4K / FullHD desktop / MacBook Pro / MacBook / MacBook Air / iPad Pro(Landscape) / iPad(Landscape) / Surface Pro / Android Tablet(Landscape)
 
-## Example Markup.
+### Tablet
+* iPad Pro(Portrait) / iPad(Portrait) / Android Tablet(Portrait)
+
+### Smartphone
+* iPhone / Android
+
+## Example.
 * Like a Bootstrap Grid.
 ```
 <div class="sng-container">
@@ -142,7 +145,7 @@ $surfacepro: (
 </div>
 ```
 
-* Grid position.
+* Align center.
 ```
 // center
 <div class="sng-container">
@@ -152,8 +155,10 @@ $surfacepro: (
         </div>
     </div>
 </div>
+```
 
-// right
+* Align right.
+```
 <div class="sng-container">
     <div class="sng-rows -right">
         <div class="grid-6">
@@ -166,7 +171,7 @@ $surfacepro: (
 * Tile.
 ```
 <div class="sng-container">
-    <div class="sng-rows -tiles">
+    <div class="sng-rows -tile">
         <div class="grid-3">
             // Contents
         </div>
@@ -180,9 +185,9 @@ $surfacepro: (
 </div>
 ```
 
-* Full width.
+* Fluid.
 ```
-<div class="sng-container -fullWidth">
+<div class="sng-container -fluid">
     <div class="sng-rows">
         <div class="grid-12">
             // Contents
@@ -191,7 +196,7 @@ $surfacepro: (
 </div>
 ```
 
-* Nested.
+* Nest.
 ```
 <div class="sng-container">
     <div class="sng-rows">

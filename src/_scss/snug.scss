@@ -112,7 +112,7 @@
     max-width: calc(#{$container-mobile} + #{$gutter-mobile});
   }
 
-  &.-fullWidth {
+  &.-fluid {
     max-width: 100%;
     padding: 0;
   }
@@ -134,11 +134,11 @@
     margin-right: calc(#{$gutter-mobile} / -2);
   }
 
-  &.-tiles {
+  &.-tile {
     margin: 0;
   }
 
-  &.-centered {
+  &.-center {
     justify-content: center;
   }
 
@@ -167,7 +167,7 @@
     margin: 0 calc(#{$gutter} / 2);
     max-width: calc((100% / #{$i}) - #{$gutter});
 
-    .-tiles & {
+    .-tile & {
       flex-basis: calc(100% / #{$i});
       margin: 0;
       max-width: calc(100% / #{$i});
@@ -190,7 +190,7 @@
     margin: 0 calc(#{$gutter} / 2);
     max-width: calc((100% / (#{$maxcolumn} / #{$i})) - #{$gutter});
 
-    .-tiles & {
+    .-tile & {
       flex-basis: calc(100% / (#{$maxcolumn} / #{$i}));
       margin: 0;
       max-width: calc(100% / (#{$maxcolumn} / #{$i}));
@@ -229,7 +229,7 @@
       margin: 0 calc(#{$gutter-tablet} / 2);
       max-width: calc((100% / #{$i}) - #{$gutter-tablet});
 
-      .-tiles & {
+      .-tile & {
         flex-basis: calc(100% / #{$i});
         margin: 0;
         max-width: calc(100% / #{$i});
@@ -250,7 +250,7 @@
       margin: 0 calc(#{$gutter-tablet} / 2);
       max-width: calc((100% / (#{$maxcolumn-tablet} / #{$i})) - #{$gutter-tablet});
 
-      .-tiles & {
+      .-tile & {
         flex-basis: calc(100% / (#{$maxcolumn-tablet} / #{$i}));
         margin: 0;
         max-width: calc(100% / (#{$maxcolumn-tablet} / #{$i}));
@@ -280,7 +280,7 @@
       margin: 0 calc(#{$gutter-mobile} / 2);
       max-width: calc((100% / #{$i}) - #{$gutter-mobile});
 
-      .-tiles & {
+      .-tile & {
         flex-basis: calc(100% / #{$i});
         margin: 0;
         max-width: calc(100% / #{$i});
@@ -296,7 +296,7 @@
       margin: 0 calc(#{$gutter-mobile} / 2);
       max-width: calc((100% / (#{$maxcolumn-mobile} / #{$i})) - #{$gutter-mobile});
 
-      .-tiles & {
+      .-tile & {
         flex-basis: calc(100% / (#{$maxcolumn-mobile} / #{$i}));
         margin: 0;
         max-width: calc(100% / (#{$maxcolumn-mobile} / #{$i}));
