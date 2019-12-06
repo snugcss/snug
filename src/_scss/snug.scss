@@ -319,7 +319,9 @@
 
 @for $i from 1 through $maxcolumn-tablet {
   .md-offset-right-#{$i} {
-    margin-left: calc(100% / (#{$maxcolumn-tablet} / #{$i}) + (#{$gutter-tablet} / 2));
+    @include max(839) {
+      margin-left: calc(100% / (#{$maxcolumn-tablet} / #{$i}) + (#{$gutter-tablet} / 2));
+    }
   }
 }
 
@@ -331,7 +333,9 @@
 
 @for $i from 1 through $maxcolumn-mobile {
   .sm-offset-right-#{$i} {
-    margin-left: calc(100% / (#{$maxcolumn-mobile} / #{$i}) + (#{$gutter-mobile} / 2));
+    @include max(767) {
+      margin-left: calc(100% / (#{$maxcolumn-mobile} / #{$i}) + (#{$gutter-mobile} / 2));
+    }
   }
 }
 
@@ -349,7 +353,9 @@
 
 @for $i from 1 through $maxcolumn-tablet {
   .md-offset-left-#{$i} {
-    margin-left: calc(100% / (#{$maxcolumn-tablet} / #{$i}) + (#{$gutter-tablet} / 2));
+    @include max(839) {
+      margin-left: calc(100% / (#{$maxcolumn-tablet} / #{$i}) + (#{$gutter-tablet} / 2));
+    }
   }
 }
 
@@ -361,6 +367,8 @@
 
 @for $i from 1 through $maxcolumn-mobile {
   .sm-offset-left-#{$i} {
-    margin-left: calc(100% / (#{$maxcolumn-mobile} / #{$i}) + (#{$gutter-mobile} / 2));
+    @include max(767) {
+      margin-left: calc(100% / (#{$maxcolumn-mobile} / #{$i}) + (#{$gutter-mobile} / 2));
+    }
   }
 }
