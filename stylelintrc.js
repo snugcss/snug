@@ -26,6 +26,7 @@ module.exports = {
         "declaration-block-trailing-semicolon": "always", //  - ブロック内の最後のセミコロンを禁止
         "declaration-colon-space-before": "never", // - コロンの直前にスペースを入れることを許可するか否か
         "declaration-colon-space-after": "always", // - コロンの直後にスペースを入れることを許可するか否か
-        "number-leading-zero": "never" // - 1未満の少数の先頭の0を許可するか否か
+        "number-leading-zero": "never", // - 1未満の少数の先頭の0を許可するか否か
+        "no-duplicate-selectors": null,
     }
 }
