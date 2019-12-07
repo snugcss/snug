@@ -95,21 +95,35 @@
   // iPad Pro 10.5' Portlait
   @include tablet(834,1112) {
     max-width: calc(#{$container-ipadpro105-portrait} + #{$gutter-tablet});
+    padding: 0 calc(#{$gutter-tablet} / 2);
   }
 
   // iPad Pro 11' Portlait
   @include tablet(834,1194) {
     max-width: calc(#{$container-ipadpro11-portrait} + #{$gutter-tablet});
+    padding: 0 calc(#{$gutter-tablet} / 2);
   }
 
   // iPad and Android Tablet Portlait
   @include tablet(768,1024) {
     max-width: calc(#{$container-ipad-portrait} + #{$gutter-tablet});
+    padding: 0 calc(#{$gutter-tablet} / 2);
   }
 
   // Smartphone
   @include max(767) {
-    max-width: calc(#{$container-mobile} + #{$gutter-mobile});
+    max-width: calc(#{$container-mobile-lg} + #{$gutter-mobile});
+    padding: 0 calc(#{$gutter-mobile} / 2);
+  }
+
+  @include max(413) {
+    max-width: calc(#{$container-mobile-md} + #{$gutter-mobile});
+    padding: 0 calc(#{$gutter-mobile} / 2);
+  }
+
+  @include max(374) {
+    max-width: calc(#{$container-mobile-sm} + #{$gutter-mobile});
+    padding: 0 calc(#{$gutter-mobile} / 2);
   }
 
   &.-fluid {
