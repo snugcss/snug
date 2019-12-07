@@ -5,14 +5,14 @@
 // Max Column
 $maxcolumn: 12 !default;
 $maxcolumn-tablet: 8 !default;
-$maxcolumn-mobile: 4 !default; 
+$maxcolumn-mobile: 4 !default;
 
 // Grid Gutter Size
 $gutter: 32px !default;
 $gutter-tablet: 32px !default;
-$gutter-mobile: 32px !default;
+$gutter-mobile: 22px !default;
 
-//  Extra Large Display(w5120) 
+//  Extra Large Display(w5120)
 $desktop-xl: 936px !default;
 
 //  Large Display(w2560)
@@ -50,4 +50,11 @@ $ipad-landscape: 80px !default;
 $surfacepro-portrait: 122px !default;
 $surfacepro-landscape: 140px !default;
 
-$mobile: 36px !default;
+// iPhone XR/XS Max/11
+$mobile-lg: 36px !default;
+
+// iPhone X/XS/11 Pro
+$mobile-md: 32px !default;
+
+// iPhone 5/SE
+$mobile-sm: 31px !default;

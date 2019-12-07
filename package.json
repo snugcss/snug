@@ -17,9 +17,11 @@
     "compile": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.css --output-style expanded",
     "minify": "node-sass -w --include-path scss src/_scss/snug.scss dist/css/snug.min.css --output-style compressed",
     "build": "postcss -w --config postcss.config.js dist/css/snug.min.css -o dist/css/snug.min.css",
+    "serve": "browser-sync start --open=\"external\" -s -f '/htdocs, **/*.html, !node_modules/**/*'",
     "all": "npm-run-all -p stylelint compile minify build"
   },
   "devDependencies": {
+    "browser-sync": "^2.26.7",
     "cssnano": "^4.1.0",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",

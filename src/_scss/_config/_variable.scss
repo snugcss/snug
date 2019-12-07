@@ -20,4 +20,6 @@ $container-surfacepro3-portrait: calc(960px - (#{$surfacepro-portrait} * 2));
 $container-surfacepro3-landscape: calc(1440px - (#{$surfacepro-landscape} * 2));
 $container-surfacepro6-portrait: calc(912px - (#{$surfacepro-portrait} * 2));
 $container-surfacepro6-landscape: calc(1368px - (#{$surfacepro-landscape} * 2));
-$container-mobile: calc(100% - (#{$mobile} * 2));
+$container-mobile-lg: calc(100% - (#{$mobile-lg} * 2));
+$container-mobile-md: calc(100% - (#{$mobile-md} * 2));
+$container-mobile-sm: calc(100% - (#{$mobile-sm} * 2));

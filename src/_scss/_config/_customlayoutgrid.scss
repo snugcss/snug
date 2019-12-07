@@ -37,6 +37,10 @@ $surfacepro: (
   landscape: 0,
 );
 
+$mobile-w414: 0;
+$mobile-w375: 0;
+$mobile-w320: 0;
+
 @if $custom-maxcolumn != 0 {
   $maxcolumn: $custom-maxcolumn !global;
 }
@@ -86,41 +90,53 @@ $surfacepro: (
 }
 
 @if map-get(($iPad), 'portrait') != 0 {
-  $ipad-port: map-get(($iPad), 'portrait') !global; 
+  $ipad-port: map-get(($iPad), 'portrait') !global;
 }
 
 @if map-get(($iPad), 'landscape') != 0 {
-  $ipad-land: map-get(($iPad), 'landscape') !global; 
+  $ipad-land: map-get(($iPad), 'landscape') !global;
 }
 
 @if map-get(($iPadPro105), 'portrait') != 0 {
-  $ipadpro105-portrait: map-get(($iPadPro105), 'portrait') !global; 
+  $ipadpro105-portrait: map-get(($iPadPro105), 'portrait') !global;
 }
 
 @if map-get(($iPadPro105), 'landscape') != 0 {
-  $ipadpro105-landscape: map-get(($iPadPro105), 'landscape') !global; 
+  $ipadpro105-landscape: map-get(($iPadPro105), 'landscape') !global;
 }
 
 @if map-get(($iPadPro11), 'portrait') != 0 {
-  $ipadpro11-portrait: map-get(($iPadPro11), 'portrait') !global; 
+  $ipadpro11-portrait: map-get(($iPadPro11), 'portrait') !global;
 }
 
 @if map-get(($iPadPro11), 'landscape') != 0 {
-  $ipadpro11-landscape: map-get(($iPadPro11), 'landscape') !global; 
+  $ipadpro11-landscape: map-get(($iPadPro11), 'landscape') !global;
 }
 
 @if map-get(($iPadPro129), 'portrait') != 0 {
-  $ipadpro129-portrait: map-get(($iPadPro129), 'portrait') !global; 
+  $ipadpro129-portrait: map-get(($iPadPro129), 'portrait') !global;
 }
 
 @if map-get(($iPadPro129), 'landscape') != 0 {
-  $ipadpro129-landscape: map-get(($iPadPro129), 'landscape') !global; 
+  $ipadpro129-landscape: map-get(($iPadPro129), 'landscape') !global;
 }
 
 @if map-get(($surfacepro), 'portrait') != 0 {
-  $surfacepro-portrait: map-get(($surfacepro), 'portrait') !global; 
+  $surfacepro-portrait: map-get(($surfacepro), 'portrait') !global;
 }
 
 @if map-get(($surfacepro), 'landscape') != 0 {
-  $surfacepro-landscape: map-get(($surfacepro), 'landscape') !global; 
+  $surfacepro-landscape: map-get(($surfacepro), 'landscape') !global;
+}
+
+@if $mobile-w414 != 0 {
+  $mobile-lg: $mobile-w414 !global;
+}
+
+@if $mobile-w375 != 0 {
+  $mobile-md: $mobile-w375 !global;
+}
+
+@if $mobile-w320 != 0 {
+  $mobile-sm: $mobile-w320 !global;
 }

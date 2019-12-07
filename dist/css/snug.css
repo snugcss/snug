@@ -269,7 +269,7 @@ p {
 
 @media only screen and (max-width: 767px) {
   [class*="column-"], [class*="grid-"], [class*="offset-"] {
-    margin: 0 calc(32px / 2);
+    margin: 0 calc(22px / 2);
   }
 }
 
@@ -367,24 +367,42 @@ p {
 @media only screen and (device-width: 834px) and (device-height: 1112px) {
   .sng-container {
     max-width: calc(calc(834px - (84px * 2)) + 32px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 @media only screen and (device-width: 834px) and (device-height: 1194px) {
   .sng-container {
     max-width: calc(calc(834px - (81px * 2)) + 32px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 @media only screen and (device-width: 768px) and (device-height: 1024px) {
   .sng-container {
     max-width: calc(calc(768px - (82px * 2)) + 32px);
+    padding: 0 calc(32px / 2);
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sng-container {
-    max-width: calc(calc(100% - (36px * 2)) + 32px);
+    max-width: calc(calc(100% - (36px * 2)) + 22px);
+    padding: 0 calc(22px / 2);
+  }
+}
+
+@media only screen and (max-width: 413px) {
+  .sng-container {
+    max-width: calc(calc(100% - (32px * 2)) + 22px);
+    padding: 0 calc(22px / 2);
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .sng-container {
+    max-width: calc(calc(100% - (31px * 2)) + 22px);
+    padding: 0 calc(22px / 2);
   }
 }
 
@@ -407,8 +425,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .sng-rows {
-    margin-left: calc(32px / -2);
-    margin-right: calc(32px / -2);
+    margin-left: calc(22px / -2);
+    margin-right: calc(22px / -2);
   }
 }
 
@@ -622,8 +640,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-1 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -650,8 +668,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-2 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -678,8 +696,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-3 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -706,8 +724,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-4 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -734,8 +752,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-5 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -762,8 +780,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-6 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -790,8 +808,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-7 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -818,8 +836,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-8 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -846,8 +864,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-9 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -874,8 +892,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-10 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -902,8 +920,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-11 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -930,8 +948,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-12 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -964,8 +982,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-1 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -984,8 +1002,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-2 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1004,8 +1022,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-3 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1024,8 +1042,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-4 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1044,8 +1062,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-5 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1064,8 +1082,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-6 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1084,8 +1102,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-7 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1104,8 +1122,8 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-md-8 {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
@@ -1215,23 +1233,23 @@ p {
 
 @media only screen and (max-width: 767px) {
   [class*="col-sm-"] {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
 @media only screen and (max-width: 767px) {
   [class*="grid-sm-"] {
-    flex-basis: calc(100% - 32px);
-    max-width: calc(100% - 32px);
+    flex-basis: calc(100% - 22px);
+    max-width: calc(100% - 22px);
   }
 }
 
 @media only screen and (max-width: 767px) {
   .col-sm-1 {
-    flex-basis: calc((100% / 1) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / 1) - 32px);
+    flex-basis: calc((100% / 1) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / 1) - 22px);
   }
   .-tile .col-sm-1 {
     flex-basis: calc(100% / 1);
@@ -1242,9 +1260,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-sm-2 {
-    flex-basis: calc((100% / 2) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / 2) - 32px);
+    flex-basis: calc((100% / 2) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / 2) - 22px);
   }
   .-tile .col-sm-2 {
     flex-basis: calc(100% / 2);
@@ -1255,9 +1273,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-sm-3 {
-    flex-basis: calc((100% / 3) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / 3) - 32px);
+    flex-basis: calc((100% / 3) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / 3) - 22px);
   }
   .-tile .col-sm-3 {
     flex-basis: calc(100% / 3);
@@ -1268,9 +1286,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .col-sm-4 {
-    flex-basis: calc((100% / 4) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / 4) - 32px);
+    flex-basis: calc((100% / 4) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / 4) - 22px);
   }
   .-tile .col-sm-4 {
     flex-basis: calc(100% / 4);
@@ -1281,9 +1299,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-sm-1 {
-    flex-basis: calc((100% / (4 / 1)) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / (4 / 1)) - 32px);
+    flex-basis: calc((100% / (4 / 1)) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / (4 / 1)) - 22px);
   }
   .-tile .grid-sm-1 {
     flex-basis: calc(100% / (4 / 1));
@@ -1294,9 +1312,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-sm-2 {
-    flex-basis: calc((100% / (4 / 2)) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / (4 / 2)) - 32px);
+    flex-basis: calc((100% / (4 / 2)) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / (4 / 2)) - 22px);
   }
   .-tile .grid-sm-2 {
     flex-basis: calc(100% / (4 / 2));
@@ -1307,9 +1325,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-sm-3 {
-    flex-basis: calc((100% / (4 / 3)) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / (4 / 3)) - 32px);
+    flex-basis: calc((100% / (4 / 3)) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / (4 / 3)) - 22px);
   }
   .-tile .grid-sm-3 {
     flex-basis: calc(100% / (4 / 3));
@@ -1320,9 +1338,9 @@ p {
 
 @media only screen and (max-width: 767px) {
   .grid-sm-4 {
-    flex-basis: calc((100% / (4 / 4)) - 32px);
-    margin: 0 calc(32px / 2);
-    max-width: calc((100% / (4 / 4)) - 32px);
+    flex-basis: calc((100% / (4 / 4)) - 22px);
+    margin: 0 calc(22px / 2);
+    max-width: calc((100% / (4 / 4)) - 22px);
   }
   .-tile .grid-sm-4 {
     flex-basis: calc(100% / (4 / 4));
@@ -1435,31 +1453,31 @@ p {
 
 @media only screen and (max-width: 767px) {
   [class*="md-offset-right-"] {
-    margin-right: calc(32px / 2);
+    margin-right: calc(22px / 2);
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-right-1 {
-    margin-left: calc(100% / (4 / 1) + (32px / 2));
+    margin-left: calc(100% / (4 / 1) + (22px / 2));
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-right-2 {
-    margin-left: calc(100% / (4 / 2) + (32px / 2));
+    margin-left: calc(100% / (4 / 2) + (22px / 2));
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-right-3 {
-    margin-left: calc(100% / (4 / 3) + (32px / 2));
+    margin-left: calc(100% / (4 / 3) + (22px / 2));
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-right-4 {
-    margin-left: calc(100% / (4 / 4) + (32px / 2));
+    margin-left: calc(100% / (4 / 4) + (22px / 2));
   }
 }
 
@@ -1567,30 +1585,30 @@ p {
 
 @media only screen and (max-width: 767px) {
   [class*="md-offset-left-"] {
-    margin-left: calc(32px / 2);
+    margin-left: calc(22px / 2);
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-left-1 {
-    margin-left: calc(100% / (4 / 1) + (32px / 2));
+    margin-left: calc(100% / (4 / 1) + (22px / 2));
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-left-2 {
-    margin-left: calc(100% / (4 / 2) + (32px / 2));
+    margin-left: calc(100% / (4 / 2) + (22px / 2));
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-left-3 {
-    margin-left: calc(100% / (4 / 3) + (32px / 2));
+    margin-left: calc(100% / (4 / 3) + (22px / 2));
   }
 }
 
 @media only screen and (max-width: 767px) {
   .sm-offset-left-4 {
-    margin-left: calc(100% / (4 / 4) + (32px / 2));
+    margin-left: calc(100% / (4 / 4) + (22px / 2));
   }
 }
