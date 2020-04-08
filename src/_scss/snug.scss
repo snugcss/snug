@@ -25,104 +25,104 @@
 
 .sng-container {
   margin: 0 auto;
-  max-width: calc(#{$container-desktop-xl} + #{$gutter});
+  max-width: map-deep-get($container, pc, w5120);
   padding: 0 calc(#{$gutter} / 2);
   width: 100%;
 
   @include max(2560) {
-    max-width: calc(#{$container-desktop-lg} + #{$gutter});
+    max-width: map-deep-get($container, pc, w2560);
   }
 
   @include max(1920) {
-    max-width: calc(#{$container-desktop} + #{$gutter});
+    max-width: map-deep-get($container, pc, w1920);
   }
 
   // Macbook Air 13' / MacBook Pro
   @include max(1440) {
-    max-width: calc(#{$container-laptop-lg} + #{$gutter});
+    max-width: map-deep-get($container, pc, w1440);
   }
 
   @include tablet(1440, 960) {
-    max-width: calc(#{$container-surfacepro3-landscape} + #{$gutter});
+    max-width: map-deep-get($container, tablet, surfacePro3, landscape);
   }
 
   @include tablet(1368,912) {
-    max-width: calc(#{$container-surfacepro6-landscape} + #{$gutter});
+    max-width: map-deep-get($container, tablet, surfacePro6, landscape);
   }
 
   // Macbook Air 11'
   @include max(1366) {
-    max-width: calc(#{$container-laptop-md} + #{$gutter});
+    max-width: map-deep-get($container, pc, w1366);
   }
 
   @include max(1280) {
-    max-width: calc(#{$container-laptop-sm} + #{$gutter});
+    max-width: map-deep-get($container, pc, w1280);
   }
 
   // iPad Pro 12.9' Landscape
   @include tablet(1366,1024) {
-    max-width: calc(#{$container-ipadpro129-landscape} + #{$gutter});
+    max-width: map-deep-get($container, tablet, iPadPro129, landscape);
   }
 
   // iPad Pro 11' Landscape
   @include tablet(1194,834) {
-    max-width: calc(#{$container-ipadpro11-landscape} + #{$gutter});
+    max-width: map-deep-get($container, tablet, iPadPro11, landscape);
   }
 
   // iPad Pro 10.5' Landscape
   @include tablet(1112,834) {
-    max-width: calc(#{$container-ipadpro105-landscape} + #{$gutter});
+    max-width: map-deep-get($container, tablet, iPadPro105, landscape);
   }
 
   // iPad Pro 12.9' Portlait
   @include tablet(1024,1366) {
-    max-width: calc(#{$container-ipadpro129-portrait} + #{$gutter});
+    max-width: map-deep-get($container, tablet, iPadPro129, portlait);
   }
 
   // iPad and Android Tablet Landscape
   @include tablet(1024,768) {
-    max-width: calc(#{$container-ipad-landscape} + #{$gutter});
+    max-width: map-deep-get($container, tablet, iPad, landscape);
   }
 
   @include tablet(960, 1440) {
-    max-width: calc(#{$container-surfacepro3-portrait} + #{$gutter});
+    max-width: map-deep-get($container, tablet, surfacePro3, portlait);
   }
 
   @include tablet(912, 1368) {
-    max-width: calc(#{$container-surfacepro6-portrait} + #{$gutter});
+    max-width: map-deep-get($container, tablet, surfacePro6, portlait);
   }
 
   // iPad Pro 10.5' Portlait
   @include tablet(834,1112) {
-    max-width: calc(#{$container-ipadpro105-portrait} + #{$gutter-tablet});
+    max-width: map-deep-get($container, tablet, iPadPro105, portlait);
     padding: 0 calc(#{$gutter-tablet} / 2);
   }
 
   // iPad Pro 11' Portlait
   @include tablet(834,1194) {
-    max-width: calc(#{$container-ipadpro11-portrait} + #{$gutter-tablet});
+    max-width: map-deep-get($container, tablet, iPadPro11, portlait);
     padding: 0 calc(#{$gutter-tablet} / 2);
   }
 
   // iPad and Android Tablet Portlait
   @include tablet(768,1024) {
-    max-width: calc(#{$container-ipad-portrait} + #{$gutter-tablet});
+    max-width: map-deep-get($container, tablet, iPad, portlait);
     padding: 0 calc(#{$gutter-tablet} / 2);
   }
 
   // Smartphone
   @include max(767) {
-    max-width: calc(#{$container-mobile-lg} + #{$gutter-mobile});
+    max-width: map-deep-get($container, mobile, w414);
     padding: 0 calc(#{$gutter-mobile} / 2);
   }
 
   @include max(413) {
-    max-width: calc(#{$container-mobile-md} + #{$gutter-mobile});
+    max-width: map-deep-get($container, mobile, w375);
     padding: 0 calc(#{$gutter-mobile} / 2);
   }
 
   @include max(374) {
-    max-width: calc(#{$container-mobile-sm} + #{$gutter-mobile});
+    max-width: map-deep-get($container, mobile, w320);
     padding: 0 calc(#{$gutter-mobile} / 2);
   }
 
