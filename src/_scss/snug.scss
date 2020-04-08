@@ -29,16 +29,21 @@
   padding: 0 calc(#{$gutter} / 2);
   width: 100%;
 
-  @include max(2560) {
+  @include max(5119) {
     max-width: map-deep-get($container, pc, w2560);
   }
 
-  @include max(1920) {
+  @include max(2559) {
     max-width: map-deep-get($container, pc, w1920);
   }
 
+    // Desktop
+  @include max(1919) {
+    max-width: map-deep-get($container, pc, w1600);
+  }
+
   // Macbook Air 13' / MacBook Pro
-  @include max(1440) {
+  @include max(1599) {
     max-width: map-deep-get($container, pc, w1440);
   }
 
@@ -51,11 +56,11 @@
   }
 
   // Macbook Air 11'
-  @include max(1366) {
+  @include max(1439) {
     max-width: map-deep-get($container, pc, w1366);
   }
 
-  @include max(1280) {
+  @include max(1279) {
     max-width: map-deep-get($container, pc, w1280);
   }
 

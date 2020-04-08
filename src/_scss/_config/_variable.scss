@@ -7,6 +7,7 @@ $container: (
     w5120: calc(5120px - (#{$desktop-xl} * 2) + #{$gutter}),
     w2560: calc(2560px - (#{$desktop-lg} * 2) + #{$gutter}),
     w1920: calc(1920px - (#{$desktop} * 2) + #{$gutter}),
+    w1600: calc(1600px - (#{$desktop-sm} * 2) + #{$gutter}),
     w1440: calc(1440px - (#{$laptop-lg} * 2) + #{$gutter}),
     w1366: calc(1366px - (#{$laptop-md} * 2) + #{$gutter}),
     w1280: calc(1280px - (#{$laptop-sm} * 2) + #{$gutter}),

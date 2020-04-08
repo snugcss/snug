@@ -17,6 +17,7 @@ $SetCustomGrid: (
       w5120: 0,
       w2560: 0,
       w1920: 0,
+      w1600: 0,
       w1440: 0,
       w1366: 0,
       w1280: 0,
@@ -85,6 +86,10 @@ $SetCustomGrid: (
 
 @if map-deep-get($SetCustomGrid, margin, pc, w1920) != 0 {
   $desktop: map-deep-get($SetCustomGrid, margin, pc, w1920) !global;
+}
+
+@if map-deep-get($SetCustomGrid, margin, pc, w1920) != 0 {
+  $desktop: map-deep-get($SetCustomGrid, margin, pc, w1600) !global;
 }
 
 @if map-deep-get($SetCustomGrid, margin, pc, w1440) != 0 {
