@@ -2,24 +2,44 @@
   _scss > _config > _variable.scss
 ------------------------ */
 // Container
-$container-desktop-xl: calc(5120px - (#{$desktop-xl} * 2));
-$container-desktop-lg: calc(2560px - (#{$desktop-lg} * 2));
-$container-desktop: calc(1920px - (#{$desktop} * 2));
-$container-laptop-lg: calc(1440px - (#{$laptop-lg} * 2));
-$container-laptop-md: calc(1366px - (#{$laptop-md} * 2));
-$container-laptop-sm: calc(1280px - (#{$laptop-sm} * 2));
-$container-ipadpro129-portrait: calc(1024px - (#{$ipadpro129-portrait} * 2));
-$container-ipadpro129-landscape: calc(1366px - (#{$ipadpro129-landscape} * 2));
-$container-ipadpro11-portrait: calc(834px - (#{$ipadpro11-portrait} * 2));
-$container-ipadpro11-landscape: calc(1194px - (#{$ipadpro11-landscape} * 2));
-$container-ipadpro105-portrait: calc(834px - (#{$ipadpro105-portrait} * 2));
-$container-ipadpro105-landscape: calc(1112px - (#{$ipadpro105-landscape} * 2));
-$container-ipad-portrait: calc(768px - (#{$ipad-portrait} * 2));
-$container-ipad-landscape: calc(1024px - (#{$ipad-landscape} * 2));
-$container-surfacepro3-portrait: calc(960px - (#{$surfacepro-portrait} * 2));
-$container-surfacepro3-landscape: calc(1440px - (#{$surfacepro-landscape} * 2));
-$container-surfacepro6-portrait: calc(912px - (#{$surfacepro-portrait} * 2));
-$container-surfacepro6-landscape: calc(1368px - (#{$surfacepro-landscape} * 2));
-$container-mobile-lg: calc(100% - (#{$mobile-lg} * 2));
-$container-mobile-md: calc(100% - (#{$mobile-md} * 2));
-$container-mobile-sm: calc(100% - (#{$mobile-sm} * 2));
+$container: (
+  pc: (
+    w5120: calc(5120px - (#{$desktop-xl} * 2) + #{$gutter}),
+    w2560: calc(2560px - (#{$desktop-lg} * 2) + #{$gutter}),
+    w1920: calc(1920px - (#{$desktop} * 2) + #{$gutter}),
+    w1440: calc(1440px - (#{$laptop-lg} * 2) + #{$gutter}),
+    w1366: calc(1366px - (#{$laptop-md} * 2) + #{$gutter}),
+    w1280: calc(1280px - (#{$laptop-sm} * 2) + #{$gutter}),
+  ),
+  tablet: (
+    iPad: (
+      portlait: calc(768px - (#{$ipad-portlait} * 2) + #{$gutter-tablet}),
+      landscape: calc(1024px - (#{$ipad-landscape} * 2) + #{$gutter-tablet}),
+    ),
+    iPadPro105: (
+      portlait: calc(834px - (#{$ipadpro105-portlait} * 2) + #{$gutter-tablet}),
+      landscape: calc(1112px - (#{$ipadpro105-landscape} * 2) + #{$gutter-tablet}),
+    ),
+    iPadPro11: (
+      portlait: calc(834px - (#{$ipadpro11-portlait} * 2) + #{$gutter-tablet}),
+      landscape: calc(1194px - (#{$ipadpro11-landscape} * 2) + #{$gutter-tablet}),
+    ),
+    iPadPro129: (
+      portlait: calc(1024px - (#{$ipadpro129-portlait} * 2) + #{$gutter}),
+      landscape: calc(1366px - (#{$ipadpro129-landscape} * 2) + #{$gutter}),
+    ),
+    surfacePro6: (
+      portlait: calc(912px - (#{$surfacepro-portlait} * 2) + #{$gutter}),
+      landscape: calc(1368px - (#{$surfacepro-landscape} * 2) + #{$gutter}),
+    ),
+    surfacePro3: (
+      portlait: calc(960px - (#{$surfacepro-portlait} * 2) + #{$gutter}),
+      landscape: calc(1440px - (#{$surfacepro-landscape} * 2) + #{$gutter}),
+    ),
+  ),
+  mobile: (
+    w414: calc(100% - (#{$mobile-lg} * 2) + #{$gutter-mobile}),
+    w375: calc(100% - (#{$mobile-md} * 2) + #{$gutter-mobile}),
+    w320: calc(100% - (#{$mobile-sm} * 2) + #{$gutter-mobile}),
+  )
+);
