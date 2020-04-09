@@ -1,14 +1,10 @@
-/* ------------------------
-  _scss > _config > _adobexd.scss
------------------------- */
-
 // Max Column
-$maxcolumn: 12 !default;
-$maxcolumn-tablet: 8 !default;
-$maxcolumn-mobile: 4 !default;
+$column-pc: 12 !default;
+$column-tablet: 8 !default;
+$column-mobile: 4 !default;
 
 // Grid Gutter Size
-$gutter: 32px !default;
+$gutter-pc: 32px !default;
 $gutter-tablet: 32px !default;
 $gutter-mobile: 22px !default;
 

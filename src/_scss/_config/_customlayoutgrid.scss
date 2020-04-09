@@ -53,19 +53,19 @@ $SetCustomGrid: (
 );
 
 @if map-deep-get($SetCustomGrid, column, pc) != 0 {
-  $maxcolumn: map-deep-get($SetCustomGrid, column, pc) !global;
+  $column-pc: map-deep-get($SetCustomGrid, column, pc) !global;
 }
 
 @if map-deep-get($SetCustomGrid, column, tablet) != 0 {
-  $maxcolumn-tablet: map-deep-get($SetCustomGrid, column, tablet) !global;
+  $column-tablet: map-deep-get($SetCustomGrid, column, tablet) !global;
 }
 
 @if map-deep-get($SetCustomGrid, column, mobile) != 0 {
-  $maxcolumn-mobile: map-deep-get($SetCustomGrid, column, mobile) !global;
+  $column-mobile: map-deep-get($SetCustomGrid, column, mobile) !global;
 }
 
 @if map-deep-get($SetCustomGrid, gutter, pc) != 0 {
-  $gutter: map-deep-get($SetCustomGrid, gutter, pc) !global;
+  $gutter-pc: map-deep-get($SetCustomGrid, gutter, pc) !global;
 }
 
 @if map-deep-get($SetCustomGrid, gutter, tablet) != 0 {

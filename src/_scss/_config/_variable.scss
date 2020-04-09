@@ -1,46 +1,57 @@
-/* ------------------------
-  _scss > _config > _variable.scss
------------------------- */
+// Column
+$column: (
+  pc: $column-pc,
+  tablet: $column-tablet,
+  mobile: $column-mobile,
+);
+
+// Gutter
+$gutter: (
+  pc: $gutter-pc,
+  tablet: $gutter-tablet,
+  mobile: $gutter-mobile
+);
+
 // Container
 $container: (
   pc: (
-    w5120: calc(5120px - (#{$desktop-xl} * 2) + #{$gutter}),
-    w2560: calc(2560px - (#{$desktop-lg} * 2) + #{$gutter}),
-    w1920: calc(1920px - (#{$desktop} * 2) + #{$gutter}),
-    w1600: calc(1600px - (#{$desktop-sm} * 2) + #{$gutter}),
-    w1440: calc(1440px - (#{$laptop-lg} * 2) + #{$gutter}),
-    w1366: calc(1366px - (#{$laptop-md} * 2) + #{$gutter}),
-    w1280: calc(1280px - (#{$laptop-sm} * 2) + #{$gutter}),
+    w5120: calc(5120px - (#{$desktop-xl} * 2) + #{map-get($gutter, pc)}),
+    w2560: calc(2560px - (#{$desktop-lg} * 2) + #{map-get($gutter, pc)}),
+    w1920: calc(1920px - (#{$desktop} * 2) + #{map-get($gutter, pc)}),
+    w1600: calc(1600px - (#{$desktop-sm} * 2) + #{map-get($gutter, pc)}),
+    w1440: calc(1440px - (#{$laptop-lg} * 2) + #{map-get($gutter, pc)}),
+    w1366: calc(1366px - (#{$laptop-md} * 2) + #{map-get($gutter, pc)}),
+    w1280: calc(1280px - (#{$laptop-sm} * 2) + #{map-get($gutter, pc)}),
   ),
   tablet: (
     iPad: (
-      portlait: calc(768px - (#{$ipad-portlait} * 2) + #{$gutter-tablet}),
-      landscape: calc(1024px - (#{$ipad-landscape} * 2) + #{$gutter-tablet}),
+      portlait: calc(768px - (#{$ipad-portlait} * 2) + #{map-get($gutter, tablet)}),
+      landscape: calc(1024px - (#{$ipad-landscape} * 2) + #{map-get($gutter, tablet)}),
     ),
     iPadPro105: (
-      portlait: calc(834px - (#{$ipadpro105-portlait} * 2) + #{$gutter-tablet}),
-      landscape: calc(1112px - (#{$ipadpro105-landscape} * 2) + #{$gutter-tablet}),
+      portlait: calc(834px - (#{$ipadpro105-portlait} * 2) + #{map-get($gutter, tablet)}),
+      landscape: calc(1112px - (#{$ipadpro105-landscape} * 2) + #{map-get($gutter, tablet)}),
     ),
     iPadPro11: (
-      portlait: calc(834px - (#{$ipadpro11-portlait} * 2) + #{$gutter-tablet}),
-      landscape: calc(1194px - (#{$ipadpro11-landscape} * 2) + #{$gutter-tablet}),
+      portlait: calc(834px - (#{$ipadpro11-portlait} * 2) + #{map-get($gutter, tablet)}),
+      landscape: calc(1194px - (#{$ipadpro11-landscape} * 2) + #{map-get($gutter, tablet)}),
     ),
     iPadPro129: (
-      portlait: calc(1024px - (#{$ipadpro129-portlait} * 2) + #{$gutter}),
-      landscape: calc(1366px - (#{$ipadpro129-landscape} * 2) + #{$gutter}),
+      portlait: calc(1024px - (#{$ipadpro129-portlait} * 2) + #{map-get($gutter, pc)}),
+      landscape: calc(1366px - (#{$ipadpro129-landscape} * 2) + #{map-get($gutter, pc)}),
     ),
     surfacePro6: (
-      portlait: calc(912px - (#{$surfacepro-portlait} * 2) + #{$gutter}),
-      landscape: calc(1368px - (#{$surfacepro-landscape} * 2) + #{$gutter}),
+      portlait: calc(912px - (#{$surfacepro-portlait} * 2) + #{map-get($gutter, pc)}),
+      landscape: calc(1368px - (#{$surfacepro-landscape} * 2) + #{map-get($gutter, pc)}),
     ),
     surfacePro3: (
-      portlait: calc(960px - (#{$surfacepro-portlait} * 2) + #{$gutter}),
-      landscape: calc(1440px - (#{$surfacepro-landscape} * 2) + #{$gutter}),
+      portlait: calc(960px - (#{$surfacepro-portlait} * 2) + #{map-get($gutter, pc)}),
+      landscape: calc(1440px - (#{$surfacepro-landscape} * 2) + #{map-get($gutter, pc)}),
     ),
   ),
   mobile: (
-    w414: calc(100% - (#{$mobile-lg} * 2) + #{$gutter-mobile}),
-    w375: calc(100% - (#{$mobile-md} * 2) + #{$gutter-mobile}),
-    w320: calc(100% - (#{$mobile-sm} * 2) + #{$gutter-mobile}),
+    w414: calc(100% - (#{$mobile-lg} * 2) + #{map-get($gutter, mobile)}),
+    w375: calc(100% - (#{$mobile-md} * 2) + #{map-get($gutter, mobile)}),
+    w320: calc(100% - (#{$mobile-sm} * 2) + #{map-get($gutter, mobile)}),
   )
 );
