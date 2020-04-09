@@ -1,142 +1,157 @@
-$custom-maxcolumn: 0;
-$custom-maxcolumn-tablet: 0;
-$custom-maxcolumn-mobile: 0;
-$custom-gutter: 0;
-$custom-gutter-tablet: 0;
-$custom-gutter-mobile: 0;
+$SetCustomGrid: (
+  column: (
+    pc: 0,
+    tablet: 0,
+    mobile: 0,
+  ),
 
-// Setup Container Size
-$w5120: 0;
-$w2560: 0;
-$w1920: 0;
-$w1440: 0;
-$w1366: 0;
-$w1280: 0;
-$iPad: (
-  portrait: 0,
-  landscape: 0,
+  gutter: (
+    pc: 0,
+    tablet: 0,
+    mobile: 0,
+  ),
+
+  // Container Size
+  margin: (
+    pc: (
+      w5120: 0,
+      w2560: 0,
+      w1920: 0,
+      w1600: 0,
+      w1440: 0,
+      w1366: 0,
+      w1280: 0,
+    ),
+    tablet: (
+      iPad: (
+        portlait: 0,
+        landscape: 0,
+      ),
+      iPadPro105: (
+        portlait: 0,
+        landscape: 0,
+      ),
+      iPadPro11: (
+        portlait: 0,
+        landscape: 0,
+      ),
+      iPadPro129: (
+        portlait: 0,
+        landscape: 0,
+      ),
+      surfacePro: (
+        portlait: 0,
+        landscape: 0,
+      ),
+    ),
+    mobile: (
+      w414: 0,
+      w375: 0,
+      w320: 0,
+    ),
+  ),
 );
 
-$iPadPro105: (
-  portrait: 0,
-  landscape: 0,
-);
-
-$iPadPro11: (
-  portrait: 0,
-  landscape: 0,
-);
-
-$iPadPro129: (
-  portrait: 0,
-  landscape: 0,
-);
-
-$surfacepro: (
-  portrait: 0,
-  landscape: 0,
-);
-
-$mobile-w414: 0;
-$mobile-w375: 0;
-$mobile-w320: 0;
-
-@if $custom-maxcolumn != 0 {
-  $maxcolumn: $custom-maxcolumn !global;
+@if map-deep-get($SetCustomGrid, column, pc) != 0 {
+  $column-pc: map-deep-get($SetCustomGrid, column, pc) !global;
 }
 
-@if $custom-maxcolumn-tablet != 0 {
-  $maxcolumn-tablet: $custom-maxcolumn-tablet !global;
+@if map-deep-get($SetCustomGrid, column, tablet) != 0 {
+  $column-tablet: map-deep-get($SetCustomGrid, column, tablet) !global;
 }
 
-@if $custom-maxcolumn-mobile != 0 {
-  $maxcolumn-mobile: $custom-maxcolumn-mobile !global;
+@if map-deep-get($SetCustomGrid, column, mobile) != 0 {
+  $column-mobile: map-deep-get($SetCustomGrid, column, mobile) !global;
 }
 
-@if $custom-gutter != 0 {
-  $gutter: $custom-gutter !global;
+@if map-deep-get($SetCustomGrid, gutter, pc) != 0 {
+  $gutter-pc: map-deep-get($SetCustomGrid, gutter, pc) !global;
 }
 
-@if $custom-gutter-tablet != 0 {
-  $gutter-tablet: $custom-gutter-tablet !global;
+@if map-deep-get($SetCustomGrid, gutter, tablet) != 0 {
+  $gutter-tablet: map-deep-get($SetCustomGrid, gutter, tablet) !global;
 }
 
-@if $custom-gutter-mobile != 0 {
-  $gutter-mobile: $custom-gutter-mobile !global;
+@if map-deep-get($SetCustomGrid, gutter, mobile) != 0 {
+  $gutter-mobile: map-deep-get($SetCustomGrid, gutter, mobile) !global;
 }
 
-@if $w5120 != 0 {
-  $desktop-xl: $w5120 !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w5120) != 0 {
+  $desktop-xl: map-deep-get($SetCustomGrid, margin, pc, w5120) !global;
 }
 
-@if $w2560 != 0 {
-  $desktop-lg: $w2560 !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w2560) != 0 {
+  $desktop-lg: map-deep-get($SetCustomGrid, margin, pc, w2560) !global;
 }
 
-@if $w1920 != 0 {
-  $desktop: $w1920 !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w1920) != 0 {
+  $desktop: map-deep-get($SetCustomGrid, margin, pc, w1920) !global;
 }
 
-@if $w1440 != 0 {
-  $laptop-lg: $w1440 !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w1920) != 0 {
+  $desktop: map-deep-get($SetCustomGrid, margin, pc, w1600) !global;
 }
 
-@if $w1366 != 0 {
-  $laptop-md: $w1366 !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w1440) != 0 {
+  $laptop-lg: map-deep-get($SetCustomGrid, margin, pc, w1440) !global;
 }
 
-@if $w1280 != 0 {
-  $laptop-sm: $w1280 !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w1366) != 0 {
+  $laptop-md: map-deep-get($SetCustomGrid, margin, pc, w1366) !global;
 }
 
-@if map-get(($iPad), 'portrait') != 0 {
-  $ipad-port: map-get(($iPad), 'portrait') !global;
+@if map-deep-get($SetCustomGrid, margin, pc, w1280) != 0 {
+  $laptop-sm: map-deep-get($SetCustomGrid, margin, pc, w1280) !global;
 }
 
-@if map-get(($iPad), 'landscape') != 0 {
-  $ipad-land: map-get(($iPad), 'landscape') !global;
+@if map-deep-get($SetCustomGrid, margin, iPad, portlait) != 0 {
+  $ipad-port: map-deep-get($SetCustomGrid, margin, iPad, portlait) !global;
 }
 
-@if map-get(($iPadPro105), 'portrait') != 0 {
-  $ipadpro105-portrait: map-get(($iPadPro105), 'portrait') !global;
+@if map-deep-get($SetCustomGrid, margin, iPad, landscape) != 0 {
+  $ipad-land: map-deep-get($SetCustomGrid, margin, iPad, landscape) !global;
 }
 
-@if map-get(($iPadPro105), 'landscape') != 0 {
-  $ipadpro105-landscape: map-get(($iPadPro105), 'landscape') !global;
+@if map-deep-get($SetCustomGrid, margin, iPadPro105, portlait) != 0 {
+  $ipadpro105-portlait: map-deep-get($SetCustomGrid, margin, iPadPro105, portlait) !global;
 }
 
-@if map-get(($iPadPro11), 'portrait') != 0 {
-  $ipadpro11-portrait: map-get(($iPadPro11), 'portrait') !global;
+@if map-deep-get($SetCustomGrid, margin, iPadPro105, landscape) != 0 {
+  $ipadpro105-landscape: map-deep-get($SetCustomGrid, margin, iPadPro105, landscape) !global;
 }
 
-@if map-get(($iPadPro11), 'landscape') != 0 {
-  $ipadpro11-landscape: map-get(($iPadPro11), 'landscape') !global;
+@if map-deep-get($SetCustomGrid, margin, iPadPro11, portlait) != 0 {
+  $ipadpro11-portlait: map-deep-get($SetCustomGrid, margin, iPadPro11, portlait) !global;
 }
 
-@if map-get(($iPadPro129), 'portrait') != 0 {
-  $ipadpro129-portrait: map-get(($iPadPro129), 'portrait') !global;
+@if map-deep-get($SetCustomGrid, margin, iPadPro, landscape) != 0 {
+  $ipadpro11-landscape: map-deep-get($SetCustomGrid, margin, iPadPro, landscape) !global;
 }
 
-@if map-get(($iPadPro129), 'landscape') != 0 {
-  $ipadpro129-landscape: map-get(($iPadPro129), 'landscape') !global;
+@if map-deep-get($SetCustomGrid, margin, iPadPro129, portlait) != 0 {
+  $ipadpro129-portlait: map-deep-get($SetCustomGrid, margin, iPadPro129, portlait) !global;
 }
 
-@if map-get(($surfacepro), 'portrait') != 0 {
-  $surfacepro-portrait: map-get(($surfacepro), 'portrait') !global;
+@if map-deep-get($SetCustomGrid, margin, iPadPro129, landscape) != 0 {
+  $ipadpro129-landscape: map-deep-get($SetCustomGrid, margin, iPadPro129, landscape) !global;
 }
 
-@if map-get(($surfacepro), 'landscape') != 0 {
-  $surfacepro-landscape: map-get(($surfacepro), 'landscape') !global;
+@if map-deep-get($SetCustomGrid, margin, surfacePro, portlait) != 0 {
+  $surfacepro-portlait: map-deep-get($SetCustomGrid, margin, surfacePro, portlait) !global;
 }
 
-@if $mobile-w414 != 0 {
-  $mobile-lg: $mobile-w414 !global;
+@if map-deep-get($SetCustomGrid, margin, surfacePro landscape) != 0 {
+  $surfacepro-landscape: map-deep-get($SetCustomGrid, margin, surfacePro landscape) !global;
 }
 
-@if $mobile-w375 != 0 {
-  $mobile-md: $mobile-w375 !global;
+@if map-deep-get($SetCustomGrid, margin, mobile, w414) != 0 {
+  $mobile-lg: map-deep-get($SetCustomGrid, margin, mobile, w414) !global;
 }
 
-@if $mobile-w320 != 0 {
-  $mobile-sm: $mobile-w320 !global;
+@if map-deep-get($SetCustomGrid, margin, mobile, w375) != 0 {
+  $mobile-md: map-deep-get($SetCustomGrid, margin, mobile, w375) !global;
+}
+
+@if map-deep-get($SetCustomGrid, margin, mobile, w320) != 0 {
+  $mobile-sm: map-deep-get($SetCustomGrid, margin, mobile, w320) !global;
 }

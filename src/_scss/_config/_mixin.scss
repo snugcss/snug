@@ -1,6 +1,3 @@
-/* ------------------------
-  _scss > _config > _mixin.scss
------------------------- */
 // media query
 @mixin max($width) {
   @media only screen and (max-width: $width + px) {
