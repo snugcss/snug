@@ -262,8 +262,8 @@
 
     @include max(767) {
       flex-basis: calc(100% - #{map-get($gutter, mobile)});
-      max-width: calc(100% - #{map-get($gutter, mobile)});
       margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+      max-width: calc(100% - #{map-get($gutter, mobile)});
     }
   }
 }
@@ -284,8 +284,8 @@
 
     @include max(767) {
       flex-basis: calc(100% - #{map-get($gutter, mobile)});
-      max-width: calc(100% - #{map-get($gutter, mobile)});
       margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+      max-width: calc(100% - #{map-get($gutter, mobile)});
     }
   }
 }
@@ -293,16 +293,16 @@
 [class*="col-sm-"] {
   @include max(767) {
     flex-basis: calc(100% - #{map-get($gutter, mobile)});
-    max-width: calc(100% - #{map-get($gutter, mobile)});
     margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+    max-width: calc(100% - #{map-get($gutter, mobile)});
   }
 }
 
 [class*="grid-sm-"] {
   @include max(767) {
     flex-basis: calc(100% - #{map-get($gutter, mobile)});
-    max-width: calc(100% - #{map-get($gutter, mobile)});
     margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+    max-width: calc(100% - #{map-get($gutter, mobile)});
   }
 }
 
