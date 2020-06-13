@@ -177,7 +177,8 @@
 }
 
 [class*="offset-"] {
-  @extend %column;
+  flex: 1;
+  position: relative;
 }
 
 @for $i from 1 through map-get($column, pc) {
@@ -262,8 +263,8 @@
 
     @include max(767) {
       flex-basis: calc(100% - #{map-get($gutter, mobile)});
-      max-width: calc(100% - #{map-get($gutter, mobile)});
       margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+      max-width: calc(100% - #{map-get($gutter, mobile)});
     }
   }
 }
@@ -284,8 +285,8 @@
 
     @include max(767) {
       flex-basis: calc(100% - #{map-get($gutter, mobile)});
-      max-width: calc(100% - #{map-get($gutter, mobile)});
       margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+      max-width: calc(100% - #{map-get($gutter, mobile)});
     }
   }
 }
@@ -293,16 +294,16 @@
 [class*="col-sm-"] {
   @include max(767) {
     flex-basis: calc(100% - #{map-get($gutter, mobile)});
-    max-width: calc(100% - #{map-get($gutter, mobile)});
     margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+    max-width: calc(100% - #{map-get($gutter, mobile)});
   }
 }
 
 [class*="grid-sm-"] {
   @include max(767) {
     flex-basis: calc(100% - #{map-get($gutter, mobile)});
-    max-width: calc(100% - #{map-get($gutter, mobile)});
     margin: 0 calc(#{map-get($gutter, mobile)} / 2);
+    max-width: calc(100% - #{map-get($gutter, mobile)});
   }
 }
 
@@ -351,21 +352,21 @@
 }
 
 @for $i from 1 through map-get($column, tablet) {
-  .md-offset-right-#{$i} {
+  .offset-md-right-#{$i} {
     @include max(839) {
       margin-left: calc(100% / #{map-get($column, tablet)} * #{$i} + (#{map-get($gutter, tablet)} / 2));
     }
   }
 }
 
-[class*="md-offset-right-"] {
+[class*="offset-md-right-"] {
   @include max(767) {
     margin-right: calc(#{map-get($gutter, mobile)} / 2);
   }
 }
 
 @for $i from 1 through map-get($column, mobile) {
-  .sm-offset-right-#{$i} {
+  .offset-sm-right-#{$i} {
     @include max(767) {
       margin-left: calc(100% / #{map-get($column, mobile)} * #{$i} + (#{map-get($gutter, mobile)} / 2));
     }
@@ -382,24 +383,28 @@
   @include max(839) {
     margin-left: calc(#{map-get($gutter, tablet)} / 2);
   }
+
+  @include max(767) {
+    margin-left: calc(#{map-get($gutter, mobile)} / 2);
+  }
 }
 
 @for $i from 1 through map-get($column, tablet) {
-  .md-offset-left-#{$i} {
+  .offset-md-left-#{$i} {
     @include max(839) {
       margin-left: calc(100% / #{map-get($column, tablet)} * #{$i} + (#{map-get($gutter, tablet)} / 2));
     }
   }
 }
 
-[class*="md-offset-left-"] {
+[class*="offset-md-left-"] {
   @include max(767) {
     margin-left: calc(#{map-get($gutter, mobile)} / 2);
   }
 }
 
 @for $i from 1 through map-get($column, mobile) {
-  .sm-offset-left-#{$i} {
+  .offset-sm-left-#{$i} {
     @include max(767) {
       margin-left: calc(100% / #{map-get($column, mobile)} * #{$i} + (#{map-get($gutter, mobile)} / 2));
     }
